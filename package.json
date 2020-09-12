@@ -1,0 +1,33 @@
+{
+  "name": "ppc pool services",
+  "version": "1.0.0",
+  "description": "Website for PPC Pool Services Ltd",
+  "keywords": [
+    "business website",
+    "one page website"
+  ],
+  "author": "Marios Sofokleous",
+  "license": "MIT",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "aos": "^2.3.4",
+    "bootstrap": "^4.4.1",
+    "browser-sync": "^2.26.12",
+    "headroom.js": "^0.11.0",
+    "jquery": "^3.4.1",
+    "owl.carousel2": "^2.2.1",
+    "popper.js": "^1.16.0",
+    "simplebar": "^5.1.0"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wait": "0.0.2"
+  }
+}
