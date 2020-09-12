@@ -63,8 +63,8 @@ $(document).ready(function() {
             0:{
                 items:1
             },
-            // breakpoint from 576px up
-            576 : {
+            // breakpoint from 992px up
+            992 : {
                 items:2
             }
         }
