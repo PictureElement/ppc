@@ -322,18 +322,34 @@ h3 {
     position: relative;
     &_odd {
         margin-right: 16px;
+        @media (max-width: 991.98px) {
+            margin-right: 0;
+        }
     }
     &_even {
         margin-left: 16px;
+        @media (max-width: 991.98px) {
+            margin-left: 0;
+        }
     }
     &__figure {
-        transition: transform .15s ease-in-out;
+        transition: border-color .15s ease-in-out;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        display: inline-block;
         position: absolute;
         top: 0;
         left: 0;
+        @media (max-width: 575.98px) {
+            position: static;
+            margin-bottom: 16px;
+        }
     }
     &__body {
         padding-left: 130px;
+        @media (max-width: 575.98px) {
+            padding: 0;
+        }
     }
     &__heading {
         margin-bottom: 12px;
@@ -343,7 +359,7 @@ h3 {
     }
     &:hover {
         figure {
-            transform: scale(1.1);
+            border-color: $primary;
         }
     }
 }
@@ -357,6 +373,13 @@ h3 {
     text-align: center;
     &__heading {
         margin-bottom: 44px;
+    }
+    @media (max-width: 575.98px) {
+        &__btn {
+            margin-bottom: 1rem;
+            display: block;
+            width: 100%;
+        }
     }
 }
 
@@ -378,11 +401,11 @@ h3 {
         background-position: 48px 0;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 464px;
+        height: 392px;
         position: absolute;
         right: 0;
         border-radius: 4px 0 0 4px;
-        @media (max-width: 1199.98px) {
+        @media (max-width: 991.98px) {
             padding-left: 0;
             overflow: hidden;
             margin: 56px 16px 0 16px;

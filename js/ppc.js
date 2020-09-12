@@ -15,7 +15,6 @@ $(document).ready(function() {
     // Brands carousel
     $('#brands-carousel').owlCarousel({
         loop:true,
-        margin:40,
         nav:false,
         dots: false,
         autoplay:true,
@@ -24,23 +23,28 @@ $(document).ready(function() {
         responsive:{
             // breakpoint from 0 up
             0:{
-                items:2
+                items:2,
+                margin:16
             },
             // breakpoint from 576px up
             576 : {
-                items:3
+                items:3,
+                margin:16
             },
             // breakpoint from 768px up
             768 : {
-                items:5
+                items:5,
+                margin:32
             },
             // breakpoint from 992px up
             992 : {
-                items:5
+                items:5,
+                margin:32
             },
             // breakpoint from 1200px up
             1200 : {
-                items:7
+                items:7,
+                margin:32
             }
         }
     });
