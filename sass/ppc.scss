@@ -116,15 +116,15 @@ h3 {
 .section {
     padding: 7.5rem 0;
     &__preheading {
-        text-transform: uppercase;
         @include font-size(1.25rem);
         font-weight: 300;
         color: rgba($color: $dark, $alpha: 0.54);
         position: relative;
+        display: inline-block;
         left: 24px;
         &::before {
             content: '';
-            display: block;
+            display: inline-block;
             width: 20px;
             height: 1px;
             background-color: rgba($color: $dark, $alpha: 0.54);
@@ -318,10 +318,19 @@ h3 {
 // Services
 // =============================================================================
 
+.services {
+    @media (max-width: 991.98px) {
+        &__header {
+            text-align: center;
+        }
+        &__preheading {
+            left: 0;
+        }
+    }
+}
 
 .service-item {
-    margin-bottom: 2.75rem;
-    position: relative;
+    margin-bottom: 5.5rem;
     &_odd {
         margin-right: 1rem;
         @media (max-width: 991.98px) {
@@ -342,14 +351,14 @@ h3 {
         position: absolute;
         top: 0;
         left: 0;
-        @media (max-width: 575.98px) {
+        @media (max-width: 991.98px) {
             position: static;
             margin-bottom: 1rem;
         }
     }
     &__body {
         padding-left: 8.125rem;
-        @media (max-width: 575.98px) {
+        @media (max-width: 991.98px) {
             padding: 0;
         }
     }
@@ -358,11 +367,27 @@ h3 {
     }
     &__text {
         margin-bottom: 1.25rem;
+        @media (max-width: 991.98px) {
+            display: none;
+        }
+    }
+    &__btn {
+        position: absolute;
+        bottom: 2.75rem;
+        display: block;
+        @media (max-width: 991.98px) {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     &:hover {
         figure {
             border-color: $primary;
         }
+    }
+    @media (max-width: 991.98px) {
+        text-align: center;
     }
 }
 
@@ -497,6 +522,7 @@ h3 {
         overflow: visible;
         .owl-stage {
             display: flex;
+            align-items: center;
             .owl-item {
                 opacity: 0;
                 transition: opacity .15s ease-in-out;
@@ -543,5 +569,38 @@ h3 {
     }
     &__ans {
         max-width: 800px;
+    }
+}
+
+// BLOG
+// =============================================================================
+
+.post {
+    padding-bottom: 3.25rem;
+    &__date {
+        font-size: 12px;
+        opacity: 54%;
+        line-height: 1;
+        margin-top: 20px;
+        margin-bottom: 4px;
+    }
+    &__title {
+        margin-bottom: 0.5rem;
+        a {
+            color: $dark;
+        }
+    }
+    &__excerpt {
+        margin-bottom: 0;
+    }
+    &__link {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.blog-carousel {
+    .owl-stage {
+        padding-left: 0 !important;
     }
 }

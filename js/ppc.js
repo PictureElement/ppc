@@ -23,28 +23,18 @@ $(document).ready(function() {
         responsive:{
             // breakpoint from 0 up
             0:{
-                items:2,
-                margin:16
+                items:3,
+                margin:12
             },
             // breakpoint from 576px up
             576 : {
                 items:3,
-                margin:16
+                margin:12
             },
             // breakpoint from 768px up
             768 : {
-                items:5,
-                margin:32
-            },
-            // breakpoint from 992px up
-            992 : {
-                items:5,
-                margin:32
-            },
-            // breakpoint from 1200px up
-            1200 : {
-                items:7,
-                margin:32
+                items:6,
+                margin:16
             }
         }
     });
@@ -52,7 +42,7 @@ $(document).ready(function() {
     // Testimonials carousel
     $('#testimonials-carousel').owlCarousel({
         loop:true,
-        margin:30,
+        margin:0,
         nav:false,
         dots: true,
         autoplay:true,
@@ -62,10 +52,28 @@ $(document).ready(function() {
             // breakpoint from 0 up
             0:{
                 items:1
+            }
+        }
+    });
+
+    // Testimonials carousel
+    $('#blog-carousel').owlCarousel({
+        loop:false,
+        nav:true,
+        dots: false,
+        autoplay:false,
+        responsive:{
+            // breakpoint from 0 up
+            0:{
+                items:1,
+                stagePadding: 24,
+                margin:12
             },
-            // breakpoint from 992px up
-            992 : {
-                items:2
+            // breakpoint from 768px up
+            768 : {
+                items:2,
+                stagePadding: 32,
+                margin:16
             }
         }
     });
