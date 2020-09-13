@@ -528,3 +528,20 @@ h3 {
         }
     }
 }
+
+// FAQs
+// =============================================================================
+
+.faq {
+    &__btn {
+        text-transform: none;
+        @include font-size(1.25rem);
+        line-height: 1.6;
+        &:focus, &:active {
+            box-shadow: none !important;
+        }
+    }
+    &__ans {
+        max-width: 800px;
+    }
+}
