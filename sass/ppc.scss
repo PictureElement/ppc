@@ -102,6 +102,7 @@ h3 {
 
 .btn {
     text-transform: uppercase;
+    box-shadow: none !important;
 }
 
 .ratio-box {
@@ -602,5 +603,57 @@ h3 {
 .blog-carousel {
     .owl-stage {
         padding-left: 0 !important;
+    }
+}
+
+
+// CONTACT
+// =============================================================================
+
+.contact {
+    .container {
+        max-width: 730px;
+    }
+    &__lead {
+        margin-bottom: 3.5rem;
+    }
+    &__preheading {
+        left: 0;
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.form {
+    .form-control {
+        background-color: transparent;
+        border-color: rgba($dark, 0.54);
+    }
+    .custom-control-label {
+        line-height: 1.3;
+        &::before {
+            background-color: transparent;
+            border: rgba($dark, 0.54) solid 1px;
+            box-shadow: none;
+        }
+    }
+    .custom-control-input:checked~.custom-control-label::before {
+        color: red;
+        border-color: $dark;
+        background-color: $dark;
+        box-shadow: none;
+    }
+    button {
+        @media (max-width: 575.98px) {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__heading {
+        margin-bottom: 2rem;
+    }
+    &__personal, &__service, &__brief {
+        margin-bottom: 2.75rem;
     }
 }
