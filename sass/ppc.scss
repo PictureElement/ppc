@@ -85,7 +85,7 @@ a {
 h1 {
     font-weight: bold;
     line-height: 1.1428;
-    @include font-size(5.25rem);
+    @include font-size(4.25rem);
 }
 
 h2 {
@@ -119,7 +119,7 @@ h3 {
     &__preheading {
         @include font-size(1.25rem);
         font-weight: 300;
-        color: rgba($color: $dark, $alpha: 0.54);
+        color: $primary;
         position: relative;
         display: inline-block;
         left: 24px;
@@ -128,7 +128,7 @@ h3 {
             display: inline-block;
             width: 20px;
             height: 1px;
-            background-color: rgba($color: $dark, $alpha: 0.54);
+            background-color: $primary;
             position: absolute;
             top: 50%;
             left: -24px;
@@ -320,6 +320,7 @@ h3 {
 // =============================================================================
 
 .services {
+    padding-bottom: 4.5rem;
     @media (max-width: 991.98px) {
         &__header {
             text-align: center;
@@ -625,10 +626,11 @@ h3 {
     }
 }
 
-.form {
+.contact-form {
     .form-control {
         background-color: transparent;
         border-color: rgba($dark, 0.54);
+        @include font-size(1.25rem);
     }
     .custom-control-label {
         line-height: 1.3;
@@ -655,5 +657,37 @@ h3 {
     }
     &__personal, &__service, &__brief {
         margin-bottom: 2.75rem;
+    }
+}
+
+
+// FOOTER
+// =============================================================================
+
+.footer {
+    padding: 7.5rem 0;
+    color: rgba($white, 0.87);
+    a {
+        color: rgba($white, 0.87);
+        font-weight: 300;
+    }
+    p {
+        margin-bottom: 1.25rem;
+    }
+    ul li {
+        margin-bottom: 1.25rem;
+    }
+    .form-control {
+        background-color: transparent;
+        border-color: rgba($white, 0.54);
+        color: rgba($white, 0.87);
+        @include font-size(1.25rem);
+    }
+    &__brand {
+        margin-bottom: 1.25rem;
+    }
+    &__heading {
+        color: #fff;
+        margin-bottom: 1.25rem;
     }
 }
