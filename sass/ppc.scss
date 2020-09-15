@@ -280,6 +280,37 @@ h3 {
             background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
         }
     }
+    .owl-nav {
+        margin: 0;
+        position: absolute;
+        top: 28vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 1rem;
+        .owl-prev {
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 48px;
+            border: 1px solid #fff;
+            font-size: 20px;
+        }
+        .owl-next {
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 48px;
+            border: 1px solid #fff;
+            font-size: 20px;
+        }
+    }
     .owl-dots {
         line-height: 0;
         display: flex;

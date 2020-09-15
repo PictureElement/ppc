@@ -4,12 +4,23 @@ $(document).ready(function() {
     $('.hero-carousel').owlCarousel({
         loop:true,
         margin:0,
-        nav:false,
-        dots: true,
         autoplay:true,
         autoplayTimeout:5000,
         autoplayHoverPause:true,
-        items: 1
+        items: 1,
+        responsive:{
+            // breakpoint from 0 up
+            0:{
+                nav:true,
+                dots:false,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
+            },
+            // breakpoint from 576px up
+            576 : {
+                nav:false,
+                dots:true,
+            }
+        }
     });
 
     // Brands carousel
