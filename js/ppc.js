@@ -77,6 +77,11 @@ $(document).ready(function() {
             }
         }
     });
+    
+    $('[data-fancybox]').fancybox({
+        // Options will go here
+        smallBtn : true
+    });
 
     // // Headroom.js
     // var header = document.querySelector("header");

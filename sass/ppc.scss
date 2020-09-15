@@ -452,6 +452,32 @@ h3 {
     }
 }
 
+// Works
+// =============================================================================
+
+.grid {
+    &__controls {
+        margin-bottom: 1rem;
+        button {
+            line-height: 1;
+            color: $dark;
+            padding: 1rem;
+            &.active {
+                color: $accent;
+            }
+        }
+    }
+    &__list {
+        [class^='col-'] {
+            margin-bottom: 1rem;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        img {
+            border-radius: 4px;
+        }
+    }
+}
 
 // About
 // =============================================================================
