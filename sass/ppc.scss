@@ -445,20 +445,30 @@ h3 {
             line-height: 1.6;
         }
     }
+    &__bg-wrapper {
+        height: 444px;
+        @media (max-width: 1199.98px) {
+            height: 572px;
+        }
+        @media (max-width: 991.98px) {
+            height: 300px;
+            margin-top: 3.5rem;
+        }
+    }
     &__bg {
-        padding-left: 3rem;
         background-image: url(../media/shop.jpg);
-        background-position: 3rem 0;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 392px;
+        background-position: center center;
         position: absolute;
-        right: 0;
+        height: 444px;
+        width: 55vw;
         border-radius: 4px 0 0 4px;
+        @media (max-width: 1199.98px) {
+            height: 572px;
+        }
         @media (max-width: 991.98px) {
-            padding-left: 0;
             overflow: hidden;
-            margin: 3.5rem 1rem 0 1rem;
             background-position: center center;
             position: relative;
             width: 100%;
