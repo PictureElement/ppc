@@ -588,7 +588,7 @@ h3 {
     }
     .owl-dots {
         line-height: 0;
-        margin-top: 1rem !important;
+        margin-top: 2rem !important;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -630,12 +630,11 @@ h3 {
 // =============================================================================
 
 .post {
-    padding-bottom: 3.25rem;
+    border-radius: 4px;
     &__date {
         font-size: 12px;
         opacity: 54%;
         line-height: 1;
-        margin-top: 20px;
         margin-bottom: 4px;
     }
     &__title {
@@ -662,8 +661,60 @@ h3 {
 }
 
 .blog-carousel {
-    .owl-stage {
-        padding-left: 0 !important;
+    .owl-stage-outer {
+        overflow: visible;
+        .owl-stage {
+            padding-left: 0 !important;
+            .owl-item {
+                opacity: 1;
+                transition: opacity .15s ease-in-out;
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .owl-nav {
+        margin-top: 2rem;
+        text-align: left;
+        .owl-prev {
+            padding: 0;
+            margin: 0 .5rem 0 0;
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 48px;
+            background: $accent;
+            font-size: 20px;
+            &:hover {
+                background: $dark;
+            }
+            &.disabled {
+                background: $accent;
+                opacity: 0.5 !important;
+            }
+        }
+        .owl-next {
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 48px;
+            background: $accent;
+            font-size: 20px;
+            &:hover {
+                background: $dark;
+            }
+            &.disabled {
+                background: $accent;
+                opacity: 0.5 !important;
+            }
+        }
     }
 }
 

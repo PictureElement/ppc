@@ -82,10 +82,11 @@ $(document).ready(function() {
         }
     });
 
-    // Testimonials carousel
+    // Blog carousel
     $('#blog-carousel').owlCarousel({
         loop:false,
         nav:true,
+        navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
         dots: false,
         autoplay:false,
         responsive:{
@@ -95,8 +96,8 @@ $(document).ready(function() {
                 stagePadding: 24,
                 margin:12
             },
-            // breakpoint from 768px up
-            768 : {
+            // breakpoint from 576px up
+            576 : {
                 items:2,
                 stagePadding: 32,
                 margin:16
