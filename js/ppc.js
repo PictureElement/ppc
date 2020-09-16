@@ -1,4 +1,13 @@
 $(document).ready(function() {
+    
+    var el = document.querySelector('.counter');
+    var counterUp = window.counterUp["default"];
+
+    // Start counting, do this on DOM ready or with Waypoints.
+    counterUp( el, {
+        duration: 1000,
+        delay: 16
+    });
 
     // Hero carousel
     $('.hero-carousel').owlCarousel({

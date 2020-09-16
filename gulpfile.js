@@ -48,7 +48,8 @@ function copy() {
     'node_modules/popper.js/dist/umd/popper.min.js',
     'node_modules/simplebar/dist/simplebar.min.js',
     'node_modules/simplebar/dist/simplebar.min.css',
-    'node_modules/headroom.js/dist/headroom.min.js'
+    'node_modules/headroom.js/dist/headroom.min.js',
+    'node_modules/counterup2/dist/index.js'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('vendor/'));
 }
