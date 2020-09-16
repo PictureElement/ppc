@@ -1,12 +1,18 @@
 $(document).ready(function() {
     
-    var el = document.querySelector('.counter');
+    // Counters
+    var elements = document.querySelectorAll('.counter');
     var counterUp = window.counterUp["default"];
 
-    // Start counting, do this on DOM ready or with Waypoints.
-    counterUp( el, {
-        duration: 1000,
-        delay: 16
+    elements.forEach(function(el) {
+        new Waypoint({
+            element: el,
+            handler: function() { 
+                counterUp(el);
+                this.destroy();
+            },
+            offset: 'bottom-in-view',
+        })
     });
 
     // Hero carousel

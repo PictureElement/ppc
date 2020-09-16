@@ -1,5 +1,5 @@
 {
-  "name": "ppc pool services",
+  "name": "ppc-pool-services",
   "version": "1.0.0",
   "description": "Website for PPC Pool Services Ltd",
   "keywords": [
@@ -19,7 +19,8 @@
     "jquery": "^3.4.1",
     "owl.carousel2": "^2.2.1",
     "popper.js": "^1.16.0",
-    "simplebar": "^5.1.0"
+    "simplebar": "^5.1.0",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "del": "^5.1.0",
