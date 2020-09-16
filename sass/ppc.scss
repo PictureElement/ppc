@@ -464,6 +464,12 @@ h3 {
         height: 444px;
         width: 55vw;
         border-radius: 4px 0 0 4px;
+        transition-duration: .3s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+        &:hover {
+            transform: translateY(8px);
+        }
         @media (max-width: 1199.98px) {
             height: 572px;
         }
