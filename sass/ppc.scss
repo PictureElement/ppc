@@ -679,7 +679,7 @@ h3 {
 .post {
     border-radius: 4px;
     &__date {
-        font-size: 12px;
+        @include font-size(1rem);
         opacity: 54%;
         line-height: 1;
         margin-bottom: 4px;
