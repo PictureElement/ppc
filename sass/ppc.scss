@@ -114,6 +114,16 @@ h3 {
     }
 }
 
+.main {
+    margin-top: 80px;
+    @media (max-width: 767.98px) {
+        margin-top: 68px;
+    }
+    @media (max-width: 575.98px) {
+        margin-top: 60px;
+    }
+}
+
 .section {
     padding: 7.5rem 0;
     &__preheading {
@@ -150,9 +160,15 @@ h3 {
 // =============================================================================
 
 .header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
     background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
     .navbar-toggler {
         border-radius: 4px;
+    }
+    &_shadow {
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
     }
 }
 
@@ -164,6 +180,21 @@ h3 {
             height: 24px;
         }
     }
+}
+
+
+// Headroom
+// =============================================================================
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
 }
 
 

@@ -105,22 +105,33 @@ $(document).ready(function() {
         }
     });
     
+
+    // Fancybox options
     $('[data-fancybox]').fancybox({
-        // Options will go here
         smallBtn : true
     });
 
-    // // Headroom.js
-    // var header = document.querySelector("header");
-    // var options = {
-    //     classes: {
-    //         top : "headroom--top navbar-light",
-    //         notTop : "headroom--not-top navbar-dark"
-    //     }
-    // }
-    // var headroom  = new Headroom(header, options);
-    // headroom.init();
+    // Headroom.js
+    var header = document.querySelector(".header");
+    var options = {
+        offset : 1080
+    }
+    var headroom  = new Headroom(header, options);
+    headroom.init();
 
+    // Header box shadow on scroll
+    if( $(window).scrollTop() > 0 ) {
+        $('.header').addClass('header_shadow');
+    }
+
+    $(window).scroll(function() {
+        if( $(window).scrollTop() > 0 ){
+            $('.header').addClass('header_shadow');
+        } else {
+            $('.header').removeClass('header_shadow');
+        }
+    });
+    
     // // Media carousel
     // $('.media__carousel').owlCarousel({
     //     loop:true,
