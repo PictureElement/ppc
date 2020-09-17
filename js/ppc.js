@@ -114,12 +114,12 @@ $(document).ready(function() {
     // Headroom.js
     var header = document.querySelector(".header");
     var options = {
-        offset : 1080
+        offset : 500
     }
     var headroom  = new Headroom(header, options);
     headroom.init();
 
-    // Header box shadow on scroll
+    // Header shadow on scroll
     if( $(window).scrollTop() > 0 ) {
         $('.header').addClass('header_shadow');
     }
@@ -131,6 +131,35 @@ $(document).ready(function() {
             $('.header').removeClass('header_shadow');
         }
     });
+
+    // Smooth scrolling
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function () {
+                        // Callback after animation
+                    });
+                }
+            }
+        });
+
     
     // // Media carousel
     // $('.media__carousel').owlCarousel({
