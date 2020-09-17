@@ -28,10 +28,6 @@ $theme-colors: (
 // Toggle global CSS preferences
 $enable-shadows: true;
 
-// Responsive font sizes
-$enable-responsive-font-sizes: true;
-$rfs-base-font-size: 1.25rem;
-
 // Buttons
 $btn-padding-y: 0.75rem;       
 $btn-padding-x: 1.25rem;             
@@ -67,7 +63,7 @@ html {
 body {
     color: $dark;
     overflow-x: hidden;
-    @include font-size(1.25rem);
+    font-size: 1.25rem;
 }
 
 p {
@@ -85,19 +81,19 @@ a {
 h1 {
     font-weight: bold;
     line-height: 1.1428;
-    @include font-size(4.25rem);
+    font-size: 4.25rem;
 }
 
 h2 {
     font-weight: 400;
     line-height: 1.1538;
-    @include font-size(3.25rem);
+    font-size: 3.25rem;
 }
 
 h3 {
     font-weight: 300;
     line-height: 1.125;
-    @include font-size(2rem);
+    font-size: 2rem;
 }
 
 .btn {
@@ -127,7 +123,7 @@ h3 {
 .section {
     padding: 7.5rem 0;
     &__preheading {
-        @include font-size(1.25rem);
+        font-size: 1.25rem;
         font-weight: 300;
         color: $primary;
         position: relative;
@@ -253,7 +249,7 @@ h3 {
             @media (max-width: 1199.98px) {
                 max-width: 800px;
                 margin-right: auto;
-                @include font-size(5.25rem);
+                font-size: 5.25rem;
                 margin-bottom: 0.75rem;
             }
         }
@@ -267,7 +263,7 @@ h3 {
             @media (max-width: 1199.98px) {
                 max-width: 800px;
                 margin-right: auto;
-                @include font-size(2rem);
+                font-size: 2rem;
                 margin-bottom: 2.75rem;
             }
             @media (max-width: 575.98px) {
@@ -577,13 +573,13 @@ h3 {
 .fact {
     text-align: center;
     &__number {
-        @include font-size(8.5rem);
+        font-size: 8.5rem;
         font-weight: 100;
         line-height: 1;
         color: rgba($primary, 0.3);
     }
     &__text {
-        @include font-size(2rem);
+        font-size: 2rem;
         line-height: 1;
     }
 }
@@ -662,7 +658,7 @@ h3 {
 .faq {
     &__btn {
         text-transform: none;
-        @include font-size(1.25rem);
+        font-size: 1.25rem;
         line-height: 1.6;
         &:focus, &:active {
             box-shadow: none !important;
@@ -679,7 +675,7 @@ h3 {
 .post {
     border-radius: 4px;
     &__date {
-        @include font-size(1rem);
+        font-size: 1rem;
         opacity: 54%;
         line-height: 1;
         margin-bottom: 4px;
@@ -788,7 +784,7 @@ h3 {
     .form-control {
         background-color: transparent;
         border-color: rgba($dark, 0.54);
-        @include font-size(1.25rem);
+        font-size: 1.25rem;
     }
     .custom-control-label {
         line-height: 1.3;
@@ -830,37 +826,37 @@ h3 {
         font-weight: 300;
     }
     p {
-        margin-bottom: 0.75rem;
-        @include font-size(1rem);
+        margin-bottom: 12px;
+        font-size: 16px;
     }
     ul li {
-        margin-bottom: 0.75rem;
-        @include font-size(1rem);
-    }
-    label {
-        @include font-size(1rem);
+        margin-bottom: 12px;
+        font-size: 16px;
     }
     .form-group {
-        margin-bottom: 0.75rem;
+        margin-bottom: 12px;
         .form-control {
             background-color: transparent;
             border-color: rgba($white, 0.54);
             color: rgba($white, 0.87);
-            @include font-size(1rem);
+            font-size: 16px;
+            padding: 8px 12px;
+            line-height: 1.6;
+            height: auto;
         }
     }
     .btn {
-        @include font-size(1rem);
-        padding: .375rem .75rem;
+        font-size: 16px;
+        padding: 8px 12px;
         line-height: 1.6;
     }
     &__brand {
-        margin-bottom: 1.25rem;
+        margin-bottom: 20px;
     }
     &__heading {
         color: #fff;
-        margin-bottom: 1.25rem;
-        @include font-size(1.25rem);
+        margin-bottom: 20px;
+        font-size: 20px;
         font-weight: 400;
     }
 }
