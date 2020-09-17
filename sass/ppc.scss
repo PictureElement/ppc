@@ -830,16 +830,29 @@ h3 {
         font-weight: 300;
     }
     p {
-        margin-bottom: 1.25rem;
+        margin-bottom: 0.75rem;
+        @include font-size(1rem);
     }
     ul li {
-        margin-bottom: 1.25rem;
+        margin-bottom: 0.75rem;
+        @include font-size(1rem);
     }
-    .form-control {
-        background-color: transparent;
-        border-color: rgba($white, 0.54);
-        color: rgba($white, 0.87);
-        @include font-size(1.25rem);
+    label {
+        @include font-size(1rem);
+    }
+    .form-group {
+        margin-bottom: 0.75rem;
+        .form-control {
+            background-color: transparent;
+            border-color: rgba($white, 0.54);
+            color: rgba($white, 0.87);
+            @include font-size(1rem);
+        }
+    }
+    .btn {
+        @include font-size(1rem);
+        padding: .375rem .75rem;
+        line-height: 1.6;
     }
     &__brand {
         margin-bottom: 1.25rem;
@@ -847,5 +860,7 @@ h3 {
     &__heading {
         color: #fff;
         margin-bottom: 1.25rem;
+        @include font-size(1.25rem);
+        font-weight: 400;
     }
 }
