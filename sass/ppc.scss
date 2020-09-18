@@ -25,18 +25,15 @@ $theme-colors: (
     "accent": $accent
 );
 
-// Toggle global CSS preferences
+// Toggle Bootstrap's global CSS preferences
 $enable-shadows: true;
 $enable-responsive-font-sizes: false;
-$rfs-base-font-size: 1rem;
-$rfs-factor: 10;
 
 // Buttons
 $btn-padding-y: 0.75rem;       
 $btn-padding-x: 1.25rem;             
-$btn-font-size: 1.25rem;
 $btn-line-height: 1;
-$btn-border-radius: 2.5rem;
+$btn-border-radius: 40px;
 
 // Typography
 $font-family-base: 'Poppins', sans-serif;
@@ -45,6 +42,14 @@ $font-weight-base: 300;
 $link-color: $accent;
 
 $grid-gutter-width: 2rem;
+
+
+// RFS overrides
+// =============================================================================
+
+$rfs-base-value: 0.875rem;
+$rfs-rem-value: 16;
+$rfs-factor: 50; // Factor of decrease
 
 
 // Import RFS and Bootstrap
@@ -58,9 +63,6 @@ $grid-gutter-width: 2rem;
 
 html {
     overflow-x: hidden;
-    @media (max-width: 767.98px) {
-        font-size: 80%; // 12.8px
-    }
 }
 
 body {
@@ -102,6 +104,7 @@ h3 {
 .btn {
     text-transform: uppercase;
     box-shadow: none !important;
+    @include font-size(1.25rem);
 }
 
 .ratio-box {
@@ -115,16 +118,13 @@ h3 {
 
 .main {
     margin-top: 80px;
-    @media (max-width: 767.98px) {
-        margin-top: 68px;
-    }
     @media (max-width: 575.98px) {
-        margin-top: 60px;
+        margin-top: 72px;
     }
 }
 
 .section {
-    padding: 7.5rem 0;
+    @include rfs(7.5rem 0, padding);
     &__preheading {
         @include font-size(1.25rem);
         font-weight: 300;
@@ -144,13 +144,13 @@ h3 {
         }
     }
     &__heading {
-        margin-bottom: 3.5rem;
+        @include rfs(3.5rem, margin-bottom);
         &_mb-small {
             margin-bottom: 1rem;
         }
     }
     &_large-gap {
-        padding: 8.75rem 0;
+        @include rfs(8.75rem 0, padding);
     }
 }
 
@@ -267,10 +267,7 @@ h3 {
                 max-width: 800px;
                 margin-right: auto;
                 @include font-size(2rem);
-                margin-bottom: 2.75rem;
-            }
-            @media (max-width: 575.98px) {
-                display: none;
+                @include rfs(2.75rem, margin-bottom);
             }
         }
         &__buttons {
@@ -294,9 +291,9 @@ h3 {
         }
         @media (max-width: 575.98px) {
             position: static;
-            padding: 2.75rem 0;
+            // @include rfs(20rem 0, padding);
             transform: translateY(0);
-            height: auto;
+            min-height: calc(100vh - 56.25vw - 72px);
             display: flex;
             align-items: center;
         }
@@ -308,6 +305,11 @@ h3 {
         overflow-x: hidden;
         @media (max-width: 575.98px) {
             background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
+            .owl-stage {
+                .item {
+                    min-height: calc(100vh - 72px);
+                }
+            }
         }
     }
     .owl-nav {
@@ -373,7 +375,7 @@ h3 {
             display: block;
             position: static;
             transform: none;
-            margin-top: 1rem !important;
+            margin-top: 1rem;
         }
     }
 }
@@ -383,7 +385,7 @@ h3 {
 // =============================================================================
 
 .services {
-    padding-bottom: 4.75rem;
+    @include rfs(4.75rem, padding-bottom);
     @media (max-width: 991.98px) {
         &__header {
             text-align: center;
@@ -395,7 +397,7 @@ h3 {
 }
 
 .service-item {
-    margin-bottom: 2.75rem;
+    @include rfs(2.75rem, margin-bottom);
     &_odd {
         margin-right: 1rem;
         @media (max-width: 991.98px) {
@@ -422,7 +424,7 @@ h3 {
         }
     }
     &__body {
-        padding-left: 8.125rem;
+        @include rfs(8.125rem, padding-left);
         @media (max-width: 991.98px) {
             padding: 0;
         }
@@ -452,7 +454,7 @@ h3 {
     background-color: $accent;
     text-align: center;
     &__heading {
-        margin-bottom: 2.75rem;
+        @include rfs(2.75rem, margin-bottom);
     }
     @media (max-width: 575.98px) {
         &__btn {
@@ -482,7 +484,7 @@ h3 {
         }
         @media (max-width: 991.98px) {
             height: 300px;
-            margin-top: 3.5rem;
+            @include rfs(3.5rem, margin-top);
         }
     }
     &__bg {
@@ -514,12 +516,12 @@ h3 {
     }
     &__lead {
         max-width: 750px;
-        margin-bottom: 3.5rem;
+        @include rfs(3.5rem, margin-bottom);
     }
-    &__brands { 
-        margin-top: 3.5rem;
+    &__brands {
+        @include rfs(3.5rem, margin-top);
         h3 {
-            margin-bottom: 2.75rem;
+            @include rfs(2.75rem, margin-bottom);
         }
         img {
             filter: contrast(0);
@@ -536,11 +538,11 @@ h3 {
 
 .grid {
     &__controls {
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
         button {
             line-height: 1;
             color: $dark;
-            padding: 1rem;
+            @include rfs(0.75rem 1.25rem, padding);
             &.active {
                 color: $accent;
             }
@@ -561,14 +563,14 @@ h3 {
 // About
 // =============================================================================
 .about {
-    padding-bottom: 18.75rem;
+    @include rfs(18.75rem, padding-bottom);
 }
 
 .facts {
-    padding-top: 4rem;
+    @include rfs(4rem, padding-top);
     @media (max-width: 767.98px) {
         [class^='col-']:not(:last-child) {
-            margin-bottom: 4rem;
+            @include rfs(4rem, margin-bottom);
         }
     }
 }
@@ -591,16 +593,13 @@ h3 {
 // =============================================================================
 
 .testimonials {
-    margin-top: -13rem;
+    @include rfs(-10rem, margin-top);
 }
 
 .testimonial {
     background-color: #fff;
     border-radius: 4px;
-    @include rfs(6.25rem, padding-top);
-    @include rfs(6.25rem, padding-bottom);
-    @include rfs(6.25rem, padding-right);
-    @include rfs(6.25rem, padding-left);
+    padding: 100px 64px;
     text-align: center;
     background-image: url(../media/quote.svg);
     background-position: top left;
@@ -615,6 +614,9 @@ h3 {
     }
     &__author {
         opacity: 54%;
+    }
+    @media (max-width: 575.98px) {
+        padding: 100px 16px;
     }
 }
 
@@ -637,7 +639,7 @@ h3 {
     }
     .owl-dots {
         line-height: 0;
-        margin-top: 2rem !important;
+        margin-top: 1rem !important;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -728,7 +730,7 @@ h3 {
         }
     }
     .owl-nav {
-        margin-top: 2rem;
+        margin-top: 1rem;
         text-align: left;
         .owl-prev {
             padding: 0;
@@ -780,13 +782,10 @@ h3 {
         max-width: 730px;
     }
     &__lead {
-        margin-bottom: 3.5rem;
+        @include rfs(3.5rem, margin-bottom);
     }
     &__preheading {
         left: 0;
-        &::before {
-            display: none;
-        }
     }
 }
 
@@ -817,10 +816,10 @@ h3 {
         }
     }
     &__heading {
-        margin-bottom: 2rem;
+        @include rfs(2rem, margin-bottom);
     }
     &__personal, &__service, &__brief {
-        margin-bottom: 2.75rem;
+        @include rfs(2.75rem, margin-bottom);
     }
 }
 
@@ -829,7 +828,7 @@ h3 {
 // =============================================================================
 
 .footer {
-    padding: 7.5rem 0;
+    @include rfs(7.5rem 0, padding);
     color: rgba($white, 0.87);
     a {
         color: rgba($white, 0.87);
