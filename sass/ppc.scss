@@ -41,6 +41,7 @@ $line-height-base: 1.6;
 $font-weight-base: 300;
 $link-color: $accent;
 
+// Grid
 $grid-gutter-width: 2rem;
 
 
@@ -58,10 +59,12 @@ $rfs-factor: 50; // Factor of decrease
 @import "../vendor/bootstrap/scss/bootstrap";
 @import "../node_modules/rfs/scss";
 
+
 // Global
 // =============================================================================
 
 html {
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -151,6 +154,47 @@ h3 {
     }
     &_large-gap {
         @include rfs(8.75rem 0, padding);
+    }
+}
+
+
+// SPINNER
+// =============================================================================
+
+.spinner-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
+    z-index: 9999999;
+}
+
+.spinner {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    &__ball {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+    &__text {
+        color: #fff;
+        margin-top: 4px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        font-size: 10px;
     }
 }
 
@@ -536,6 +580,7 @@ h3 {
     }
 }
 
+
 // Works
 // =============================================================================
 
@@ -545,7 +590,7 @@ h3 {
         button {
             line-height: 1;
             color: $dark;
-            @include rfs(0.75rem 1.25rem, padding);
+            @include rfs(0.5rem 1rem, padding);
             &.active {
                 color: $accent;
             }
@@ -563,8 +608,10 @@ h3 {
     }
 }
 
+
 // About
 // =============================================================================
+
 .about {
     @include rfs(18.75rem, padding-bottom);
 }
@@ -591,6 +638,7 @@ h3 {
         line-height: 1;
     }
 }
+
 
 // Testimonials
 // =============================================================================
@@ -663,18 +711,26 @@ h3 {
     }
 }
 
+
 // FAQs
 // =============================================================================
 
 .faq {
     &__icon {
-        @include font-size(1.25rem);
+        font-size: 12px;
+        color: $primary;
+        left: -2em;
+        position: absolute;
+        text-align: center;
+        width: 2em;
         line-height: 1.6;
     }
     &__btn {
+        position: relative;
         text-transform: none;
         @include font-size(1.25rem);
         line-height: 1.6;
+        color: $dark;
         &:focus, &:active {
             box-shadow: none !important;
         }
@@ -683,6 +739,7 @@ h3 {
         max-width: 800px;
     }
 }
+
 
 // BLOG
 // =============================================================================
@@ -870,5 +927,32 @@ h3 {
         margin-bottom: 20px;
         font-size: 20px;
         font-weight: 400;
+    }
+}
+
+
+// KEYFRAMES
+// =============================================================================
+
+@keyframes motion {
+    0% {
+        -webkit-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
+    }
+    25% {
+        -webkit-transform: translateX(-50px) scale(0.3);
+        transform: translateX(-50px) scale(0.3);
+    }
+    50% {
+        -webkit-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
+    }
+    75% {
+        -webkit-transform: translateX(50px) scale(0.3);
+        transform: translateX(50px) scale(0.3);
+    }
+    100% {
+        -webkit-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
     }
 }

@@ -27,11 +27,17 @@
         <link rel="stylesheet" href="css/ppc.min.css">
     </head>
     <body>
-        
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="spinner__ball"></div>
+                <p class="spinner__text">LOADING</p>
+            </div>
+        </div>
+        <!-- HEADER -->
         <header class="header">
             <div class="container">
                 <nav class="navbar navbar-expand-xl navbar-dark px-0 py-3">
-                    <a class="navbar-brand py-2" href="#">
+                    <a class="navbar-brand py-2 mr-2" href="#">
                         <img src="media/logo.png" loading="lazy" alt="PPC Pool Services Logo" srcset="media/logo.png 1x, media/logo@2x.png 2x">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -62,7 +68,7 @@
                                 <a class="nav-link" href="#contact">CONTACT</a>
                             </li>
                         </ul>
-                        <a class="hover-effect position-relative" href="tel:+"><i class="fas fa-phone-alt"></i> +357 26 XXX XXX</a>
+                        <div class="ml-5"><i class="fas fa-phone-alt text-accent"></i><a class="hover-effect position-relative ml-2" href="tel:+">+357 26 XXX XXX</a></div>
                     </div>
                 </nav>
             </div>
@@ -311,12 +317,12 @@
                     <div class="grid">
                         <div class="grid__controls">
                             <button type="button" class="btn btn-link pl-0 active">All</button>
-                            <button type="button" class="btn btn-link pl-0">Filter 1</button>
-                            <button type="button" class="btn btn-link pl-0">Filter 2</button>
-                            <button type="button" class="btn btn-link pl-0">Filter 3</button>
-                            <button type="button" class="btn btn-link pl-0">Filter 4</button>
-                            <button type="button" class="btn btn-link pl-0">Filter 5</button>
-                            <button type="button" class="btn btn-link pl-0">Filter 6</button>
+                            <button type="button" class="btn btn-link pl-0">Maintenance</button>
+                            <button type="button" class="btn btn-link pl-0">Repairs</button>
+                            <button type="button" class="btn btn-link pl-0">Refurbishments</button>
+                            <button type="button" class="btn btn-link pl-0">Installations</button>
+                            <button type="button" class="btn btn-link pl-0">Construction</button>
+                            <button type="button" class="btn btn-link pl-0">Water supply</button>
                         </div>
                         <div class="grid__list row px-2">
                             <div class="col-4 col-md-4">
@@ -447,10 +453,7 @@
                     </header>
                     <div class="accordion" id="accordionFaq">
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1" type="button">How can I find your shop?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1" type="button"><span class="faq__icon"><i class="fas fa-question-circle"></i></span>How can I find your shop?</button>
                             <hr>
                             <div class="collapse" id="collapse-1" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -460,10 +463,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2" type="button">How much will it cost me to have my pool cleaned?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">How much will it cost me to have my pool cleaned?</span></button>
                             <hr>
                             <div class="collapse" id="collapse-2" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -473,10 +473,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3" type="button">How often do I put chemicals in my pool?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">How often do I put chemicals in my pool?</span></button>
                             <hr>
                             <div class="collapse" id="collapse-3" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -486,10 +483,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4" type="button">Why do I need a qualified pool cleaner?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">Why do I need a qualified pool cleaner?</span></button>
                             <hr>
                             <div class="collapse" id="collapse-4" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -499,10 +493,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5" type="button">How often should I circulate (run the pump) my pool?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">How often should I circulate (run the pump) my pool?</span></button>
                             <hr>
                             <div class="collapse" id="collapse-5" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -512,10 +503,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6" type="button">How often should I change the sand in my filter?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">How often should I change the sand in my filter?</span></button>
                             <hr>
                             <div class="collapse" id="collapse-6" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -525,10 +513,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7" type="button">When can I use my pool after I add chemicals?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">When can I use my pool after I add chemicals?</button>
                             <hr>
                             <div class="collapse" id="collapse-7" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -538,10 +523,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8" type="button">What size pool should I buy?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">What size pool should I buy?</button>
                             <hr>
                             <div class="collapse" id="collapse-8" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -551,10 +533,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9" type="button">Why choose a Liner Pool?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">Why choose a Liner Pool?</button>
                             <hr>
                             <div class="collapse" id="collapse-9" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -564,10 +543,7 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <div class="d-inline-flex">
-                                <i class="faq__icon fas fa-question-circle"></i>
-                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10" type="button">Is there much maintenance associated with a swimming pool?</button>
-                            </div>
+                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">Is there much maintenance associated with a swimming pool?</button>
                             <hr>
                             <div class="collapse" id="collapse-10" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -783,9 +759,15 @@
                 </div>
             </div>
         </footer>
-
         <!-- jQuery -->
         <script src="vendor/jquery/dist/jquery.min.js"></script>
+        <script>
+            // Hide spinner on page load
+            $(window).on('load', function() {
+                $('.spinner-wrapper').fadeOut('slow');
+                $('html').css('overflow-y', 'visible');
+            });
+        </script>
         <!-- Popper.js -->
         <script src="vendor/popper.js/dist/umd/popper.min.js"></script>
         <!-- Bootstrap JS -->
