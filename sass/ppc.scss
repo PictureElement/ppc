@@ -11,11 +11,18 @@ $breadcrumb-divider: quote("|");
 // =============================================================================
 
 // Colors
+// $white: #fff;
+// $dark: #3C3744;
+// $light: #F2F8FC;
+// $primary:#0F75BC;
+// $accent: #4DCCBD;
+
+// Colors
 $white: #fff;
-$dark: #3C3744;
-$light: #F2F8FC;
+$dark: #2A2C57;
+$light: #ECF6FD;
 $primary:#0F75BC;
-$accent: #4DCCBD;
+$accent: #06C9B2;
 
 $theme-colors: (
     "white": $white,
@@ -69,6 +76,7 @@ html {
 }
 
 body {
+    background-color: #fff;
     color: $dark;
     overflow-x: hidden;
     @include font-size(1.25rem);
@@ -167,7 +175,9 @@ h3 {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
+    background: linear-gradient(-45deg, #0F75BC 0%, #083B5E 50%);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
     z-index: 9999999;
 }
 
@@ -631,7 +641,7 @@ h3 {
         @include font-size(8.5rem);
         font-weight: 100;
         line-height: 1;
-        color: rgba($primary, 0.3);
+        color: rgba($primary, 0.5);
     }
     &__text {
         @include font-size(2rem);
@@ -955,4 +965,16 @@ h3 {
         -webkit-transform: translateX(0) scale(1);
         transform: translateX(0) scale(1);
     }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
