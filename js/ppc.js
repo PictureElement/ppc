@@ -1,5 +1,25 @@
+// Hide spinner on page load
+$(window).on('load', function() {
+    $('.spinner-wrapper').fadeOut('slow');
+    $('html').css('overflow-y', 'visible');
+});
+
 $(document).ready(function() {
+    // Add header shadow
+    $('.navbar-toggler').on('click', function() {
+        $('.header').toggleClass('header_shadow');
+    });
     
+    // Back to top
+    $('.to-top').on('click', function(e) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000, function () {
+            // Callback after animation
+        });
+    });
+
     // Counters
     var elements = document.querySelectorAll('.counter');
     var counterUp = window.counterUp["default"];

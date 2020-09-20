@@ -210,12 +210,29 @@ h3 {
 }
 
 
+// TO TOP
+// =============================================================================
+
+.to-top {
+    z-index: 99999;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    color: black;
+    &:hover {
+        color: black;
+    }
+}
+
+
 // Header
 // =============================================================================
 
 .header {
     position: fixed;
-    z-index: 1000;
+    z-index: 99999999;
     width: 100%;
     // background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
     background-color: $primary;
@@ -257,6 +274,8 @@ h3 {
 // =============================================================================
 
 .hero {
+    z-index: 9999999;
+    position: relative;
     &-bg-wrapper {
         max-width: 54%;
         position: relative;

@@ -28,12 +28,14 @@
         <link rel="stylesheet" href="css/ppc.min.css">
     </head>
     <body>
+        <!-- SPINNER -->
         <div class="spinner-wrapper">
             <div class="spinner">
                 <div class="spinner__ball"></div>
                 <p class="spinner__text">LOADING</p>
             </div>
         </div>
+        <button class="to-top btn"><i class="fas fa-long-arrow-alt-up"></i></button>
         <!-- HEADER -->
         <header class="header">
             <div class="container">
@@ -608,7 +610,10 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="text-md-right">
-                                        <a class="btn btn-link" href="#" role="button">View all posts</a>
+                                        <div>
+                                            <i class="fas fa-long-arrow-alt-right text-accent"></i>
+                                            <a class="ml-2" href="tel:+">VIEW ALL POSTS</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -816,16 +821,6 @@
         </footer>
         <!-- jQuery -->
         <script src="vendor/jquery/dist/jquery.min.js"></script>
-        <script>
-            // Hide spinner on page load
-            $(window).on('load', function() {
-                $('.spinner-wrapper').fadeOut('slow');
-                $('html').css('overflow-y', 'visible');
-            });
-            $('.navbar-toggler').on('click', function() {
-                $('.header').toggleClass('header_shadow');
-            });
-        </script>
         <!-- Popper.js -->
         <script src="vendor/popper.js/dist/umd/popper.min.js"></script>
         <!-- Bootstrap JS -->
