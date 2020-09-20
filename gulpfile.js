@@ -38,6 +38,7 @@ function copy() {
     'node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css',
     'node_modules/@fortawesome/fontawesome-free/css/brands.min.css',
     'node_modules/@fortawesome/fontawesome-free/css/solid.min.css',
+    'node_modules/@fortawesome/fontawesome-free/css/regular.min.css',
     'node_modules/@fortawesome/fontawesome-free/webfonts/**/*',
     'node_modules/aos/dist/aos.js',
     'node_modules/aos/dist/aos.css',

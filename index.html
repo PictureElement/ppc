@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="vendor/@fortawesome/fontawesome-free/css/fontawesome.min.css">
         <link rel="stylesheet" href="vendor/@fortawesome/fontawesome-free/css/brands.min.css">
         <link rel="stylesheet" href="vendor/@fortawesome/fontawesome-free/css/solid.min.css">
+        <link rel="stylesheet" href="vendor/@fortawesome/fontawesome-free/css/regular.min.css">
         <!-- Fancybox -->
         <link rel="stylesheet" href="vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
         <!-- Owl Carousel 2 -->
@@ -264,33 +265,34 @@
                     </header>
                     <div class="shop__intro">
                         <h3>Visit our Paphos location</h3>
-                        <div class="row">
+                        <div class="row align-items-stretch">
                             <div class="col-lg-7">
-                                <div class="border p-3 rounded">
-                                    <p class="mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate rem delectus saepe deserunt soluta, culpa et corrupti, necessitatibus sunt reiciendis tempore. Libero quia tempora, iure necessitatibus officiis culpa obcaecati! Id nulla distinctio sit similique maxime tempore nihil repellat quo quibusdam, architecto necessitatibus minus unde delectus. Quos eveniet, cumque nesciunt adipisci earum soluta corrupti? Consequuntur, illum, cum dolor voluptate delectus adipisci ut fuga soluta recusandae sequi vero quo, minus inventore architecto. Ad delectus impedit commodi. Iste?</p>
+                                <div class="border pt-3 px-3 rounded">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, quo libero vero dicta rem inventore labore dignissimos fuga expedita facere, autem laudantium voluptatibus recusandae numquam consectetur exercitationem fugiat, debitis repellendus.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis tenetur quisquam deserunt beatae sunt sequi a illum. Assumenda reprehenderit numquam molestiae pariatur id porro?</p>
                                 </div>
                             </div>
-                            <div class="col-lg-5">
-                                <div class="shop__bg"></div>
+                            <div class="col-lg-5 mt-3 mt-lg-0">
+                                <div class="shop__bg border"></div>
                             </div>
                         </div>
                     </div>
                     <div class="shop__map">
                         <h3>Contact details</h3>
-                        <div class="row">
+                        <div class="row align-items-stretch">
                             <div class="col-lg-5">
                                 <div class="border p-3 rounded">
-                                    <ul class="fa-ul mb-0">
-                                        <li><span class="fa-li"><i class="fa-fw fas fa-map-marker-alt"></i></span>Olgas Ksinaridou Str.,<br>Omiros Court Shop 2,<br>8020, Paphos</li>
-                                        <li><span class="fa-li"><i class="fa-fw fas fa-phone-alt"></i></span>+357 26 XXX XXX</li>
-                                        <li><span class="fa-li"><i class="fa-fw fas fa-at"></i></span>mail@example.com</li>
-                                        <li><span class="fa-li"><i class="fa-fw fas fa-clock"></i></span>Mon. to Fri. from 08:00 - 17:00</li>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-map-marker-alt"></i><div class="ml-2"><a href="https://g.page/PPC-POOLS-LTD?share" target="_blank" rel="noopener noreferrer">Olgas Ksinaridou Str.,<br>Omiros Court Shop 2,<br>8020, Paphos</a></div></li>
+                                        <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-phone-alt"></i><div class="ml-2"><a href="tel:+">+357 26 XXX XXX</a></div></li>
+                                        <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-at"></i><div class="ml-2"><a href="mailto:">mail@example.com</a></div></li>
+                                        <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-clock"></i><div class="ml-2">Mon. to Fri. from 08:00 - 17:00</div></li>
                                     </ul>
                                     <a href="#contact" class="mt-3 btn btn-accent btn-block">Get a quote</a>
                                 </div>
                             </div>
-                            <div class="col-lg-7">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13107.633746367834!2d32.4272672!3d34.7830803!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca19c562fbb5da00!2sPPC%20Pool%20Services%20Ltd!5e0!3m2!1sen!2s!4v1600516980301!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            <div class="col-lg-7 mt-3 mt-lg-0">
+                                <iframe class="border" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13107.633746367834!2d32.4272672!3d34.7830803!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca19c562fbb5da00!2sPPC%20Pool%20Services%20Ltd!5e0!3m2!1sen!2s!4v1600516980301!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                             </div>
                         </div>
                     </div>
@@ -462,17 +464,23 @@
                     </header>
                     <div class="accordion" id="accordionFaq">
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1" type="button"><span class="faq__icon"><i class="fas fa-question-circle"></i></span>How can I find your shop?</button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-2" type="button">How can I find your shop?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-1" data-parent="#accordionFaq">
                                 <div class="faq__ans">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                                 </div>
-                                <hr> 
+                                <hr>
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">How much will it cost me to have my pool cleaned?</span></button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2" type="button">How much will it cost me to have my pool cleaned?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-2" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -482,7 +490,10 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">How often do I put chemicals in my pool?</span></button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3" type="button">How often do I put chemicals in my pool?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-3" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -492,7 +503,10 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">Why do I need a qualified pool cleaner?</span></button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4" type="button">Why do I need a qualified pool cleaner?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-4" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -502,7 +516,10 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">How often should I circulate (run the pump) my pool?</span></button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5" type="button">How often should I circulate (run the pump) my pool?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-5" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -512,7 +529,10 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">How often should I change the sand in my filter?</span></button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6" type="button">How often should I change the sand in my filter?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-6" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -522,7 +542,10 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">When can I use my pool after I add chemicals?</button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7" type="button">When can I use my pool after I add chemicals?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-7" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -532,7 +555,10 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">What size pool should I buy?</button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8" type="button">What size pool should I buy?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-8" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -542,7 +568,10 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">Why choose a Liner Pool?</button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9" type="button">Why choose a Liner Pool?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-9" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -552,7 +581,10 @@
                             </div>
                         </div>
                         <div class="faq">
-                            <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0" data-toggle="collapse" data-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10" type="button"><i class="faq__icon fas fa-question-circle"></i><span class="ml-2">Is there much maintenance associated with a swimming pool?</button>
+                            <div class="d-flex">
+                                <i class="faq__icon far fa-question-circle"></i>
+                                <button class="faq__btn btn btn-link btn-block rounded-0 text-left p-0 ml-2" data-toggle="collapse" data-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10" type="button">Is there much maintenance associated with a swimming pool?</button>
+                            </div>
                             <hr>
                             <div class="collapse" id="collapse-10" data-parent="#accordionFaq">
                                 <div class="faq__ans">
@@ -569,7 +601,18 @@
                 <div class="container">
                     <header>
                         <h5 class="section__preheading">BLOG</h5>
-                        <h2 class="section__heading">What's new at PPC</h2>
+                        <div class="blog__heading-wrapper">
+                            <div class="row align-items-end">
+                                <div class="col-md-8">
+                                    <h2 class="section__heading">What's new at PPC</h2>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-md-right">
+                                        <a class="btn btn-link" href="#" role="button">View all posts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </header>
                     <div id="blog-carousel" class="blog-carousel owl-carousel owl-theme">
                         <div class="item">
@@ -727,8 +770,11 @@
                     <div class="col-12 col-lg-3 mb-4 mb-lg-0">
                         <img class="footer__brand" src="media/logo.png" loading="lazy" alt="PPC Pool Services Logo" srcset="media/logo.png 1x, media/logo@2x.png 2x">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod dictum lacus sit amet mattis.</p>
-                        <div class="social">
-                            
+                        <div class="footer__social">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-12 col-lg-3 mb-4 mb-lg-0">
@@ -775,6 +821,9 @@
             $(window).on('load', function() {
                 $('.spinner-wrapper').fadeOut('slow');
                 $('html').css('overflow-y', 'visible');
+            });
+            $('.navbar-toggler').on('click', function() {
+                $('.header').toggleClass('header_shadow');
             });
         </script>
         <!-- Popper.js -->
