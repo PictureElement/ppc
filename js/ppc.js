@@ -6,10 +6,42 @@ $(window).on('load', function() {
 
 $(document).ready(function() {
     // Add header shadow
+    if( $(window).scrollTop() > 0 ) {
+        $('.header').addClass('header_shadow');
+    }
+
     $('.navbar-toggler').on('click', function() {
-        $('.header').toggleClass('header_shadow');
+        var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
+        var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
+        var hasShadow = $('.header').hasClass('header_shadow');
+
+        if (isScrollTopGreaterThanZero) {
+            $('header').addClass('header_shadow');
+        } else if (isNavbarCollapseVisible) {
+            $('header').removeClass('header_shadow');
+        } else {
+            $('header').addClass('header_shadow');
+        }
     });
-    
+
+    $(window).scroll(function() {
+        var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
+        var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
+        var hasShadow = $('.header').hasClass('header_shadow');
+
+        console.log(isNavbarCollapseVisible);
+        console.log(isScrollTopGreaterThanZero);
+        console.log(hasShadow);
+
+        if (isScrollTopGreaterThanZero) {
+            $('header').addClass('header_shadow');
+        } else if (isNavbarCollapseVisible) {
+            $('header').addClass('header_shadow');
+        } else {
+            $('header').removeClass('header_shadow');
+        }
+    });
+
     // Back to top
     $('.to-top').on('click', function(e) {
         event.preventDefault();
@@ -138,19 +170,6 @@ $(document).ready(function() {
     }
     var headroom  = new Headroom(header, options);
     headroom.init();
-
-    // Header shadow on scroll
-    if( $(window).scrollTop() > 0 ) {
-        $('.header').addClass('header_shadow');
-    }
-
-    $(window).scroll(function() {
-        if( $(window).scrollTop() > 0 ){
-            $('.header').addClass('header_shadow');
-        } else {
-            $('.header').removeClass('header_shadow');
-        }
-    });
 
     // Smooth scrolling
     $('a[href*="#"]')
