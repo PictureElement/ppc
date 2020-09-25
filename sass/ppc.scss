@@ -73,6 +73,7 @@ $rfs-factor: 50; // Factor of decrease
 body {
     background-color: #fff;
     color: $dark;
+    overflow-x: hidden;
     @include font-size(1.25rem);
     &.fancybox-active {
         overflow: hidden;
@@ -809,7 +810,7 @@ h3 {
 
 .post {
     border-radius: 4px;
-    &__date {
+    &__meta {
         @include font-size(1rem);
         opacity: 54%;
         line-height: 1;
@@ -817,9 +818,6 @@ h3 {
     }
     &__title {
         margin-bottom: 0.5rem;
-        a {
-            color: $dark;
-        }
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
