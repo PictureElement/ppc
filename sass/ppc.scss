@@ -185,7 +185,7 @@ h3 {
     background: linear-gradient(-45deg, $dark 0%, $primary 50%);
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-    z-index: 999999999;
+    z-index: 1004;
 }
 
 .spinner {
@@ -220,7 +220,7 @@ h3 {
 // =============================================================================
 
 .to-top {
-    z-index: 99999;
+    z-index: 1001;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -238,7 +238,7 @@ h3 {
 
 .header {
     position: fixed;
-    z-index: 99999999;
+    z-index: 1003;
     width: 100%;
     // background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
     background-color: $primary;
@@ -280,7 +280,7 @@ h3 {
 // =============================================================================
 
 .hero {
-    z-index: 9999999;
+    z-index: 1002;
     position: relative;
     &-bg-wrapper {
         max-width: 54%;
@@ -560,7 +560,6 @@ h3 {
 
 .shop {
     &__bg {
-        background-image: url(../media/shop.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -601,7 +600,7 @@ h3 {
             }
         }
     }
-    &__brands {
+    &__slideshow {
         h3 {
             @include rfs(2rem, margin-bottom);
         }

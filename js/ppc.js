@@ -90,8 +90,8 @@ $(document).ready(function() {
         }
     });
 
-    // Brands carousel
-    $('#brands-carousel').owlCarousel({
+    // Shop carousel
+    $('#shop-carousel').owlCarousel({
         loop:true,
         nav:false,
         dots: false,
