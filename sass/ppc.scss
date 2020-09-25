@@ -70,16 +70,13 @@ $rfs-factor: 50; // Factor of decrease
 // Global
 // =============================================================================
 
-html {
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
 body {
     background-color: #fff;
     color: $dark;
-    overflow-x: hidden;
     @include font-size(1.25rem);
+    &.fancybox-active {
+        overflow: hidden;
+    }
 }
 
 p {
@@ -238,6 +235,8 @@ h3 {
 
 .header {
     position: fixed;
+    left: 0;
+    top: 0;
     z-index: 1003;
     width: 100%;
     // background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
@@ -280,6 +279,7 @@ h3 {
 // =============================================================================
 
 .hero {
+    overflow-x: hidden;
     z-index: 1002;
     position: relative;
     &-bg-wrapper {
@@ -384,7 +384,6 @@ h3 {
 
 .hero-carousel {
     .owl-stage-outer {
-        overflow-x: hidden;
         @media (max-width: 575.98px) {
             // background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
             background-color: $primary;
@@ -650,6 +649,7 @@ h3 {
 // =============================================================================
 
 .about {
+    overflow-x: hidden;
     @include rfs(18.75rem, padding-bottom);
 }
 
@@ -681,6 +681,7 @@ h3 {
 // =============================================================================
 
 .testimonials {
+    overflow-x: hidden;
     @include rfs(-10rem, margin-top);
 }
 
@@ -689,7 +690,7 @@ h3 {
     border-radius: 4px;
     padding: 100px 64px;
     text-align: center;
-    background-image: url(../media/quote.svg);
+    background-image: url(../images/quote.svg);
     background-position: top left;
     background-repeat: no-repeat;
     height: 100%;
@@ -710,6 +711,8 @@ h3 {
 }
 
 .testimonials-carousel {
+    position: relative;
+    padding-bottom: calc(1rem + 24px);
     .owl-stage-outer {
         overflow: visible;
         .owl-stage {
@@ -790,6 +793,7 @@ h3 {
 // =============================================================================
 
 .blog {
+    overflow-x: hidden;
     &__heading-wrapper {
         @include rfs(3.5rem, margin-bottom);
         h2 {
