@@ -605,10 +605,12 @@ h3 {
             @include rfs(2rem, margin-bottom);
         }
         img {
-            filter: contrast(0);
-            transition: filter .15s ease-in-out;
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: filter .15s ease-in-out, opacity .15s ease-in-out;
             &:hover {
-                filter: contrast(100%)
+                filter: grayscale(0);
+                opacity: 1;;
             }
         }
     }
