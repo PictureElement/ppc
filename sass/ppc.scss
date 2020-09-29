@@ -169,6 +169,10 @@ h3 {
     color: #fff;
 }
 
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
 
 // SPINNER
 // =============================================================================
@@ -800,6 +804,11 @@ h3 {
 
 .blog {
     overflow-x: hidden;
+    &__list {
+        [class^='col-'] {
+            margin-bottom: 2rem;
+        }
+    }
     &__heading-wrapper {
         @include rfs(3.5rem, margin-bottom);
         h2 {
