@@ -4,7 +4,7 @@
 // Variables
 // =============================================================================
 
-$breadcrumb-divider: quote("|");
+$breadcrumb-divider: quote(">");
 
 
 // Bootstrap overrides (overrides must come before you import Bootstrap’s Sass files)
@@ -93,7 +93,7 @@ a {
 }
 
 h1 {
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.1428;
     @include font-size(4.25rem);
 }
@@ -171,6 +171,26 @@ h3 {
 
 .text-uppercase {
     text-transform: uppercase !important;
+}
+
+.breadcrumb-item {
+    @include font-size(1.25rem);
+    &.active {
+        color: rgba($dark, 0.54);
+    }
+    &+.breadcrumb-item::before {
+        color: rgba($dark, 0.54);
+    }
+}
+
+.cover {
+    &__title {
+        @include rfs(0.75rem, margin-bottom);
+    }
+    &__divider {
+        @include rfs(1.75rem, margin-top);
+        @include rfs(1.75rem, margin-bottom);
+    }
 }
 
 
@@ -722,7 +742,7 @@ h3 {
 
 .testimonials-carousel {
     position: relative;
-    padding-bottom: calc(1rem + 24px);
+    padding-bottom: calc(2rem + 24px);
     .owl-stage-outer {
         overflow: visible;
         .owl-stage {
@@ -741,7 +761,7 @@ h3 {
     }
     .owl-dots {
         line-height: 0;
-        margin-top: 1rem !important;
+        margin-top: 2rem !important;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -768,14 +788,10 @@ h3 {
 // =============================================================================
 
 .faqs {
-    border: 1px solid rgba($dark, 0.1);
     @include rfs(7.5rem, margin-top);
 }
 
 .faq {
-    hr {
-        border-top: 1px solid rgba($dark, 0.1);
-    }
     &__icon {
         color: $accent;
         line-height: 1.6;
@@ -824,6 +840,8 @@ h3 {
 
 .post {
     border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
     &__meta {
         @include font-size(1rem);
         opacity: 54%;
@@ -865,7 +883,7 @@ h3 {
         }
     }
     .owl-nav {
-        margin-top: 1rem;
+        margin-top: 2rem;
         text-align: left;
         .owl-prev {
             padding: 0;
