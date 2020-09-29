@@ -240,25 +240,28 @@ h3 {
     top: 0;
     z-index: 1003;
     width: 100%;
-    // background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
     background-color: $primary;
-    .navbar-toggler {
-        border-radius: 4px;
-    }
     &_shadow {
         box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
     }
-}
-
-.navbar-brand {
-    line-height: 1;
-    img {
-        height: 32px;
-        @media (max-width: 575.98px) {
-            height: 24px;
+    .navbar-toggler {
+        border-radius: 4px;
+    }
+    .navbar-brand {
+        line-height: 1;
+        img {
+            height: 32px;
+            @media (max-width: 575.98px) {
+                height: 24px;
+            }
         }
     }
+    .nav-link, .nav-phone {
+        @include font-size(1rem);
+    }
 }
+
+
 
 
 // Headroom
