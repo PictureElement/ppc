@@ -156,7 +156,16 @@ $(document).ready(function() {
             }
         }
     });
-    
+
+    // Post carousel
+    $('#post-carousel').owlCarousel({
+        loop:true,
+        nav:true,
+        navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+        dots: false,
+        autoplay:true,
+        items: 1
+    });
 
     // Fancybox options
     $('[data-fancybox]').fancybox({

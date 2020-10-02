@@ -37,7 +37,7 @@ $enable-shadows: true;
 $enable-responsive-font-sizes: false;
 
 // Buttons
-$btn-padding-y: 0.75rem;       
+$btn-padding-y: 0.75rem;
 $btn-padding-x: 1.25rem;             
 $btn-line-height: 1;
 $btn-border-radius: 40px;
@@ -99,15 +99,21 @@ h1 {
 }
 
 h2 {
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.1538;
     @include font-size(3.25rem);
 }
 
 h3 {
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.125;
     @include font-size(2rem);
+}
+
+h4 {
+    font-weight: 500;
+    line-height: 1.6;
+    @include font-size(1.25rem);
 }
 
 .btn {
@@ -155,7 +161,7 @@ h3 {
     &__heading {
         @include rfs(3.5rem, margin-bottom);
         &_mb-small {
-            margin-bottom: 1rem;
+            @include rfs(2rem, margin-bottom);
         }
     }
     &_large-gap {
@@ -174,12 +180,16 @@ h3 {
 }
 
 .breadcrumb-item {
-    @include font-size(1.25rem);
+    @include font-size(1rem);
     &.active {
         color: rgba($dark, 0.54);
     }
+    &+ .breadcrumb-item {
+        padding-left: 0.25rem;
+    }
     &+.breadcrumb-item::before {
         color: rgba($dark, 0.54);
+        padding-right: 0.25rem;
     }
 }
 
@@ -187,10 +197,18 @@ h3 {
     &__title {
         @include rfs(0.75rem, margin-bottom);
     }
+    &__subtitle {
+        font-weight: 300;
+    }
     &__divider {
         @include rfs(1.75rem, margin-top);
         @include rfs(1.75rem, margin-bottom);
     }
+}
+
+.badge {
+    font-size: 100%;
+    font-weight: 400;
 }
 
 
@@ -431,26 +449,33 @@ h3 {
         display: flex;
         width: 100%;
         justify-content: space-between;
-        padding: 0 1rem;
         .owl-prev {
-            color: #fff;
+            text-align: center;
+            background: transparent !important;
+            border-radius: 50%;
+            color: rgba(white, 0.54);
             width: 48px;
             height: 48px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 48px;
-            border: 1px solid #fff;
             font-size: 20px;
+            line-height: 48px;
+            padding: 0;
+            &:hover {
+                color: rgba(white, 1);
+            }
         }
         .owl-next {
-            color: #fff;
+            text-align: center;
+            background: transparent !important;
+            border-radius: 50%;
+            color: rgba(white, 0.54);
             width: 48px;
             height: 48px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 48px;
-            border: 1px solid #fff;
             font-size: 20px;
+            line-height: 48px;
+            padding: 0;
+            &:hover {
+                color: rgba(white, 1);
+            }
         }
     }
     .owl-dots {
@@ -696,7 +721,7 @@ h3 {
     text-align: center;
     &__number {
         @include font-size(8.5rem);
-        font-weight: 100;
+        font-weight: 300;
         line-height: 1;
         color: rgba($primary, 0.5);
     }
@@ -820,14 +845,28 @@ h3 {
 
 .blog {
     overflow-x: hidden;
-    &__list {
+    &-list {
         [class^='col-'] {
             margin-bottom: 2rem;
+            @media (max-width: 767.98px) {
+                margin-bottom: 1rem;
+            }
         }
     }
-    &__categories {
-        @media (max-width: 767.98px) {
+    &-categories {
+        @include rfs(3.5rem, margin-bottom);
+    }
+    &-similar {
+        .blog-list [class^='col-']:last-child {
             @include rfs(3.5rem, margin-bottom);
+        }
+    }
+    &-popular {
+        .blog-list [class^='col-']:last-child {
+            margin-bottom: 0;
+            @media (max-width: 767.98px) {
+                @include rfs(3.5rem, margin-bottom);
+            }
         }
     }
     &__heading-wrapper {
@@ -843,6 +882,13 @@ h3 {
     }
 }
 
+.tag-list {
+    li {
+        margin-right: .5rem;
+        margin-bottom: .5rem;
+    }
+}
+
 .post {
     border-radius: 4px;
     background-color: #fff;
@@ -854,7 +900,7 @@ h3 {
         margin-bottom: 4px;
     }
     &__title {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -870,6 +916,21 @@ h3 {
     &__link {
         position: absolute;
         bottom: 0;
+    }
+}
+
+.post-meta {
+    &__profile-image {
+        width: 48px;
+        height: 48px;
+    }
+    &__author {
+        @include font-size(1rem);
+        font-weight: 300;
+    }
+    &__date {
+        @include font-size(1rem);
+        color: rgba($dark, 0.54);
     }
 }
 
@@ -931,6 +992,53 @@ h3 {
     }
 }
 
+.post-carousel {
+    position: relative;
+    .item {
+        img {
+            border-radius: 4px;
+        }
+    }
+    .owl-nav {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .owl-prev {
+            text-align: center;
+            background: transparent !important;
+            border-radius: 50%;
+            color: rgba(white, 0.54);
+            width: 48px;
+            height: 48px;
+            font-size: 20px;
+            line-height: 48px;
+            padding: 0;
+            &:hover {
+                color: rgba(white, 1);
+            }
+        }
+        .owl-next {
+            text-align: center;
+            background: transparent !important;
+            border-radius: 50%;
+            color: rgba(white, 0.54);
+            width: 48px;
+            height: 48px;
+            font-size: 20px;
+            line-height: 48px;
+            padding: 0;
+            &:hover {
+                color: rgba(white, 1);
+            }
+        }
+    }
+}
 
 // CONTACT
 // =============================================================================
