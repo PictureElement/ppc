@@ -112,7 +112,7 @@ h3 {
 
 h4 {
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.2;
     @include font-size(1.25rem);
 }
 
@@ -931,6 +931,13 @@ h4 {
     @include rfs(3.5rem, margin-bottom);
 }
 
+// Blog page - Tags
+.blog-tags {
+    @media (max-width: 991.98px) {
+        @include rfs(3.5rem, margin-bottom);
+    }
+}
+
 // Blog page - Similar posts
 .blog-similar {
     .blog-list [class^='col-']:last-child {
@@ -942,9 +949,6 @@ h4 {
 .blog-popular {
     .blog-list [class^='col-']:last-child {
         margin-bottom: 0;
-        @media (max-width: 767.98px) {
-            @include rfs(3.5rem, margin-bottom);
-        }
     }
 }
 
@@ -981,9 +985,9 @@ h4 {
 
 // Tag list
 .tag-list {
-    li {
-        margin-right: .5rem;
-        margin-bottom: .5rem;
+    .list-inline-item {
+        font-size: 1rem;
+        margin: 0;
     }
 }
 
@@ -1001,6 +1005,18 @@ h4 {
         &__date {
             @include font-size(1rem);
             color: rgba($dark, 0.54);
+        }
+    }
+    &-share {
+        &__title {
+            @include font-size(1rem);
+            font-weight: 300;
+        }
+        &__link {
+            color: rgba($dark, 0.54);
+            &:hover, &:focus {
+                color: rgba($dark, 0.87);
+            }       
         }
     }
     &-carousel {
@@ -1049,6 +1065,16 @@ h4 {
                 }
             }
         }
+    }
+    &__return-btn {
+        margin-top: 3rem;
+        display: inline-block;
+    }
+}
+
+.aside {
+    .blog-tags {
+        @include rfs(3.5rem, margin-bottom);
     }
 }
 
