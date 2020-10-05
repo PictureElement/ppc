@@ -721,7 +721,7 @@ h4 {
     text-align: center;
     &__number {
         @include font-size(8.5rem);
-        font-weight: 300;
+        font-weight: 100;
         line-height: 1;
         color: rgba($primary, 0.5);
     }
