@@ -29,7 +29,7 @@
     </head>
     <body>
         <!-- SPINNER -->
-        <div class="spinner-wrapper">
+        <div id="spinnerWrapper" class="spinner-wrapper">
             <div class="spinner">
                 <div class="spinner__ball"></div>
                 <p class="spinner__text">LOADING</p>
@@ -37,10 +37,10 @@
         </div>
 
         <!-- TO TOP -->
-        <button class="to-top btn"><i class="fas fa-long-arrow-alt-up"></i></button>
+        <button id="toTop" class="to-top btn"><i class="fas fa-long-arrow-alt-up"></i></button>
 
         <!-- HEADER -->
-        <header class="header">
+        <header id="pageHeader" class="page-header">
             <div class="container">
                 <nav class="navbar navbar-expand-xl navbar-dark px-0 py-3">
                     <a class="navbar-brand py-2 mr-2" href="/">
@@ -86,7 +86,7 @@
         <main class="main">
             <!-- HERO -->
             <section class="hero">
-                <div class="hero-carousel owl-carousel">
+                <div id="heroCarousel" class="hero-carousel owl-carousel">
                     <div class="item">
                         <div class="hero-bg-wrapper">
                             <div class="ratio-box ratio-box_16-by-9" style="background-image: url(images/hero.jpg);background-size: cover;background-repeat: no-repeat;"></div>
@@ -281,7 +281,7 @@
                         <h5 class="section__preheading">SHOP</h5>
                         <h2 class="section__heading">Pool supplies & equipment</h2>
                     </header>
-                    <div class="shop__intro">
+                    <div class="shop-intro">
                         <h3>Visit our Paphos location</h3>
                         <div class="row align-items-stretch">
                             <div class="col-lg-7">
@@ -291,11 +291,11 @@
                                 </div>
                             </div>
                             <div class="col-lg-5 mt-3 mt-lg-0">
-                                <div class="shop__bg border" style="background-image: url(../images/shop.jpg);"></div>
+                                <div class="shop-intro__bg border" style="background-image: url(../images/shop.jpg);"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="shop__map">
+                    <div class="shop-map">
                         <h3>Contact details</h3>
                         <div class="row align-items-stretch">
                             <div class="col-lg-5">
@@ -314,9 +314,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__slideshow">
+                    <div class="shop-slideshow">
                         <h3>Supplier of top quality brands</h3>
-                        <div id="shop-carousel" class="owl-carousel owl-theme text-center">
+                        <div id="shopCarousel" class="owl-carousel owl-theme text-center">
                             <div class="item border"><img src="images/brand-01.png" alt=""></div>
                             <div class="item border"><img src="images/brand-02.svg" alt=""></div>
                             <div class="item border"><img src="images/brand-03.svg" alt=""></div>
@@ -448,7 +448,7 @@
             <!-- TESTIMONIALS -->
             <section id="testimonials" class="testimonials">
                 <div class="container">
-                    <div id="testimonials-carousel" class="testimonials-carousel owl-carousel owl-theme">
+                    <div id="testimonialsCarousel" class="testimonials-carousel owl-carousel owl-theme">
                         <div class="item">
                             <div class="testimonial shadow">
                                 <div class="testimonial__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque congue nulla eu volutpat. Donec dapibus commodo mauris vel consectetur.”</div>
@@ -637,7 +637,7 @@
                             </div>
                         </div>
                     </header>
-                    <div id="blog-carousel" class="blog-carousel owl-carousel owl-theme">
+                    <div id="blogCarousel" class="blog-carousel owl-carousel owl-theme">
                         <div class="item">
                             <article class="post shadow">
                                 <img class="img-fluid" src="images/post-1.jpg" loading="lazy" alt="...">

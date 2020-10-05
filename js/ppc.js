@@ -1,49 +1,48 @@
-// Hide spinner on page load
+// 1. Hide spinner on page load
 $(window).on('load', function() {
-    $('.spinner-wrapper').fadeOut('slow');
+    $('#spinnerWrapper').fadeOut('slow');
     $('html').css('overflow-y', 'visible');
 });
 
 $(document).ready(function() {
-    // Add header shadow
+    // 2. Add header shadow
+    var $pageHeader = $('#pageHeader');
+
     if( $(window).scrollTop() > 0 ) {
-        $('.header').addClass('header_shadow');
+        $pageHeader.addClass('header_shadow');
     }
 
     $('.navbar-toggler').on('click', function() {
         var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
         var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
-        var hasShadow = $('.header').hasClass('header_shadow');
+        var hasShadow = $pageHeader.hasClass('page-header_shadow');
+        
 
         if (isScrollTopGreaterThanZero) {
-            $('.header').addClass('header_shadow');
+            $pageHeader.addClass('page-header_shadow');
         } else if (isNavbarCollapseVisible) {
-            $('.header').removeClass('header_shadow');
+            $pageHeader.removeClass('page-header_shadow');
         } else {
-            $('.header').addClass('header_shadow');
+            $pageHeader.addClass('page-header_shadow');
         }
     });
 
     $(window).scroll(function() {
         var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
         var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
-        var hasShadow = $('.header').hasClass('header_shadow');
-
-        console.log(isNavbarCollapseVisible);
-        console.log(isScrollTopGreaterThanZero);
-        console.log(hasShadow);
+        var hasShadow = $pageHeader.hasClass('page-header_shadow');
 
         if (isScrollTopGreaterThanZero) {
-            $('.header').addClass('header_shadow');
+            $pageHeader.addClass('page-header_shadow');
         } else if (isNavbarCollapseVisible) {
-            $('.header').addClass('header_shadow');
+            $pageHeader.addClass('page-header_shadow');
         } else {
-            $('.header').removeClass('header_shadow');
+            $pageHeader.removeClass('page-header_shadow');
         }
     });
 
-    // Back to top
-    $('.to-top').on('click', function(e) {
+    // 3. Back to top
+    $('#toTop').on('click', function(e) {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: 0
@@ -52,7 +51,7 @@ $(document).ready(function() {
         });
     });
 
-    // Counters
+    // 4. Counters
     var elements = document.querySelectorAll('.counter');
     var counterUp = window.counterUp["default"];
 
@@ -67,8 +66,8 @@ $(document).ready(function() {
         })
     });
 
-    // Hero carousel
-    $('.hero-carousel').owlCarousel({
+    // 5. Hero carousel
+    $('#heroCarousel').owlCarousel({
         loop:true,
         margin:0,
         autoplay:true,
@@ -90,8 +89,8 @@ $(document).ready(function() {
         }
     });
 
-    // Shop carousel
-    $('#shop-carousel').owlCarousel({
+    // 6. Shop carousel
+    $('#shopCarousel').owlCarousel({
         loop:true,
         nav:false,
         dots: false,
@@ -117,8 +116,8 @@ $(document).ready(function() {
         }
     });
 
-    // Testimonials carousel
-    $('#testimonials-carousel').owlCarousel({
+    // 7. Testimonials carousel
+    $('#testimonialsCarousel').owlCarousel({
         loop:true,
         margin:0,
         nav:false,
@@ -134,8 +133,8 @@ $(document).ready(function() {
         }
     });
 
-    // Blog carousel
-    $('#blog-carousel').owlCarousel({
+    // 8. Blog carousel
+    $('#blogCarousel').owlCarousel({
         loop:false,
         nav:true,
         navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
@@ -157,8 +156,8 @@ $(document).ready(function() {
         }
     });
 
-    // Post carousel
-    $('#post-carousel').owlCarousel({
+    // 9. Post carousel
+    $('#singlePostCarousel').owlCarousel({
         loop:true,
         nav:true,
         navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
@@ -167,20 +166,20 @@ $(document).ready(function() {
         items: 1
     });
 
-    // Fancybox options
+    // 10. Fancybox options
     $('[data-fancybox]').fancybox({
         smallBtn : true
     });
 
-    // Headroom.js
-    var header = document.querySelector(".header");
+    // 11. Headroom.js
+    var pageHeader = document.getElementById("#pageHeader");
     var options = {
         offset : 500
     }
-    var headroom  = new Headroom(header, options);
+    var headroom  = new Headroom(pageHeader, options);
     headroom.init();
 
-    // Smooth scrolling
+    // 12. Smooth scrolling
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
         .not('[href="#"]')

@@ -31,7 +31,7 @@
     </head>
     <body>
         <!-- SPINNER -->
-        <div class="spinner-wrapper">
+        <div id="spinnerWrapper" class="spinner-wrapper">
             <div class="spinner">
                 <div class="spinner__ball"></div>
                 <p class="spinner__text">LOADING</p>
@@ -39,10 +39,10 @@
         </div>
 
         <!-- TO TOP -->
-        <button class="to-top btn"><i class="fas fa-long-arrow-alt-up"></i></button>
+        <button id="toTop" class="to-top btn"><i class="fas fa-long-arrow-alt-up"></i></button>
 
         <!-- HEADER -->
-        <header class="header">
+        <header id="pageHeader" class="page-header">
             <div class="container">
                 <nav class="navbar navbar-expand-xl navbar-dark px-0 py-3">
                     <a class="navbar-brand py-2 mr-2" href="/">
@@ -106,15 +106,15 @@
                     <div class="row">
                         <div class="col-md-7">
                             <!-- POST -->
-                            <section class="section">
-                                <div class="media post-meta mb-3 align-items-center">
-                                    <img class="post-meta__profile-image rounded-circle mr-2" src="https://via.placeholder.com/48x48.png" alt="...">
+                            <section class="single-post section">
+                                <div class="media single-post-meta mb-3 align-items-center">
+                                    <img class="single-post-meta__profile-image rounded-circle mr-2" src="https://via.placeholder.com/48x48.png" alt="...">
                                     <div class="media-body">
-                                        <h4 class="post-meta__author m-0">By John Smith</h4>
-                                        <div class="post-meta__date"><i class="fas fa-calendar-day"></i> 23/12/2020</div>
+                                        <h4 class="single-post-meta__author m-0">By John Smith</h4>
+                                        <div class="single-post-meta__date"><i class="fas fa-calendar-day"></i> 23/12/2020</div>
                                     </div>
                                 </div>
-                                <div id="post-carousel" class="post-carousel owl-carousel owl-theme">
+                                <div id="singlePostCarousel" class="single-post-carousel owl-carousel owl-theme">
                                     <div class="item">
                                         <img src="https://via.placeholder.com/1108x623.png?text=Post(1)" class="d-block w-100" alt="...">
                                     </div>
