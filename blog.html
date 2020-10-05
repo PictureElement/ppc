@@ -146,23 +146,25 @@
                             </article>
                         </div>
                     </div>
-                    <nav class="text-center" aria-label="Blog pagination">
-                        <ul class="pagination mx-auto text-center mb-0">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="d-flex flex-column align-items-center">
+                        <nav class="d-inline-block" aria-label="Blog pagination">
+                            <ul class="pagination mx-auto text-center mb-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </section>
 
@@ -217,8 +219,8 @@
                             <div class="blog-search pl-0 pl-lg-4">
                                 <h3 class="section__heading section__heading_mb-small">Search for posts</h3>
                                 <form class="d-flex">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn-accent" type="submit"><i class="fas fa-search"></i></button>
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn-accent rounded-right" type="submit"><i class="fas fa-search"></i></button>
                                 </form>
                             </div>
                             <!-- CATEGORIES -->
