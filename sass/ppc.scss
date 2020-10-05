@@ -985,9 +985,11 @@ h4 {
 
 // Tag list
 .tag-list {
+    font-size: 0;
     .list-inline-item {
         font-size: 1rem;
-        margin: 0;
+        margin-right: 4px;
+        margin-bottom: 4px;
     }
 }
 
