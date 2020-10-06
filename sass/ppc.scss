@@ -131,13 +131,6 @@ h4 {
     }
 }
 
-.main {
-    margin-top: 80px;
-    @media (max-width: 575.98px) {
-        margin-top: 72px;
-    }
-}
-
 .section {
     @include rfs(7.5rem 0, padding);
     &__preheading {
@@ -277,8 +270,7 @@ h4 {
 // =============================================================================
 
 .page-header {
-    position: fixed;
-    left: 0;
+    position: sticky;
     top: 0;
     z-index: 1003;
     width: 100%;
@@ -292,10 +284,7 @@ h4 {
     .navbar-brand {
         line-height: 1;
         img {
-            height: 32px;
-            @media (max-width: 575.98px) {
-                height: 24px;
-            }
+            width: 100px;
         }
     }
     .nav-link, .nav-phone {

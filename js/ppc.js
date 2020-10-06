@@ -172,7 +172,7 @@ $(document).ready(function() {
     });
 
     // 11. Headroom.js
-    var pageHeader = document.getElementById("#pageHeader");
+    var pageHeader = document.getElementById("pageHeader");
     var options = {
         offset : 500
     }
