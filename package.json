@@ -16,6 +16,7 @@
     "browser-sync": "^2.26.12",
     "counterup2": "^1.0.4",
     "headroom.js": "^0.11.0",
+    "holderjs": "^2.9.7",
     "jquery": "^3.4.1",
     "owl.carousel2": "^2.2.1",
     "popper.js": "^1.16.0",

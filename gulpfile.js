@@ -53,7 +53,8 @@ function copy() {
     'node_modules/simplebar/dist/simplebar.min.css',
     'node_modules/headroom.js/dist/headroom.min.js',
     'node_modules/counterup2/dist/index.js',
-    'node_modules/waypoints/lib/noframework.waypoints.js'
+    'node_modules/waypoints/lib/noframework.waypoints.js',
+    'node_modules/holderjs/holder.min.js'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('vendor/'));
 }
