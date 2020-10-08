@@ -714,7 +714,7 @@ h4 {
         @include font-size(8.5rem);
         font-weight: 100;
         line-height: 1;
-        color: rgba($primary, 0.5);
+        color: rgba($primary, 0.54);
     }
     &__text {
         @include font-size(2rem);
@@ -729,6 +729,12 @@ h4 {
 .testimonials {
     overflow-x: hidden;
     @include rfs(-10rem, margin-top);
+    &__quote {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        fill: rgba($primary, 0.25);
+    }
 }
 
 .testimonial {
@@ -736,9 +742,6 @@ h4 {
     border-radius: 4px;
     padding: 100px 64px;
     text-align: center;
-    background-image: url(../images/quote.svg);
-    background-position: top left;
-    background-repeat: no-repeat;
     height: 100%;
     display: flex;
     justify-content: center;
