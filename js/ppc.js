@@ -1,9 +1,3 @@
-// 1. Hide spinner on page load
-$(window).on('load', function() {
-    $('#spinnerWrapper').fadeOut('slow');
-    $('html').css('overflow-y', 'visible');
-});
-
 $(document).ready(function() {
     // 2. Add header shadow
     var $pageHeader = $('#pageHeader');
@@ -225,4 +219,14 @@ $(document).ready(function() {
     $( window ).resize(function() {
         equalHeight();
     });
+});
+
+$(window).on('load', function() {
+    // 1. Hide spinner on page load
+    $('#spinnerWrapper').fadeOut('slow');
+    $('html').css('overflow-y', 'visible'); 
+
+    // 14. Multi-Line Truncation
+    $(".hero-text-wrapper__title").addClass('truncate-overflow-title');
+    $(".hero-text-wrapper__lead").addClass('truncate-overflow-lead');
 });

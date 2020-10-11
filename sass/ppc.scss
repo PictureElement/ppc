@@ -43,7 +43,7 @@ $btn-line-height: 1;
 $btn-border-radius: 40px;
 
 // Typography
-$font-family-base: 'Poppins', sans-serif;
+$font-family-base: 'Montserrat', sans-serif;
 $line-height-base: 1.6;
 $font-weight-base: 300;
 $link-color: $accent;
@@ -79,6 +79,81 @@ body {
         overflow: hidden;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+// Multi-Line Truncation 
+// =============================================================================
+
+// Hero title
+.truncate-overflow-title {
+    position: relative;
+    max-height: calc(1.1428 * 2 * 4.375vw);
+    overflow: hidden;
+    margin-right: -3.45vw;
+    padding-right: 3.45vw;
+}
+
+.truncate-overflow-title::before {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.truncate-overflow-title::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 3.45vw;
+    height: 100%;
+    background-color: $primary;
+}
+
+// Hero lead
+.truncate-overflow-lead {
+    position: relative;
+    @include rfs(calc(1.125 * 2 * 1.666vw), max-height);
+    overflow: hidden;
+    @include rfs(-1.15vw, margin-right);
+    @include rfs(1.15vw, padding-right);
+}
+
+.truncate-overflow-lead::before {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.truncate-overflow-lead::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1.15vw;
+    height: 100%;
+    background-color: $primary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 p {
     margin-bottom: 1rem;
@@ -481,8 +556,8 @@ h4 {
         display: flex;
         flex-direction: column;
         position: absolute;
-        right: 20px;
-        top: calc(50% - 2.9166vw);
+        left: 20px;
+        top: calc(50%);
         transform: translateY(-50%);
         margin-top: 0 !important;
         .owl-dot {
