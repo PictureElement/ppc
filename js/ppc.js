@@ -224,9 +224,5 @@ $(document).ready(function() {
 $(window).on('load', function() {
     // 1. Hide spinner on page load
     $('#spinnerWrapper').fadeOut('slow');
-    $('html').css('overflow-y', 'visible'); 
-
-    // 14. Multi-Line Truncation
-    $(".hero-text-wrapper__title").addClass('truncate-overflow-title');
-    $(".hero-text-wrapper__lead").addClass('truncate-overflow-lead');
+    $('html').css('overflow-y', 'visible');
 });
