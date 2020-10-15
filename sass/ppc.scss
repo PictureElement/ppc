@@ -4,30 +4,34 @@
 // Variables
 // =============================================================================
 
-$breadcrumb-divider: quote(">");
+$breadcrumb-divider: quote("»");
 
 
 // Bootstrap overrides (overrides must come before you import Bootstrap’s Sass files)
 // =============================================================================
 
 // Colors
-// $white: #fff;
-// $dark: #3C3744;
-// $light: #F2F8FC;
-// $primary:#0F75BC;
-// $accent: #4DCCBD;
+$body: red;
 
-// Colors
-$white: #fff;
-$dark: #2A2C57;
-$light: #ECF6FD;
-$primary:#0F75BC;
-$accent: #06C9B2;
+$primary: #005d81;
+$on-primary: #fff;
+
+$primary-dark: #003454;
+$on-primary-dark: #fff;
+
+$accent: #8CFFDA;
+$on-accent: #14313D;
+
+$accent-dark: #57cba8;
+$on-accent-dark: #14313D;
+
+$background: #fff;
+$on-background: #14313D;
+
+$surface: #fff;
+$on-surface: #14313D;
 
 $theme-colors: (
-    "white": $white,
-    "dark": $dark,
-    "light": $light,
     "primary": $primary,
     "accent": $accent
 );
@@ -44,8 +48,9 @@ $btn-border-radius: 40px;
 
 // Typography
 $font-family-base: 'Montserrat', sans-serif;
+$headings-font-family: 'Arima Madurai', cursive;
 $line-height-base: 1.6;
-$font-weight-base: 300;
+$font-weight-base: 400;
 $link-color: $accent;
 
 // Grid
@@ -71,8 +76,8 @@ $rfs-factor: 50; // Factor of decrease
 // =============================================================================
 
 body {
-    background-color: #fff;
-    color: $dark;
+    background-color: $background;
+    color: $on-background;
     overflow-x: hidden;
     @include font-size(1.25rem);
     &.fancybox-active {
@@ -93,21 +98,17 @@ p {
 }
 
 a {
-    font-weight: 400;
     color: $accent;
-    &:hover {
-        color: $accent;
-    }
 }
 
 h1 {
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1.1428;
     @include font-size(4.25rem);
 }
 
 h2 {
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.1538;
     @include font-size(3.25rem);
 }
@@ -116,12 +117,6 @@ h3 {
     font-weight: 500;
     line-height: 1.125;
     @include font-size(2rem);
-}
-
-h4 {
-    font-weight: 500;
-    line-height: 1.2;
-    @include font-size(1.25rem);
 }
 
 .btn {
@@ -138,6 +133,24 @@ h4 {
     }
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: $on-primary;
+    position: relative;
+    &:hover, &:focus {
+        color: $on-primary;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 1px;
+            background-color: $on-primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
 .ratio-box {
     position: relative;
     overflow: hidden;
@@ -151,6 +164,7 @@ h4 {
     @include rfs(7.5rem 0, padding);
     &__preheading {
         @include font-size(1.25rem);
+        font-family: $font-family-base;
         font-weight: 300;
         color: $primary;
         position: relative;
@@ -180,8 +194,8 @@ h4 {
 
 // Highlight color
 ::selection {
-    background-color: $primary;
-    color: #fff;
+    background-color: $accent;
+    color: $on-accent;
 }
 
 .text-uppercase {
@@ -191,13 +205,13 @@ h4 {
 .breadcrumb-item {
     @include font-size(1rem);
     &.active {
-        color: rgba($dark, 0.54);
+        color: $body;
     }
     &+ .breadcrumb-item {
         padding-left: 0.25rem;
     }
     &+.breadcrumb-item::before {
-        color: rgba($dark, 0.54);
+        color: $body;
         padding-right: 0.25rem;
     }
 }
@@ -207,7 +221,10 @@ h4 {
         @include rfs(0.75rem, margin-bottom);
     }
     &__subtitle {
+        font-family: $font-family-base;
         font-weight: 300;
+        line-height: 1.125;
+        @include font-size(2rem);
     }
     &__divider {
         @include rfs(1.75rem, margin-top);
@@ -231,7 +248,7 @@ h4 {
     top: 0;
     left: 0;
     background: $primary;
-    background: linear-gradient(-45deg, $dark 0%, $primary 50%);
+    background: linear-gradient(-45deg, $primary-dark 0%, $primary 50%);
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     z-index: 1004;
@@ -342,7 +359,7 @@ h4 {
             display: block;
             width: 100%;
             height: 100%;
-            background-color: rgba($dark, 0.3);
+            background-color: rgba(black, 0.3);
             position: absolute;
             top: 0;
             left: 0;
@@ -363,13 +380,11 @@ h4 {
     }
     &__bg {
         border-radius: 0 4px 4px 0;
-
         @media (max-width: 1199.98px) {
             border-radius: 0;
         }
     }
     &-text-wrapper {
-        // background: linear-gradient(270deg, #0F75BC 0%, #083B5E 50%);
         background-color: $primary;
         position: absolute;
         top: 0;
@@ -383,6 +398,7 @@ h4 {
             z-index: 2;
             margin-bottom: 0.625vw;
             margin-left: auto;
+            color: $on-primary;
             @media (max-width: 1199.98px) {
                 max-width: 800px;
                 margin-right: auto;
@@ -391,12 +407,16 @@ h4 {
             }
         }
         &__lead {
+            font-family: $font-family-base;
+            font-weight: 300;
             font-size: 1.666vw;
+            line-height: 1.125;
             max-width: 41.666vw;
             position: relative;
             z-index: 2;
             margin-bottom: 2.292vw;
             margin-left: auto;
+            color: $on-primary;
             @media (max-width: 1199.98px) {
                 max-width: 800px;
                 margin-right: auto;
@@ -560,7 +580,7 @@ h4 {
     }
     &__figure {
         transition: border-color .15s ease-in-out;
-        border: 1px solid transparent;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         border-radius: 50%;
         overflow: hidden;
         display: inline-block;
@@ -577,6 +597,12 @@ h4 {
             padding: 0;
         }
     }
+    &__link {
+        color: $on-background;
+        &:hover {
+            color: $on-background;
+        }
+    }
     &__heading {
         margin-bottom: 0.75rem;
     }
@@ -585,9 +611,6 @@ h4 {
         @media (max-width: 991.98px) {
             display: none;
         }
-    }
-    figure {
-        border-color: rgba($primary, 0.54);
     }
     @media (max-width: 991.98px) {
         text-align: center;
@@ -599,8 +622,9 @@ h4 {
 // =============================================================================
 
 .cta {
-    background-color: $accent;
+    background-color: $primary;
     text-align: center;
+    color: $on-primary;
     &__heading {
         @include rfs(2.75rem, margin-bottom);
     }
@@ -618,8 +642,10 @@ h4 {
 // =============================================================================
 
 .shop-intro {
+    color: $on-surface;
     h3 {
         @include rfs(2rem, margin-bottom);
+        color: $on-background;
     }
 }
 
@@ -634,12 +660,13 @@ h4 {
 
 .shop-map {
     @include rfs(3.5rem 0 3.5rem 0, margin);
+    color: $on-surface;
     ul li a {
-        color: $dark;
-        font-weight: 300;
+        color: $on-surface;
     }
     h3 {
         @include rfs(2rem, margin-bottom);
+        color: $on-background;
     }
     iframe {
         border-radius: 4px;
@@ -655,6 +682,7 @@ h4 {
 .shop-slideshow {
     h3 {
         @include rfs(2rem, margin-bottom);
+        color: $on-background;
     }
     img {
         filter: grayscale(100%);
@@ -676,13 +704,22 @@ h4 {
         margin-bottom: 0.75rem;
         button {
             line-height: 1;
-            color: $dark;
-            @include rfs(0.5rem 1rem, padding);
-            &:hover {
-                color: $dark;
+            color: $on-background;
+            @include rfs(0.5rem, padding);
+            position: relative;
+            &:hover, &:focus {
+                color: $on-background;
+                text-decoration: none;
             }
-            &.active {
-                color: $accent;
+            &.active::before {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 1px;
+                background-color: $on-background;
+                position: absolute;
+                bottom: 0;
+                left: 0;
             }
         }
     }
@@ -703,6 +740,7 @@ h4 {
 // =============================================================================
 
 .about {
+    background-color: darken($background, 5%);
     overflow-x: hidden;
     @include rfs(18.75rem, padding-bottom);
 }
@@ -720,11 +758,14 @@ h4 {
     text-align: center;
     &__number {
         @include font-size(8.5rem);
+        font-family: $headings-font-family;
         font-weight: 100;
         line-height: 1;
-        color: rgba($primary, 0.54);
+        color: $primary;
     }
     &__text {
+        font-family: $headings-font-family;
+        font-weight: 500;
         @include font-size(2rem);
         line-height: 1;
     }
@@ -741,7 +782,7 @@ h4 {
         position: absolute;
         top: 0;
         z-index: 1;
-        fill: rgba($primary, 0.25);
+        fill: rgba($on-surface, 0.15);
     }
 }
 
@@ -755,12 +796,11 @@ h4 {
     justify-content: center;
     flex-direction: column;
     &__text {
-        font-style: italic;
         margin-bottom: 1rem;
     }
     &__author {
-        opacity: 54%;
-        font-size: 16px;
+        @include font-size(1rem);
+        font-weight: 300;
     }
     @media (max-width: 575.98px) {
         padding: 100px 16px;
@@ -793,16 +833,16 @@ h4 {
         left: 50%;
         transform: translateX(-50%);
         .owl-dot {
-            transition: background-color .15s ease-in-out;
             span {
                 margin: 4px;
                 width: 16px;
                 height: 16px;
-                background: transparent;
+                background: #fff;
                 border: 1px solid $accent;
             }
             &.active, &:hover {
                 span {
+                    border: none;
                     background: $accent;
                 }
             }
@@ -828,9 +868,9 @@ h4 {
         text-transform: none;
         @include font-size(1.25rem);
         line-height: 1.6;
-        color: $dark;
+        color: $on-background;
         &:hover {
-            color: $dark;
+            color: $on-background;
         }
         &:focus, &:active {
             box-shadow: none !important;
@@ -844,6 +884,11 @@ h4 {
 
 // BLOG
 // =============================================================================
+
+.blog {
+    background-color: darken($background, 5%);
+    overflow-x:hidden;
+}
 
 // Homepage blog carousel
 .blog-carousel {
@@ -873,7 +918,7 @@ h4 {
         .owl-prev {
             padding: 0;
             margin: 0 .5rem 0 0;
-            color: #fff;
+            color: $on-accent;
             width: 48px;
             height: 48px;
             border-radius: 50%;
@@ -882,17 +927,17 @@ h4 {
             background: $accent;
             font-size: 20px;
             &:hover {
-                background: $dark;
+                background: darken($accent, 10%);
+                color: $on-accent;
             }
             &.disabled {
-                background: $accent;
-                opacity: 0.5 !important;
+                background: lighten($accent, 10%);
             }
         }
         .owl-next {
             padding: 0;
             margin: 0;
-            color: #fff;
+            color: $on-accent;
             width: 48px;
             height: 48px;
             border-radius: 50%;
@@ -901,11 +946,11 @@ h4 {
             background: $accent;
             font-size: 20px;
             &:hover {
-                background: $dark;
+                background: darken($accent, 10%);
+                color: $on-accent;
             }
             &.disabled {
-                background: $accent;
-                opacity: 0.5 !important;
+                background: lighten($accent, 10%);
             }
         }
     }
@@ -925,19 +970,6 @@ h4 {
     margin-top: 2rem;
     @media (max-width: 767.98px) {
         margin-top: 1rem;
-    }
-}
-
-// Homepage blog heading
-.blog-heading-wrapper {
-    @include rfs(3.5rem, margin-bottom);
-    h2 {
-        margin-bottom: 0;
-    }
-    .btn {
-        @media (max-width: 767.98px) {
-            padding-left: 0;
-        }
     }
 }
 
@@ -971,7 +1003,7 @@ h4 {
 .blog-search {
     @include rfs(3.5rem, margin-bottom);
     .form-control {
-        color: rgba($dark, 0.87);
+        color: $body;
         font-size: 16px;
         padding: 8px 12px;
         line-height: 1.6;
@@ -991,21 +1023,28 @@ h4 {
 // Post card
 .post {
     border-radius: 4px;
-    background-color: #fff;
+    background-color: $surface;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    color: $on-surface;
     &__meta {
         @include font-size(1rem);
-        opacity: 54%;
         line-height: 1;
         margin-bottom: 4px;
+        font-weight: 300;
+        a {
+            color: $on-surface;
+        }
     }
     &__title {
         margin-bottom: 0.75rem;
         overflow: hidden;
+        a {
+            color: $on-surface;
+        }
     }
     &__excerpt {
         margin-bottom: 0;
@@ -1036,29 +1075,27 @@ h4 {
         }
         &__author {
             @include font-size(1rem);
-            font-weight: 300;
         }
         &__date {
             @include font-size(1rem);
-            color: rgba($dark, 0.54);
         }
     }
     &-share {
         &__title {
             @include font-size(1.25rem);
-            font-weight: 300;
+            font-weight: 500;
             text-align: center;
         }
         &__link {
             @include font-size(2rem);
-            color: rgba($dark, 0.54);
+            color: rgba($body, 0.54);
             width: 48px;
             height: 48px;
             display: inline-block;
             text-align: center;
             line-height: 48px;
             &:hover, &:focus {
-                color: rgba($dark, 0.87);
+                color: rgba($body, 0.87);
             }       
         }
     }
@@ -1126,6 +1163,7 @@ h4 {
 // =============================================================================
 
 .contact {
+    color: $on-accent;
     .container {
         max-width: 730px;
     }
@@ -1140,13 +1178,13 @@ h4 {
 .contact-form {
     .form-control {
         background-color: transparent;
-        border-color: rgba($dark, 0.54);
+        border-color: rgba($on-accent, 0.54);
         @include font-size(1.25rem);
     }
     .custom-control-label {
         &::before {
             background-color: transparent;
-            border: rgba($dark, 0.54) solid 1px;
+            border: rgba($on-accent, 0.54) solid 1px;
             box-shadow: none;
             @include rfs(1.25rem, 'width');
             @include rfs(1.25rem, 'height');
@@ -1156,8 +1194,8 @@ h4 {
         }
     }
     .custom-control-input:checked~.custom-control-label::before {
-        border-color: $dark;
-        background-color: $dark;
+        border-color: $primary;
+        background-color: $primary;
         box-shadow: none;
     }
     button {
@@ -1179,11 +1217,11 @@ h4 {
 // =============================================================================
 
 .footer {
+    background-color: $primary-dark;
     @include rfs(7.5rem 0, padding);
-    color: rgba($white, 0.87);
+    color: $on-primary-dark;
     a {
-        color: rgba($white, 0.87);
-        font-weight: 300;
+        color: $on-primary-dark;
     }
     p {
         margin-bottom: 12px;
@@ -1197,7 +1235,7 @@ h4 {
         margin-bottom: 12px;
         .form-control {
             background-color: transparent;
-            border-color: rgba($white, 0.54);
+            border-color: rgba($on-primary-dark, 0.54);
             color: rgba($white, 0.87);
             font-size: 16px;
             padding: 8px 12px;
@@ -1228,10 +1266,10 @@ h4 {
         margin-bottom: 20px;
     }
     &__heading {
-        color: #fff;
+        color: $on-primary-dark;
         margin-bottom: 20px;
         font-size: 20px;
-        font-weight: 400;
+        font-weight: 500;
     }
 }
 
