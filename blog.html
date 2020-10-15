@@ -96,21 +96,21 @@
 
         <main class="main">
             <!-- COVER -->
-            <div class="cover section jumbotron jumbotron-fluid mb-0 bg-white">
-                <div class="container text-dark">
+            <div class="cover section jumbotron jumbotron-fluid mb-0">
+                <div class="container">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb bg-transparent p-0 mb-0">
                             <li class="breadcrumb-item"><a href="/">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Blog</li>
                         </ol>
                     </nav>
-                    <h1 class="cover__title">Blog</h1>
-                    <p class="cover__subtitle mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta explicabo ipsum, fugiat mollitia iusto laudantium.</p>
+                    <h1 class="cover__title mt-3">Blog</h1>
+                    <p class="cover__subtitle mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
             </div>
 
             <!-- BLOG -->
-            <section class="section blog bg-light">
+            <section class="section section_dark blog">
                 <div class="container">
                     <header>
                         <h2 class="section__heading">Latest posts</h2>
@@ -252,17 +252,17 @@
                     <div class="d-flex flex-column align-items-center">
                         <nav class="d-inline-block" aria-label="Blog pagination">
                             <ul class="pagination mx-auto text-center mb-0">
-                                <li class="page-item">
+                                <li class="page-item disabled">
                                     <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
+                                        <span aria-hidden="true">Previous</span>
                                     </a>
                                 </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 <li class="page-item">
                                     <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
+                                        <span aria-hidden="true">Next</span>
                                     </a>
                                 </li>
                             </ul>
@@ -281,7 +281,7 @@
                                 <h3 class="section__heading section__heading_mb-small">Popular posts</h3>
                                 <div class="blog-list row">
                                     <div class="col-md-12">
-                                        <article class="post border">
+                                        <article class="post border_on-background">
                                             <div class="card-body">
                                                 <div class="post__meta">Posted in <a href="/category.html">Category</a> on Sep 25, 2020.</div>
                                                 <h4 class="post__title mb-0"><a href="/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
@@ -289,7 +289,7 @@
                                         </article>
                                     </div>
                                     <div class="col-md-12">
-                                        <article class="post border">
+                                        <article class="post border_on-background">
                                             <div class="card-body">
                                                 <div class="post__meta">Posted in <a href="/category.html">Category</a> on Sep 25, 2020.</div>
                                                 <h4 class="post__title mb-0"><a href="/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
@@ -297,7 +297,7 @@
                                         </article>
                                     </div>
                                     <div class="col-md-12">
-                                        <article class="post border">
+                                        <article class="post border_on-background">
                                             <div class="card-body">
                                                 <div class="post__meta">Posted in <a href="/category.html">Category</a> on Sep 25, 2020.</div>
                                                 <h4 class="post__title mb-0"><a href="/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
@@ -305,7 +305,7 @@
                                         </article>
                                     </div>
                                     <div class="col-md-12">
-                                        <article class="post border">
+                                        <article class="post border_on-background">
                                             <div class="card-body">
                                                 <div class="post__meta">Posted in <a href="/category.html">Category</a> on Sep 25, 2020.</div>
                                                 <h4 class="post__title mb-0"><a href="/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
@@ -327,17 +327,17 @@
                             <!-- CATEGORIES -->
                             <div class="blog-categories pl-0 pl-lg-4">
                                 <h3 class="section__heading section__heading_mb-small">Categories</h3>
-                                <ul class="list-unstyled mb-0 border rounded p-3">
-                                    <li><a href="/category.html">&raquo; Tips (24)</a></li>
-                                    <li><a href="/category.html">&raquo; News (10)</a></li>
-                                    <li><a href="/category.html">&raquo; Services (12)</a></li>
-                                    <li><a href="/category.html">&raquo; Special offers (32)</a></li>
+                                <ul class="list-unstyled mb-0 border_on-background rounded p-3">
+                                    <li>&raquo; <a href="/category.html">Tips (24)</a></li>
+                                    <li>&raquo; <a href="/category.html">News (10)</a></li>
+                                    <li>&raquo; <a href="/category.html">Services (12)</a></li>
+                                    <li>&raquo; <a href="/category.html">Special offers (32)</a></li>
                                 </ul>
                             </div>
                             <!-- TAGS -->
                             <div class="blog-tags pl-0 pl-lg-4">
                                 <h3 class="section__heading section__heading_mb-small">Tag cloud</h3>
-                                <ul class="tag-list list-inline mb-0 border rounded p-3">
+                                <ul class="tag-list list-inline mb-0 border_on-background rounded p-3">
                                     <li class="list-inline-item"><a href="/tag.html" class="badge badge-accent">Liners (2)</a></li>
                                     <li class="list-inline-item"><a href="/tag.html" class="badge badge-accent">LED lights (4)</a></li>
                                     <li class="list-inline-item"><a href="/tag.html" class="badge badge-accent">IP68 (3)</a></li>
@@ -367,23 +367,23 @@
             <section class="section section_large-gap cta">
                 <div class="container">
                     <h2 class="cta__heading">Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-                    <a href="tel:+" class="cta__btn btn btn-dark"><i class="fas fa-phone-alt"></i> +357 26 XXX XXX</a>
-                    <a href="/#contact" class="cta__btn btn btn-outline-dark">Get a quote</a>
+                    <a href="tel:+" class="cta__btn btn btn-accent"><i class="fas fa-phone-alt"></i> +357 26 XXX XXX</a>
+                    <a href="/#contact" class="cta__btn btn btn-outline-accent">Get a quote</a>
                 </div>
             </section>
         </main>
 
         <!-- FOOTER -->
-        <footer class="footer bg-dark">
+        <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-3 mb-4 mb-lg-0">
                         <img class="footer__brand" src="https://placehold.co/120x30.png" srcset="https://placehold.co/120x30.png?text=120x30@1x 1x, https://placehold.co/240x60@2x.png?text=120x30@2x 2x"  width="120" loading="lazy" alt="PPC Pool Services Logo">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod dictum lacus sit amet mattis.</p>
-                        <div class="footer__social">
+                        <div>
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="list-inline-item"><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a class="footer__social-link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a class="footer__social-link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -413,14 +413,14 @@
                                 <input type="email" class="form-control" id="newsletterEmail" aria-describedby="emailHelp" placeholder="Email address" required>
                             </div>
                             <button type="submit" class="btn btn-block btn-accent rounded">Subscribe</button>
-                            <small style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.54);line-height:1.2;margin-top:4px;" id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+                            <small style="font-size:12px;font-weight:300;line-height:1.2;margin-top:4px;" id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
                         </form>
                     </div>
                 </div>
-                <hr style="margin:40px 0 20px 0;background-color:rgba(255,255,255,0.15);">
-                <div class="copyright clearfix">
-                    <span style="font-size:12px;color:rgba(255,255,255,0.54);line-height:1;" class="float-none float-sm-left">© 2020 PPC Pool Services Ltd. All rights reserved.</span>
-                    <span style="font-size:12px;color:rgba(255,255,255,0.54);line-height:1;" class="float-none float-sm-right">Website by <a href="https://msof.me/" target="_blank" rel="noopener noreferrer">Marios Sofokleous</a></span>
+                <hr class="hr_on-primary-dark">
+                <div class="clearfix">
+                    <span class="footer__copy-left float-none float-sm-left">© 2020 PPC Pool Services Ltd. All rights reserved.</span>
+                    <span class="footer__copy-right float-none float-sm-right">Website by <a href="https://msof.me/" target="_blank" rel="noopener noreferrer">Marios Sofokleous</a></span>
                 </div>
             </div>
         </footer>

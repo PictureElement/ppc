@@ -10,9 +10,26 @@ $breadcrumb-divider: quote("»");
 // Bootstrap overrides (overrides must come before you import Bootstrap’s Sass files)
 // =============================================================================
 
-// Colors
-$body: red;
+// Theme 1
+$primary: red;
+$on-primary:  yellow;
 
+$primary-dark: darken(red, 30%);
+$on-primary-dark: lime;
+
+$accent: green;
+$on-accent: blue;
+
+$accent-dark: purple;
+$on-accent-dark: orange;
+
+$background: #333;
+$on-background: cyan;
+
+$surface: navy;
+$on-surface: magenta;
+
+// Theme 2
 $primary: #005d81;
 $on-primary: #fff;
 
@@ -31,6 +48,7 @@ $on-background: #14313D;
 $surface: #fff;
 $on-surface: #14313D;
 
+// Theme colors
 $theme-colors: (
     "primary": $primary,
     "accent": $accent
@@ -55,6 +73,15 @@ $link-color: $accent;
 
 // Grid
 $grid-gutter-width: 2rem;
+
+// Jumbotron
+$jumbotron-bg: $primary-dark;
+
+// Pagination
+$pagination-color:                  rgba(0,0,0,0.87);
+$pagination-hover-color:            rgba(0,0,0,0.87);
+$pagination-active-color:           $on-accent;
+$pagination-active-bg:              $accent;
 
 
 // RFS overrides
@@ -93,6 +120,28 @@ body {
     overflow: hidden;
 }
 
+.hr {
+    &_on-background {
+        border-top-color: rgba($on-background, 0.30);
+    }
+    &_on-primary-dark {
+        border-top-color: rgba($on-primary-dark, 0.30);
+    }
+}
+
+.border {
+    &_on-background {
+        border: 1px solid rgba($on-background, 0.30);
+    }
+}
+
+.pagination {
+    .page-item.disabled a {
+        color: rgba(0,0,0,0.87);
+        font-weight: 300;
+    }
+}
+
 p {
     margin-bottom: 1rem;
 }
@@ -125,28 +174,25 @@ h3 {
     @include font-size(1.25rem);
 }
 
-.form-control {
-    box-shadow: none;
-    &:focus {
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-        border-color: $primary !important;
-    }
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: $on-primary;
-    position: relative;
-    &:hover, &:focus {
+.navbar-dark .navbar-nav {
+    .active .nav-link {
         color: $on-primary;
-        &::before {
-            content: '';
-            display: inline-block;
-            width: 100%;
-            height: 1px;
-            background-color: $on-primary;
-            position: absolute;
-            bottom: 0;
-            left: 0;
+    }
+    .nav-link {
+        color: $on-primary;
+        position: relative;
+        &:hover, &:focus {
+            color: $on-primary;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 1px;
+                background-color: $on-primary;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
         }
     }
 }
@@ -187,6 +233,9 @@ h3 {
             @include rfs(2rem, margin-bottom);
         }
     }
+    &_dark {
+        background-color: darken($background, 5%);
+    }
     &_large-gap {
         @include rfs(8.75rem 0, padding);
     }
@@ -204,26 +253,34 @@ h3 {
 
 .breadcrumb-item {
     @include font-size(1rem);
+    a { 
+        font-weight: 400;
+        color: $accent;
+    }
     &.active {
-        color: $body;
+        color: $on-primary-dark;
     }
     &+ .breadcrumb-item {
         padding-left: 0.25rem;
-    }
-    &+.breadcrumb-item::before {
-        color: $body;
-        padding-right: 0.25rem;
+        &::before {
+            color: $on-primary-dark;
+            padding-right: 0.25rem;
+        }
     }
 }
 
 .cover {
     &__title {
+        max-width: 800px;
+        color: $on-primary-dark;
         @include rfs(0.75rem, margin-bottom);
     }
     &__subtitle {
+        max-width: 800px;
         font-family: $font-family-base;
         font-weight: 300;
         line-height: 1.125;
+        color: $on-primary-dark;
         @include font-size(2rem);
     }
     &__divider {
@@ -479,7 +536,7 @@ h3 {
             text-align: center;
             background: transparent !important;
             border-radius: 50%;
-            color: rgba(white, 0.54);
+            color: rgba(white, 0.75);
             width: 48px;
             height: 48px;
             font-size: 20px;
@@ -493,7 +550,7 @@ h3 {
             text-align: center;
             background: transparent !important;
             border-radius: 50%;
-            color: rgba(white, 0.54);
+            color: rgba(white, 0.75);
             width: 48px;
             height: 48px;
             font-size: 20px;
@@ -643,6 +700,9 @@ h3 {
 
 .shop-intro {
     color: $on-surface;
+    &__left {
+        background-color: $surface;
+    }
     h3 {
         @include rfs(2rem, margin-bottom);
         color: $on-background;
@@ -661,6 +721,9 @@ h3 {
 .shop-map {
     @include rfs(3.5rem 0 3.5rem 0, margin);
     color: $on-surface;
+    &__left {
+        background-color: $surface;
+    }
     ul li a {
         color: $on-surface;
     }
@@ -740,7 +803,6 @@ h3 {
 // =============================================================================
 
 .about {
-    background-color: darken($background, 5%);
     overflow-x: hidden;
     @include rfs(18.75rem, padding-bottom);
 }
@@ -787,7 +849,7 @@ h3 {
 }
 
 .testimonial {
-    background-color: #fff;
+    background-color: $surface;
     border-radius: 4px;
     padding: 100px 64px;
     text-align: center;
@@ -797,10 +859,12 @@ h3 {
     flex-direction: column;
     &__text {
         margin-bottom: 1rem;
+        color: $on-surface;
     }
     &__author {
         @include font-size(1rem);
         font-weight: 300;
+        color: $on-surface;
     }
     @media (max-width: 575.98px) {
         padding: 100px 16px;
@@ -855,6 +919,7 @@ h3 {
 // =============================================================================
 
 .faqs {
+    border-top: 1px solid rgba($on-background, 0.30);
     @include rfs(7.5rem, margin-top);
 }
 
@@ -886,7 +951,6 @@ h3 {
 // =============================================================================
 
 .blog {
-    background-color: darken($background, 5%);
     overflow-x:hidden;
 }
 
@@ -976,6 +1040,12 @@ h3 {
 // Blog page - Categories
 .blog-categories {
     @include rfs(3.5rem, margin-bottom);
+    ul {
+        background-color: $surface;
+    }
+    li, a {
+        color: $on-surface;
+    }
 }
 
 // Blog page - Tags
@@ -1003,13 +1073,30 @@ h3 {
 .blog-search {
     @include rfs(3.5rem, margin-bottom);
     .form-control {
-        color: $body;
+        background-color: transparent;
+        color: $on-background;
         font-size: 16px;
         padding: 8px 12px;
         line-height: 1.6;
         height: auto;
         border-radius: 0.25rem 0 0 0.25rem;
-        border-color: #dee2e6;
+        border-color: rgba($on-background, 0.30);
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: rgba($on-background, 0.54);
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: rgba($on-background, 0.54);
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: rgba($on-background, 0.54);
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: rgba($on-background, 0.54);
+        }
     }
     button {
         font-size: 16px;
@@ -1037,6 +1124,7 @@ h3 {
         font-weight: 300;
         a {
             color: $on-surface;
+            font-weight: 400;
         }
     }
     &__title {
@@ -1059,6 +1147,7 @@ h3 {
 // Tag list
 .tag-list {
     font-size: 0;
+    background-color: $surface;
     .list-inline-item {
         font-size: 1rem;
         margin-right: 4px;
@@ -1077,6 +1166,7 @@ h3 {
             @include font-size(1rem);
         }
         &__date {
+            font-weight: 300;
             @include font-size(1rem);
         }
     }
@@ -1088,14 +1178,14 @@ h3 {
         }
         &__link {
             @include font-size(2rem);
-            color: rgba($body, 0.54);
+            color: $on-background;
             width: 48px;
             height: 48px;
             display: inline-block;
             text-align: center;
             line-height: 48px;
             &:hover, &:focus {
-                color: rgba($body, 0.87);
+                color: $on-background;
             }       
         }
     }
@@ -1120,7 +1210,7 @@ h3 {
                 text-align: center;
                 background: transparent !important;
                 border-radius: 50%;
-                color: rgba(white, 0.54);
+                color: rgba(white, 0.75);
                 width: 48px;
                 height: 48px;
                 font-size: 20px;
@@ -1134,7 +1224,7 @@ h3 {
                 text-align: center;
                 background: transparent !important;
                 border-radius: 50%;
-                color: rgba(white, 0.54);
+                color: rgba(white, 0.75);
                 width: 48px;
                 height: 48px;
                 font-size: 20px;
@@ -1177,14 +1267,15 @@ h3 {
 
 .contact-form {
     .form-control {
+        color: $on-accent;
         background-color: transparent;
-        border-color: rgba($on-accent, 0.54);
+        border-color: rgba($on-accent, 0.30);
         @include font-size(1.25rem);
     }
     .custom-control-label {
         &::before {
             background-color: transparent;
-            border: rgba($on-accent, 0.54) solid 1px;
+            border: 1px solid rgba($on-accent, 0.30);
             box-shadow: none;
             @include rfs(1.25rem, 'width');
             @include rfs(1.25rem, 'height');
@@ -1235,12 +1326,28 @@ h3 {
         margin-bottom: 12px;
         .form-control {
             background-color: transparent;
-            border-color: rgba($on-primary-dark, 0.54);
-            color: rgba($white, 0.87);
+            border-color: rgba($on-primary-dark, 0.3);
+            color: $on-primary-dark;
             font-size: 16px;
             padding: 8px 12px;
             line-height: 1.6;
             height: auto;
+            &::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: rgba($on-primary-dark, 0.54);
+            }
+            &::-moz-placeholder {
+                /* Firefox 19+ */
+                color: rgba($on-primary-dark, 0.54);
+            }
+            &:-ms-input-placeholder {
+                /* IE 10+ */
+                color: rgba($on-primary-dark, 0.54);
+            }
+            &:-moz-placeholder {
+                /* Firefox 18- */
+                color: rgba($on-primary-dark, 0.54);
+            }
         }
     }
     .btn {
@@ -1248,28 +1355,41 @@ h3 {
         padding: 8px 12px;
         line-height: 1.6;
     }
-    &__social {
+    &__social-link {
+        display: inline-block;
+        text-align: center;
+        width: 48px;
+        height: 48px;
+        border: 1px solid $on-primary-dark;
+        border-radius: 4px;
+        i {
+            line-height: 48px;
+            font-size: 20px;
+        }
+    }
+    &__copy-left {
+        font-size:12px;
+        line-height:1;
+        font-weight: 300;
+    }
+    &__copy-right {
+        font-size:12px;
+        line-height:1;
+        font-weight: 300;
         a {
-            display: inline-block;
-            text-align: center;
-            width: 48px;
-            height: 48px;
-            border: 1px solid rgba($white, 0.87);
-            border-radius: 4px;
-            i {
-                line-height: 48px;
-                font-size: 20px;
-            }
+            font-weight: 400;
         }
     }
     &__brand {
         margin-bottom: 20px;
     }
     &__heading {
-        color: $on-primary-dark;
         margin-bottom: 20px;
         font-size: 20px;
         font-weight: 500;
+    }
+    &__divider {
+        border-top-color: rgba($on-primary-dark, 0.30);
     }
 }
 
