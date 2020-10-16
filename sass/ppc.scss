@@ -723,6 +723,9 @@ h3 {
     color: $on-surface;
     &__left {
         background-color: $surface;
+        ul li {
+            margin-bottom: 12px;
+        }
     }
     ul li a {
         color: $on-surface;
