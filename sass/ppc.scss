@@ -78,10 +78,14 @@ $grid-gutter-width: 2rem;
 $jumbotron-bg: $primary-dark;
 
 // Pagination
-$pagination-color:                  rgba(0,0,0,0.87);
-$pagination-hover-color:            rgba(0,0,0,0.87);
-$pagination-active-color:           $on-accent;
-$pagination-active-bg:              $accent;
+$pagination-color: rgba(0,0,0,0.87);
+$pagination-hover-color:rgba(0,0,0,0.87);
+$pagination-active-color: $on-accent;
+$pagination-active-bg: $accent;
+
+// Color contrast
+$yiq-text-dark: black;
+$yiq-text-light: white;
 
 
 // RFS overrides
@@ -349,10 +353,7 @@ h3 {
     right: 0;
     width: 48px;
     height: 48px;
-    color: black;
-    &:hover {
-        color: black;
-    }
+    color: color-yiq($background);
 }
 
 
@@ -674,6 +675,10 @@ h3 {
     }
 }
 
+[id^=serviceModal] {
+    background-color: $surface;
+    color: $on-surface;
+}
 
 // CTA
 // =============================================================================
@@ -930,6 +935,7 @@ h3 {
     &__icon {
         color: $accent;
         line-height: 1.6;
+        @include font-size(1.5rem);
     }
     &__btn {
         position: relative;
@@ -997,9 +1003,6 @@ h3 {
                 background: darken($accent, 10%);
                 color: $on-accent;
             }
-            &.disabled {
-                background: lighten($accent, 10%);
-            }
         }
         .owl-next {
             padding: 0;
@@ -1015,9 +1018,6 @@ h3 {
             &:hover {
                 background: darken($accent, 10%);
                 color: $on-accent;
-            }
-            &.disabled {
-                background: lighten($accent, 10%);
             }
         }
     }
