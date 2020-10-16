@@ -84,6 +84,7 @@ $pagination-active-color: $on-accent;
 $pagination-active-bg: $accent;
 
 // Color contrast
+$yiq-contrasted-threshold: 150;
 $yiq-text-dark: black;
 $yiq-text-light: white;
 
@@ -1393,7 +1394,7 @@ h3 {
         font-weight: 500;
     }
     &__divider {
-        border-top-color: rgba($on-primary-dark, 0.30);
+        margin: 40px 0 20px 0;
     }
 }
 
