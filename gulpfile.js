@@ -7,6 +7,7 @@ const del = require('del');
 const browsersync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
 const wait = require('gulp-wait');
+const critical = require('critical');
 
 // Static server
 function browserSync(cb) {
@@ -48,13 +49,9 @@ function copy() {
     'node_modules/owl.carousel2/dist/owl.carousel.min.js',
     'node_modules/owl.carousel2/dist/assets/owl.carousel.min.css',
     'node_modules/owl.carousel2/dist/assets/owl.theme.default.min.css',
-    'node_modules/popper.js/dist/umd/popper.min.js',
-    'node_modules/simplebar/dist/simplebar.min.js',
-    'node_modules/simplebar/dist/simplebar.min.css',
     'node_modules/headroom.js/dist/headroom.min.js',
     'node_modules/counterup2/dist/index.js',
-    'node_modules/waypoints/lib/noframework.waypoints.js',
-    'node_modules/holderjs/holder.min.js'
+    'node_modules/waypoints/lib/noframework.waypoints.js'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('vendor/'));
 }
@@ -78,6 +75,28 @@ function js() {
     .pipe(gulp.dest('js/'));
 }
 
+function criticalCSS() {
+  return critical.generate({
+      inline: true,
+      minify: true,
+      base: './',
+      src: 'index.html',
+      target: {
+        // css: 'critical.css',
+        html: 'index-critical.html',
+        // uncritical: 'uncritical.css'
+      },
+      width: 1920,
+      height: 1080
+  });
+}
+
+// Browser reload
+function browserReload(cb) {
+  browsersync.reload();
+  cb(); // Signal completion
+}
+
 // Watch scss/js/html/ files
 function watchFiles() {
   gulp.watch("sass/*.scss", gulp.series(css));
@@ -87,7 +106,7 @@ function watchFiles() {
 
 // Define complex tasks
 const vendor = gulp.series(clean, copy);
-const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(vendor, gulp.parallel(css, js), criticalCSS);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Register public tasks
