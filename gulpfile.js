@@ -118,7 +118,7 @@ function combine() {
 
 // Critical CSS
 function criticalCSS() {
-  return gulp.src('src/*.html')
+  return gulp.src('dist/*.html')
     .pipe(
       critical({
           inline: true,
@@ -147,7 +147,7 @@ function criticalCSS() {
 
 // Define complex tasks
 const reinit = gulp.series(cleanDist, cleanVendor, copyFonts, copyImages, copyVendor, copyIconFonts);
-const build = gulp.series(reinit, compileSass, combine);
+const build = gulp.series(reinit, compileSass, combine, criticalCSS);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Register public tasks
