@@ -30,8 +30,6 @@ function copyVendor() {
   return gulp.src([
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
-    'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
-    'node_modules/@fortawesome/fontawesome-free/webfonts/**/*',
     'node_modules/aos/dist/aos.js',
     'node_modules/aos/dist/aos.css',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
@@ -46,18 +44,6 @@ function copyVendor() {
     'node_modules/waypoints/lib/noframework.waypoints.js'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('src/vendor/'));
-}
-
-// Copy icon fonts
-function copyIconFonts() {
-  return gulp.src('src/vendor/@fortawesome/fontawesome-free/webfonts/**/*')
-    .pipe(gulp.dest('dist/webfonts/'));
-}
-
-// Copy fonts
-function copyFonts() {
-  return gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
 }
 
 // Copy images
@@ -121,7 +107,6 @@ function criticalCSS() {
   return gulp.src('dist/*.html')
     .pipe(
       critical({
-          inline: true,
           base: 'dist/',
           dimensions: [
             {
@@ -146,7 +131,7 @@ function criticalCSS() {
 // =============================================================================
 
 // Define complex tasks
-const reinit = gulp.series(cleanDist, cleanVendor, copyFonts, copyImages, copyVendor, copyIconFonts);
+const reinit = gulp.series(cleanDist, cleanVendor, copyImages, copyVendor);
 const build = gulp.series(reinit, compileSass, combine, criticalCSS);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
