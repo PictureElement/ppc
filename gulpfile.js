@@ -151,3 +151,4 @@ const production = gulp.series(browserSyncDist);
 exports.reinit = reinit;
 exports.build = build;
 exports.watch = watch;
+exports.production = production;
