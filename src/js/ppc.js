@@ -204,21 +204,6 @@ $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip({
             container: 'body'
          });
-    
-    // 13. Set to equal height 
-    function equalHeight() {
-        var $leftContent = $('#leftContent');
-        var $rightContent = $('#rightContent');
-        if ($(window).width() > 992) {
-            $rightContent.outerHeight($leftContent.outerHeight());
-        }
-    }
-
-    equalHeight();
-            
-    $( window ).resize(function() {
-        equalHeight();
-    });
 });
 
 $(window).on('load', function() {

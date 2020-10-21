@@ -704,48 +704,23 @@ h3 {
 // =============================================================================
 
 .shop-intro {
-    color: $on-surface;
-    &__left {
-        background-color: $surface;
-    }
+    @include rfs(3.5rem, margin-bottom);
     h3 {
         @include rfs(2rem, margin-bottom);
         color: $on-background;
     }
-}
-
-.shop__image {
-    transition-duration: .3s;
-    transition-property: transform;
-    transition-timing-function: ease-out;
-    &:hover {
-        transform: translateY(8px);
-    }
-}
-
-.shop-map {
-    @include rfs(3.5rem 0 3.5rem 0, margin);
-    color: $on-surface;
     &__left {
         background-color: $surface;
-        ul li {
-            margin-bottom: 12px;
-        }
-    }
-    ul li a {
         color: $on-surface;
     }
-    h3 {
-        @include rfs(2rem, margin-bottom);
-        color: $on-background;
-    }
-    iframe {
-        border-radius: 4px;
-        width: 100%;
-        height: 100%;
-        display: block;
-        @media (max-width: 991.98px) {
-            height: 300px;
+    &__right {
+        background-color: $surface;
+        color: $on-surface;
+        ul li {
+            margin-bottom: 12px;
+            a {
+                color: $on-surface;
+            }
         }
     }
 }
@@ -1288,16 +1263,26 @@ h3 {
             display: none;
         }
     }
+    .custom-radio {
+        margin-bottom: 8px;
+    }
     .custom-control-input:checked~.custom-control-label::before {
         border-color: $primary;
         background-color: $primary;
         box-shadow: none;
+    }
+    .custom-control-label { 
+        font-weight: 300;
     }
     button {
         @media (max-width: 575.98px) {
             display: block;
             width: 100%;
         }
+    }
+    a {
+        font-weight: 400;
+        color: $on-accent;
     }
     &__heading {
         @include rfs(2rem, margin-bottom);
