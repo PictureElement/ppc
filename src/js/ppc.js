@@ -142,7 +142,7 @@ $(document).ready(function() {
                 margin:12
             },
             // breakpoint from 576px up
-            576 : {
+            992 : {
                 items:2,
                 stagePadding: 32,
                 margin:16
