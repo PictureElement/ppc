@@ -56,11 +56,22 @@ function copyImages() {
 // Development
 // =============================================================================
 
-// Static server
-function browserSync(cb) {
+// Static server (src)
+function browserSyncSrc(cb) {
   browsersync.init({
     server: {
       baseDir: "src"
+    },
+    open: "external"
+  });
+  cb();
+}
+
+// Static server (dist)
+function browserSyncDist(cb) {
+  browsersync.init({
+    server: {
+      baseDir: "dist"
     },
     open: "external"
   });
@@ -130,10 +141,11 @@ function criticalCSS() {
 // Tasks
 // =============================================================================
 
-// Define complex tasks
+// Define tasks
 const reinit = gulp.series(cleanDist, cleanVendor, copyImages, copyVendor);
 const build = gulp.series(reinit, compileSass, combine, criticalCSS);
-const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+const watch = gulp.series(build, gulp.parallel(watchFiles, browserSyncSrc));
+const production = gulp.series(browserSyncDist);
 
 // Register public tasks
 exports.reinit = reinit;
