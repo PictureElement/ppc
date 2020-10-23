@@ -30,6 +30,8 @@ function copyVendor() {
   return gulp.src([
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+    'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+    'node_modules/@fortawesome/fontawesome-free/webfonts/**/*',
     'node_modules/aos/dist/aos.js',
     'node_modules/aos/dist/aos.css',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
@@ -44,6 +46,18 @@ function copyVendor() {
     'node_modules/waypoints/lib/noframework.waypoints.js'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('src/vendor/'));
+}
+
+// Copy fonts
+function copyFonts() {
+  return gulp.src('src/webfonts/**/*')
+    .pipe(gulp.dest('dist/webfonts/'));
+}
+
+// Copy icon fonts
+function copyIconFonts() {
+  return gulp.src('src/vendor/@fortawesome/fontawesome-free/webfonts/**/*')
+    .pipe(gulp.dest('dist/webfonts/'));
 }
 
 // Copy images
@@ -115,12 +129,12 @@ function combine() {
 
 // Critical CSS
 function criticalCSS() {
-  return gulp.src('src/*.html')
+  return gulp.src('dist/*.html')
     .pipe(
       critical({
-          // inline: true,
+          inline: true,
           base: 'dist/',
-          ignore: ['@font-face'],
+          // ignore: ['@font-face'],
           dimensions: [
             {
               // 9:16 (Mobile)
@@ -166,7 +180,7 @@ function criticalCSS() {
 // =============================================================================
 
 // Define tasks
-const reinit = gulp.series(cleanDist, cleanVendor, copyImages, copyVendor);
+const reinit = gulp.series(cleanDist, cleanVendor, copyVendor, copyFonts, copyIconFonts, copyImages);
 const build = gulp.series(reinit, compileSass, combine, criticalCSS);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSyncSrc));
 const production = gulp.series(browserSyncDist);
