@@ -7643,10 +7643,10 @@ h3 {
 
 .hero-carousel {
   display: block; }
-  .hero-carousel .owl-stage-outer .owl-stage .item:not(:first-child) {
+  .hero-carousel .item:not(:first-child) {
     display: none; }
   @media (max-width: 575.98px) {
-    .hero-carousel .owl-stage-outer .owl-stage .item {
+    .hero-carousel .item {
       min-height: calc(100vh - 72px); } }
   @media (max-width: 575.98px) {
     .hero-carousel .owl-stage-outer {

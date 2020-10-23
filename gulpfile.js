@@ -115,7 +115,7 @@ function combine() {
 
 // Critical CSS
 function criticalCSS() {
-  return gulp.src('dist/*.html')
+  return gulp.src('src/*.html')
     .pipe(
       critical({
           // inline: true,
@@ -152,7 +152,7 @@ function criticalCSS() {
               height: 800,
               width: 1200,
             },
-          ],
+          ]
       })
     )
     .on('error', function(err) { 

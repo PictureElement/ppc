@@ -468,17 +468,15 @@ h3 {
 
 .hero-carousel {
     display: block;
-    .owl-stage-outer {
-        .owl-stage {
-            .item {
-                &:not(:first-child) {
-                    display: none;
-                }
-                @media (max-width: 575.98px) {
-                    min-height: calc(100vh - 72px);
-                }
-            }
+    .item {
+        &:not(:first-child) {
+            display: none;
         }
+        @media (max-width: 575.98px) {
+            min-height: calc(100vh - 72px);
+        }
+    }
+    .owl-stage-outer {
         @media (max-width: 575.98px) {
             background-color: $primary;
         }
