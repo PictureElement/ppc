@@ -67,6 +67,7 @@ $(document).ready(function() {
         autoplay:true,
         autoplayTimeout:5000,
         autoplayHoverPause:true,
+        checkVisibility: false,
         items: 1,
         responsive:{
             // breakpoint from 0 up
@@ -82,6 +83,7 @@ $(document).ready(function() {
             }
         }
     });
+    
 
     // 6. Shop carousel
     $('#shopCarousel').owlCarousel({

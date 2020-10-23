@@ -7,7 +7,7 @@ const del = require('del');
 const browsersync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
 const wait = require('gulp-wait');
-const critical = require('critical').stream ;
+const critical = require('critical').stream;
 const useref = require('gulp-useref');
 const gulpif = require('gulp-if');
 
@@ -118,15 +118,39 @@ function criticalCSS() {
   return gulp.src('dist/*.html')
     .pipe(
       critical({
+          // inline: true,
           base: 'dist/',
+          ignore: ['@font-face'],
           dimensions: [
             {
-              height: 500,
-              width: 300,
+              // 9:16 (Mobile)
+              height: 1022,
+              width: 575,
             },
             {
-              height: 720,
-              width: 1280,
+              // 9:16 (Tablet)
+              height: 1364,
+              width: 767,
+            },
+            {
+              // 9:16 (Tablet)
+              height: 1762,
+              width: 991,
+            },
+            {
+              // 9:16 (Tablet)
+              height: 2132,
+              width: 1199,
+            },
+            {
+              // 9:16 (Tablet)
+              height: 2132,
+              width: 1199,
+            },
+            {
+              // 3:2 (Desktop)
+              height: 800,
+              width: 1200,
             },
           ],
       })
