@@ -7636,6 +7636,7 @@ h3 {
     @media (max-width: 575.98px) {
       .hero-text-wrapper {
         position: static;
+        background-color: #005d81;
         transform: translateY(0);
         min-height: calc(100vh - 56.25vw - 72px);
         display: flex;

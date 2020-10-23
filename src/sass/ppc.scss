@@ -457,7 +457,7 @@ h3 {
         }
         @media (max-width: 575.98px) {
             position: static;
-            // @include rfs(20rem 0, padding);
+            background-color: $primary;
             transform: translateY(0);
             min-height: calc(100vh - 56.25vw - 72px);
             display: flex;
