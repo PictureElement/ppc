@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    // 1. Work section filters
+    $(".grid__controls button.btn").click(function() {
+        $(".grid__controls").find(".active").removeClass("active");
+        $(this).addClass("active");
+    }); 
+
     // 2. Add header shadow
     var $pageHeader = $('#pageHeader');
 
@@ -11,7 +17,6 @@ $(document).ready(function() {
         var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
         var hasShadow = $pageHeader.hasClass('page-header_shadow');
         
-
         if (isScrollTopGreaterThanZero) {
             $pageHeader.addClass('page-header_shadow');
         } else if (isNavbarCollapseVisible) {
@@ -206,10 +211,4 @@ $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip({
             container: 'body'
          });
-});
-
-$(window).on('load', function() {
-    // 1. Hide spinner on page load
-    $('#spinnerWrapper').fadeOut('slow');
-    $('html').css('overflow-y', 'visible');
 });
