@@ -7575,8 +7575,6 @@ h3 {
     border-radius: 4px; }
   .page-header .navbar-brand {
     line-height: 1; }
-    .page-header .navbar-brand img {
-      width: 120px; }
   .page-header .nav-link, .page-header .nav-phone {
     font-size: calc(0.8775rem + 0.16333vw); }
     @media (min-width: 1200px) {

@@ -390,9 +390,6 @@ h3 {
     }
     .navbar-brand {
         line-height: 1;
-        img {
-            width: 120px;
-        }
     }
     .nav-link, .nav-phone {
         @include font-size(1rem);
