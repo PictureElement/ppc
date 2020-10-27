@@ -1,0 +1,31 @@
+// FAQs
+// =============================================================================
+
+.faqs {
+    border-top: 1px solid rgba($on-background, 0.30);
+    @include rfs(7.5rem, margin-top);
+}
+
+.faq {
+    &__icon {
+        color: $accent;
+        line-height: 1.6;
+        @include font-size(1.5rem);
+    }
+    &__btn {
+        position: relative;
+        text-transform: none;
+        @include font-size(1.25rem);
+        line-height: 1.6;
+        color: $on-background;
+        &:hover {
+            color: $on-background;
+        }
+        &:focus, &:active {
+            box-shadow: none !important;
+        }
+    }
+    &__ans {
+        max-width: 800px;
+    }
+}

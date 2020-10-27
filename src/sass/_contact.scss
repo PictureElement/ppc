@@ -1,0 +1,63 @@
+// CONTACT
+// =============================================================================
+
+.contact {
+    color: $on-accent;
+    .container {
+        max-width: 730px;
+    }
+    &__lead {
+        @include rfs(3.5rem, margin-bottom);
+    }
+    &__preheading {
+        left: 0;
+    }
+}
+
+.contact-form {
+    .form-control {
+        color: $on-accent;
+        background-color: transparent;
+        border-color: rgba($on-accent, 0.30);
+        @include font-size(1.25rem);
+    }
+    .custom-control-label {
+        &::before {
+            background-color: transparent;
+            border: 1px solid rgba($on-accent, 0.30);
+            box-shadow: none;
+            @include rfs(1.25rem, 'width');
+            @include rfs(1.25rem, 'height');
+        }
+        &::after {
+            display: none;
+        }
+    }
+    .custom-radio {
+        margin-bottom: 8px;
+    }
+    .custom-control-input:checked~.custom-control-label::before {
+        border-color: $primary;
+        background-color: $primary;
+        box-shadow: none;
+    }
+    .custom-control-label { 
+        font-weight: 300;
+    }
+    button {
+        @media (max-width: 575.98px) {
+            display: block;
+            width: 100%;
+        }
+    }
+    a {
+        font-weight: 400;
+        color: $on-accent;
+    }
+    &__heading {
+        @include rfs(2rem, margin-bottom);
+    }
+    &__personal, &__service, &__brief {
+        @include rfs(2.75rem, margin-bottom);
+    }
+}

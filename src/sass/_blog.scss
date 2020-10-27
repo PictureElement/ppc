@@ -1,0 +1,295 @@
+// BLOG
+// =============================================================================
+
+.blog {
+    overflow-x:hidden;
+}
+
+// Homepage blog carousel
+.blog-carousel {
+    display: flex;
+    .owl-stage-outer {
+        overflow: visible;
+        .owl-stage {
+            padding-left: 0 !important;
+            display: flex;
+            .owl-item {
+                opacity: 1;
+                transition: opacity .15s ease-in-out;
+                &.active {
+                    opacity: 1;
+                }
+                .item {
+                    display: flex;
+                    flex: 1 0 auto;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .owl-nav {
+        margin-top: 2rem;
+        text-align: left;
+        .owl-prev {
+            padding: 0;
+            margin: 0 .5rem 0 0;
+            color: $on-accent;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 48px;
+            background: $accent;
+            font-size: 20px;
+            &:hover {
+                background: darken($accent, 10%);
+                color: $on-accent;
+            }
+        }
+        .owl-next {
+            padding: 0;
+            margin: 0;
+            color: $on-accent;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 48px;
+            background: $accent;
+            font-size: 20px;
+            &:hover {
+                background: darken($accent, 10%);
+                color: $on-accent;
+            }
+        }
+    }
+}
+
+// Blog page post list
+.blog-list {
+    [class^='col-'] {
+        margin-bottom: 2rem;
+        @media (max-width: 767.98px) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.blog__back-to-overview {
+    margin-top: 2rem;
+    @media (max-width: 767.98px) {
+        margin-top: 1rem;
+    }
+}
+
+// Blog page - Categories
+.blog-categories {
+    @include rfs(3.5rem, margin-bottom);
+    ul {
+        background-color: $surface;
+    }
+    li, a {
+        color: $on-surface;
+    }
+}
+
+// Blog page - Tags
+.blog-tags {
+    @media (max-width: 991.98px) {
+        @include rfs(3.5rem, margin-bottom);
+    }
+}
+
+// Blog page - Similar posts
+.blog-similar {
+    .blog-list [class^='col-']:last-child {
+        @include rfs(3.5rem, margin-bottom);
+    }
+}
+
+// Blog page - Popular posts
+.blog-popular {
+    .blog-list [class^='col-']:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Blog page - Search form
+.blog-search {
+    @include rfs(3.5rem, margin-bottom);
+    .form-control {
+        background-color: transparent;
+        color: $on-background;
+        font-size: 16px;
+        padding: 8px 12px;
+        line-height: 1.6;
+        height: auto;
+        border-radius: 0.25rem 0 0 0.25rem;
+        border-color: rgba($on-background, 0.30);
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: rgba($on-background, 0.54);
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: rgba($on-background, 0.54);
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: rgba($on-background, 0.54);
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: rgba($on-background, 0.54);
+        }
+    }
+    button {
+        font-size: 16px;
+        padding: 8px 12px;
+        line-height: 1.6;
+        border-radius: 0 0.25rem 0.25rem 0;
+        border: none;
+    }
+}
+
+// Post card
+.post {
+    border-radius: 4px;
+    background-color: $surface;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: $on-surface;
+    &__meta {
+        @include font-size(1rem);
+        line-height: 1;
+        margin-bottom: 4px;
+        font-weight: 300;
+        a {
+            color: $on-surface;
+            font-weight: 400;
+        }
+    }
+    &__title {
+        margin-bottom: 0.75rem;
+        overflow: hidden;
+        a {
+            color: $on-surface;
+        }
+    }
+    &__excerpt {
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+    &__link {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+// Tag list
+.tag-list {
+    font-size: 0;
+    background-color: $surface;
+    .list-inline-item {
+        font-size: 1rem;
+        margin-right: 4px;
+        margin-bottom: 4px;
+    }
+}
+
+// Post page
+.single-post {
+    &-meta {
+        &__profile-image {
+            width: 60px;
+            height: 60px;
+        }
+        &__author {
+            @include font-size(1rem);
+        }
+        &__date {
+            font-weight: 300;
+            @include font-size(1rem);
+        }
+    }
+    &-share {
+        &__title {
+            font-family: $headings-font-family;
+            @include font-size(1.25rem);
+            font-weight: 500;
+            text-align: center;
+        }
+        &__link {
+            @include font-size(2rem);
+            color: $on-background;
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+            text-align: center;
+            line-height: 48px;
+            &:hover, &:focus {
+                color: $on-background;
+            }       
+        }
+    }
+    &-carousel {
+        position: relative;
+        .item {
+            img {
+                border-radius: 4px;
+            }
+        }
+        .owl-nav {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .owl-prev {
+                text-align: center;
+                background: transparent !important;
+                border-radius: 50%;
+                color: rgba(white, 0.75);
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+                line-height: 48px;
+                padding: 0;
+                &:hover {
+                    color: rgba(white, 1);
+                }
+            }
+            .owl-next {
+                text-align: center;
+                background: transparent !important;
+                border-radius: 50%;
+                color: rgba(white, 0.75);
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+                line-height: 48px;
+                padding: 0;
+                &:hover {
+                    color: rgba(white, 1);
+                }
+            }
+        }
+    }
+    &__return-btn {
+        margin-top: 3rem;
+        display: inline-block;
+    }
+}
+
+.aside {
+    .blog-tags {
+        @include rfs(3.5rem, margin-bottom);
+    }
+}

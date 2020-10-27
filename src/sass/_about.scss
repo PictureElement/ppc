@@ -1,0 +1,33 @@
+// About
+// =============================================================================
+
+.about {
+    overflow-x: hidden;
+    @include rfs(18.75rem, padding-bottom);
+}
+
+.facts {
+    @include rfs(4rem, padding-top);
+    @media (max-width: 767.98px) {
+        [class^='col-']:not(:last-child) {
+            @include rfs(4rem, margin-bottom);
+        }
+    }
+}
+
+.fact {
+    text-align: center;
+    &__number {
+        @include font-size(8.5rem);
+        font-family: $headings-font-family;
+        font-weight: 100;
+        line-height: 1;
+        color: $primary;
+    }
+    &__text {
+        font-family: $headings-font-family;
+        font-weight: 500;
+        @include font-size(2rem);
+        line-height: 1;
+    }
+}

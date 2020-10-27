@@ -1,0 +1,182 @@
+
+// Global
+// =============================================================================
+
+body {
+    background-color: $background;
+    color: $on-background;
+    overflow-x: hidden;
+    @include font-size(1.25rem);
+    &.fancybox-active {
+        overflow: hidden;
+    }
+}
+
+h1 {
+    font-weight: 900;
+    line-height: 1.1428;
+    @include font-size(4.25rem);
+}
+
+h2 {
+    font-weight: 700;
+    line-height: 1.1538;
+    @include font-size(3.25rem);
+}
+
+h3 {
+    font-weight: 500;
+    line-height: 1.125;
+    @include font-size(2rem);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: $accent;
+}
+
+// Multi-Line truncation 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.hr {
+    &_on-background {
+        border-top-color: rgba($on-background, 0.30);
+    }
+    &_on-primary-dark {
+        border-top-color: rgba($on-primary-dark, 0.30);
+    }
+}
+
+.border {
+    &_on-background {
+        border: 1px solid rgba($on-background, 0.30);
+    }
+}
+
+.pagination {
+    .page-item.disabled a {
+        color: rgba(0,0,0,0.87);
+        font-weight: 300;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    box-shadow: none !important;
+    @include font-size(1.25rem);
+}
+
+.ratio-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    &_16-by-9 {
+        padding-top: 56.25%;
+    }
+}
+
+.section {
+    @include rfs(7.5rem 0, padding);
+    &__preheading {
+        @include font-size(1.25rem);
+        font-family: $font-family-base;
+        font-weight: 300;
+        color: $primary;
+        position: relative;
+        display: inline-block;
+        left: 24px;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            background-color: $primary;
+            position: absolute;
+            top: 50%;
+            left: -24px;
+        }
+    }
+    &__heading {
+        @include rfs(3.5rem, margin-bottom);
+        &_mb-small {
+            @include rfs(2rem, margin-bottom);
+        }
+    }
+    &_dark {
+        background-color: darken($background, 5%);
+    }
+    &_large-gap {
+        @include rfs(8.75rem 0, padding);
+    }
+}
+
+// Highlight color
+::selection {
+    background-color: $accent;
+    color: $on-accent;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.breadcrumb-item {
+    @include font-size(1rem);
+    a { 
+        font-weight: 400;
+        color: $accent;
+    }
+    &.active {
+        color: $on-primary-dark;
+    }
+    &+ .breadcrumb-item {
+        padding-left: 0.25rem;
+        &::before {
+            color: $on-primary-dark;
+            padding-right: 0.25rem;
+        }
+    }
+}
+
+.cover {
+    &__title {
+        max-width: 800px;
+        color: $on-primary-dark;
+        @include rfs(0.75rem, margin-bottom);
+    }
+    &__subtitle {
+        max-width: 800px;
+        font-family: $font-family-base;
+        font-weight: 300;
+        line-height: 1.125;
+        color: $on-primary-dark;
+        @include font-size(2rem);
+    }
+    &__divider {
+        @include rfs(1.75rem, margin-top);
+        @include rfs(1.75rem, margin-bottom);
+    }
+}
+
+.badge {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.to-top {
+    z-index: 1001;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    color: color-yiq($background);
+}

@@ -1,0 +1,40 @@
+// Shop
+// =============================================================================
+
+.shop-intro {
+    @include rfs(3.5rem, margin-bottom);
+    h3 {
+        @include rfs(2rem, margin-bottom);
+        color: $on-background;
+    }
+    &__left {
+        background-color: $surface;
+        color: $on-surface;
+    }
+    &__right {
+        background-color: $surface;
+        color: $on-surface;
+        ul li {
+            margin-bottom: 12px;
+            a {
+                color: $on-surface;
+            }
+        }
+    }
+}
+
+.shop-slideshow {
+    h3 {
+        @include rfs(2rem, margin-bottom);
+        color: $on-background;
+    }
+    img {
+        filter: grayscale(100%);
+        opacity: 0.5;
+        transition: filter .15s ease-in-out, opacity .15s ease-in-out;
+        &:hover {
+            filter: grayscale(0);
+            opacity: 1;;
+        }
+    }
+}

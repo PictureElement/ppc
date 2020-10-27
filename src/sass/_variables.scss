@@ -1,0 +1,88 @@
+// Variables
+// =============================================================================
+
+// Theme 1
+// $primary: red;
+// $on-primary:  yellow;
+
+// $primary-dark: darken(red, 30%);
+// $on-primary-dark: lime;
+
+// $accent: green;
+// $on-accent: blue;
+
+// $accent-dark: purple;
+// $on-accent-dark: orange;
+
+// $background: #333;
+// $on-background: cyan;
+
+// $surface: navy;
+// $on-surface: magenta;
+
+// Theme 2
+$primary: #005d81;
+$on-primary: #fff;
+
+$primary-dark: #003454;
+$on-primary-dark: #fff;
+
+$accent: #8CFFDA;
+$on-accent: #14313D;
+
+$accent-dark: #57cba8;
+$on-accent-dark: #14313D;
+
+$background: #fff;
+$on-background: #14313D;
+
+$surface: #fff;
+$on-surface: #14313D;
+
+// Theme colors
+$theme-colors: (
+    "primary": $primary,
+    "accent": $accent
+);
+
+// Breadcrumb separator
+$breadcrumb-divider: quote("»");
+
+// Toggle Bootstrap's global CSS preferences
+$enable-shadows: true;
+$enable-responsive-font-sizes: false;
+
+// Buttons
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.25rem;             
+$btn-line-height: 1;
+$btn-border-radius: 40px;
+
+// Typography
+$font-family-base: 'Montserrat', sans-serif;
+$headings-font-family: 'Arima Madurai', cursive;
+$line-height-base: 1.6;
+$font-weight-base: 400;
+$link-color: $accent;
+
+// Grid
+$grid-gutter-width: 2rem;
+
+// Jumbotron
+$jumbotron-bg: $primary-dark;
+
+// Pagination
+$pagination-color: rgba(0,0,0,0.87);
+$pagination-hover-color:rgba(0,0,0,0.87);
+$pagination-active-color: $on-accent;
+$pagination-active-bg: $accent;
+
+// Color contrast
+$yiq-contrasted-threshold: 150;
+$yiq-text-dark: black;
+$yiq-text-light: white;
+
+// RFS
+$rfs-base-value: 0.875rem;
+$rfs-rem-value: 16;
+$rfs-factor: 50; // Factor of decrease
