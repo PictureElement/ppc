@@ -7421,6 +7421,9 @@ a {
 .hr_on-secondary {
   border-top-color: rgba(255, 255, 255, 0.3) !important; }
 
+.hr_on-accent {
+  border-top-color: rgba(20, 49, 61, 0.3) !important; }
+
 .hr_on-primary-dark {
   border-top-color: rgba(255, 255, 255, 0.3) !important; }
 
@@ -7556,16 +7559,15 @@ a {
         margin-bottom: 1.75rem; } }
   .cover_primary-page {
     background-color: #003454; }
-    .cover_primary-page .cover__title {
+    .cover_primary-page .cover__title, .cover_primary-page .cover__subtitle, .cover_primary-page .cover__text {
       color: #fff; }
-    .cover_primary-page .cover__subtitle {
-      color: #fff; }
+  .cover_status-page {
+    background-color: #8CFFDA; }
+    .cover_status-page .cover__title, .cover_status-page .cover__subtitle, .cover_status-page .cover__text {
+      color: #14313D; }
   .cover_utility-page {
     background-color: #6C757D; }
-    .cover_utility-page .cover__title {
-      color: #fff;
-      text-align: center; }
-    .cover_utility-page .cover__subtitle {
+    .cover_utility-page .cover__title, .cover_utility-page .cover__subtitle, .cover_utility-page .cover__text {
       color: #fff;
       text-align: center; }
 

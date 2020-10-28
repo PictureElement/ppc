@@ -53,6 +53,9 @@ a {
     &_on-secondary {
         border-top-color: rgba($on-secondary, 0.30) !important;
     }
+    &_on-accent {
+        border-top-color: rgba($on-accent, 0.30) !important;
+    }
     &_on-primary-dark {
         border-top-color: rgba($on-primary-dark, 0.30) !important;
     }
@@ -189,20 +192,19 @@ a {
     }
     &_primary-page {
         background-color: $primary-dark;
-        .cover__title {
+        .cover__title, .cover__subtitle, .cover__text {
             color: $on-primary-dark;
         }
-        .cover__subtitle {
-            color: $on-primary-dark;
+    }
+    &_status-page {
+        background-color: $accent;
+        .cover__title, .cover__subtitle, .cover__text {
+            color: $on-accent;
         }
     }
     &_utility-page {
         background-color: $secondary;
-        .cover__title {
-            color: $on-secondary;
-            text-align: center;
-        }
-        .cover__subtitle {
+        .cover__title, .cover__subtitle, .cover__text {
             color: $on-secondary;
             text-align: center;
         }
