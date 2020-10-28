@@ -48,10 +48,13 @@ a {
 
 .hr {
     &_on-background {
-        border-top-color: rgba($on-background, 0.30);
+        border-top-color: rgba($on-background, 0.30) !important;
+    }
+    &_on-secondary {
+        border-top-color: rgba($on-secondary, 0.30) !important;
     }
     &_on-primary-dark {
-        border-top-color: rgba($on-primary-dark, 0.30);
+        border-top-color: rgba($on-primary-dark, 0.30) !important;
     }
 }
 
@@ -62,10 +65,22 @@ a {
 }
 
 .pagination {
-    .page-item.disabled a {
-        color: rgba(0,0,0,0.87);
-        font-weight: 300;
+    .page-item {
+        .page-link {
+            border-color: rgba($on-background, 0.30);
+            color: $on-background;
+        }
     }
+    &_mt {
+        margin-top: 2rem;
+        @media (max-width: 767.98px) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
 }
 
 .btn {
@@ -116,6 +131,10 @@ a {
     &_large-gap {
         @include rfs(8.75rem 0, padding);
     }
+    &_narrow {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 }
 
 // Highlight color
@@ -146,23 +165,47 @@ a {
     }
 }
 
+.back-to-overview {
+    margin-top: 2rem;
+    @media (max-width: 767.98px) {
+        margin-top: 1rem;
+    }
+}
+
 .cover {
+    @include rfs(7.5rem 0, padding);
     &__title {
-        max-width: 800px;
-        color: $on-primary-dark;
         @include rfs(0.75rem, margin-bottom);
     }
     &__subtitle {
-        max-width: 800px;
         font-family: $font-family-base;
         font-weight: 300;
         line-height: 1.125;
-        color: $on-primary-dark;
         @include font-size(2rem);
     }
     &__divider {
         @include rfs(1.75rem, margin-top);
         @include rfs(1.75rem, margin-bottom);
+    }
+    &_primary-page {
+        background-color: $primary-dark;
+        .cover__title {
+            color: $on-primary-dark;
+        }
+        .cover__subtitle {
+            color: $on-primary-dark;
+        }
+    }
+    &_utility-page {
+        background-color: $secondary;
+        .cover__title {
+            color: $on-secondary;
+            text-align: center;
+        }
+        .cover__subtitle {
+            color: $on-secondary;
+            text-align: center;
+        }
     }
 }
 

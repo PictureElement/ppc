@@ -33,6 +33,9 @@ $on-accent: #14313D;
 $accent-dark: #57cba8;
 $on-accent-dark: #14313D;
 
+$secondary: #6C757D;
+$on-secondary: #fff;
+
 $background: #fff;
 $on-background: #14313D;
 
@@ -42,11 +45,12 @@ $on-surface: #14313D;
 // Theme colors
 $theme-colors: (
     "primary": $primary,
-    "accent": $accent
+    "accent": $accent,
+    "secondary": $secondary
 );
 
 // Breadcrumb separator
-$breadcrumb-divider: quote("»");
+$breadcrumb-divider: quote(">");
 
 // Toggle Bootstrap's global CSS preferences
 $enable-shadows: true;
@@ -67,9 +71,6 @@ $link-color: $accent;
 
 // Grid
 $grid-gutter-width: 2rem;
-
-// Jumbotron
-$jumbotron-bg: $primary-dark;
 
 // Pagination
 $pagination-color: rgba(0,0,0,0.87);

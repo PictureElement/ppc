@@ -1,11 +1,7 @@
 // BLOG
 // =============================================================================
 
-.blog {
-    overflow-x:hidden;
-}
-
-// Homepage blog carousel
+// Blog carousel
 .blog-carousel {
     display: flex;
     .owl-stage-outer {
@@ -65,90 +61,13 @@
     }
 }
 
-// Blog page post list
+// Blog list
 .blog-list {
     [class^='col-'] {
         margin-bottom: 2rem;
         @media (max-width: 767.98px) {
             margin-bottom: 1rem;
         }
-    }
-}
-
-.blog__back-to-overview {
-    margin-top: 2rem;
-    @media (max-width: 767.98px) {
-        margin-top: 1rem;
-    }
-}
-
-// Blog page - Categories
-.blog-categories {
-    @include rfs(3.5rem, margin-bottom);
-    ul {
-        background-color: $surface;
-    }
-    li, a {
-        color: $on-surface;
-    }
-}
-
-// Blog page - Tags
-.blog-tags {
-    @media (max-width: 991.98px) {
-        @include rfs(3.5rem, margin-bottom);
-    }
-}
-
-// Blog page - Similar posts
-.blog-similar {
-    .blog-list [class^='col-']:last-child {
-        @include rfs(3.5rem, margin-bottom);
-    }
-}
-
-// Blog page - Popular posts
-.blog-popular {
-    .blog-list [class^='col-']:last-child {
-        margin-bottom: 0;
-    }
-}
-
-// Blog page - Search form
-.blog-search {
-    @include rfs(3.5rem, margin-bottom);
-    .form-control {
-        background-color: transparent;
-        color: $on-background;
-        font-size: 16px;
-        padding: 8px 12px;
-        line-height: 1.6;
-        height: auto;
-        border-radius: 0.25rem 0 0 0.25rem;
-        border-color: rgba($on-background, 0.30);
-        &::-webkit-input-placeholder {
-            /* Chrome/Opera/Safari */
-            color: rgba($on-background, 0.54);
-        }
-        &::-moz-placeholder {
-            /* Firefox 19+ */
-            color: rgba($on-background, 0.54);
-        }
-        &:-ms-input-placeholder {
-            /* IE 10+ */
-            color: rgba($on-background, 0.54);
-        }
-        &:-moz-placeholder {
-            /* Firefox 18- */
-            color: rgba($on-background, 0.54);
-        }
-    }
-    button {
-        font-size: 16px;
-        padding: 8px 12px;
-        line-height: 1.6;
-        border-radius: 0 0.25rem 0.25rem 0;
-        border: none;
     }
 }
 
@@ -189,18 +108,88 @@
     }
 }
 
-// Tag list
-.tag-list {
-    font-size: 0;
-    background-color: $surface;
-    .list-inline-item {
-        font-size: 1rem;
-        margin-right: 4px;
-        margin-bottom: 4px;
+// Blog popular
+.blog-popular {
+    .blog-list [class^='col-']:last-child {
+        margin-bottom: 0;
     }
 }
 
-// Post page
+// Blog similar
+.blog-similar {
+    .blog-list [class^='col-']:last-child {
+        @include rfs(3.5rem, margin-bottom);
+    }
+}
+
+// Blog search
+.blog-search {
+    @include rfs(3.5rem, margin-bottom);
+    .form-control {
+        background-color: transparent;
+        color: $on-background;
+        font-size: 16px;
+        padding: 8px 12px;
+        line-height: 1.6;
+        height: auto;
+        border-radius: 0.25rem 0 0 0.25rem;
+        border-color: rgba($on-background, 0.30);
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: rgba($on-background, 0.54);
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: rgba($on-background, 0.54);
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: rgba($on-background, 0.54);
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: rgba($on-background, 0.54);
+        }
+    }
+    button {
+        font-size: 16px;
+        padding: 8px 12px;
+        line-height: 1.6;
+        border-radius: 0 0.25rem 0.25rem 0;
+        border: 1px solid rgba($on-background, 0.30);
+        border-left-width: 0;
+        box-shadow: none;
+    }
+}
+
+// Blog categories
+.blog-categories {
+    @include rfs(3.5rem, margin-bottom);
+    ul {
+        background-color: $surface;
+    }
+    li, a {
+        color: $on-surface;
+    }
+}
+
+// Blog tags
+.blog-tags {
+    ul {
+        font-size: 0;
+        background-color: $surface;
+        .list-inline-item {
+            font-size: 1rem;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+    }
+    @media (max-width: 991.98px) {
+        @include rfs(3.5rem, margin-bottom);
+    }
+}
+
+// Single post
 .single-post {
     &-meta {
         &__profile-image {
