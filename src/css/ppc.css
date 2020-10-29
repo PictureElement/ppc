@@ -8316,6 +8316,7 @@ a {
     color: #14313D; }
 
 .single-post-carousel {
+  display: block;
   position: relative; }
   .single-post-carousel .item img {
     border-radius: 4px; }
