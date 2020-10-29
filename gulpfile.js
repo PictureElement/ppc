@@ -12,7 +12,7 @@ const useref = require('gulp-useref');
 const gulpif = require('gulp-if');
 
 
-// Clean/Copy
+// Initialize
 // =============================================================================
 
 // Clean dist
@@ -20,13 +20,13 @@ function cleanDist() {
   return del(['dist/**', '!dist']);
 }
 
-// Clean vendor
+// Clean vendor (src)
 function cleanVendor() {
   return del(['src/vendor/**', '!src/vendor']);
 }
 
-// Copy third-party modules in vendor directory
-function copyVendor() {
+// Populate vendor (src)
+function populateVendor() {
   return gulp.src([
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
@@ -48,22 +48,28 @@ function copyVendor() {
   .pipe(gulp.dest('src/vendor/'));
 }
 
-// Copy fonts
+// Copy fonts to dist
 function copyFonts() {
   return gulp.src('src/webfonts/**/*')
     .pipe(gulp.dest('dist/webfonts/'));
 }
 
-// Copy icon fonts
-function copyIconFonts() {
-  return gulp.src('src/vendor/@fortawesome/fontawesome-free/webfonts/**/*')
-    .pipe(gulp.dest('dist/webfonts/'));
-}
-
-// Copy images
+// Copy images to dist
 function copyImages() {
   return gulp.src('src/images/**/*')
     .pipe(gulp.dest('dist/images'));
+}
+
+// Copy vendor to dist
+function copyVendor() {
+  return gulp.src('src/vendor/**/*')
+    .pipe(gulp.dest('dist/vendor'));
+}
+
+// Copy Html to dist
+function copyHtml() {
+  return gulp.src('src/*.html')
+    .pipe(gulp.dest('dist'));
 }
 
 
@@ -75,17 +81,6 @@ function browserSyncSrc(cb) {
   browsersync.init({
     server: {
       baseDir: "src"
-    },
-    open: "external"
-  });
-  cb();
-}
-
-// Static server (dist)
-function browserSyncDist(cb) {
-  browsersync.init({
-    server: {
-      baseDir: "dist"
     },
     open: "external"
   });
@@ -118,6 +113,7 @@ function watchFiles() {
 // =============================================================================
 
 // JS and CSS optimization
+/*
 function combine() {
   return gulp.src('src/*.html')
     .pipe(useref())
@@ -125,6 +121,22 @@ function combine() {
     .pipe(gulpif('*.css', autoprefixer({cascade: false}))) // Add vendor prefixes
     .pipe(gulpif('*.css', cleanCSS({compatibility: 'ie8'}))) // Minify CSS
     .pipe(gulp.dest('dist')); // Save to dist
+}
+*/
+
+// CSS optimization
+function css() {
+  return gulp.src('src/css/*.css')
+  .pipe(autoprefixer({cascade: false})) // Add vendor prefixes
+  .pipe(cleanCSS({compatibility: 'ie8'})) // Minify CSS
+  .pipe(gulp.dest('dist/css/'));
+}
+
+// JS optimization
+function js() {
+  return gulp.src('src/js/*.js')
+    .pipe(uglify()) // Minify JS
+    .pipe(gulp.dest('dist/js/'));
 }
 
 // Critical CSS
@@ -170,7 +182,7 @@ function criticalCSS() {
       })
     )
     .on('error', function(err) { 
-      gutil.log(gutil.colors.red(err.message)); 
+      document(error);
     })
     .pipe(gulp.dest('dist/'));
 }
@@ -180,13 +192,11 @@ function criticalCSS() {
 // =============================================================================
 
 // Define tasks
-const reinit = gulp.series(cleanDist, cleanVendor, copyVendor, copyFonts, copyIconFonts, copyImages);
-const build = gulp.series(reinit, compileSass, combine, criticalCSS);
+const init = gulp.series(cleanDist, cleanVendor, populateVendor, copyFonts, copyImages, copyVendor, copyHtml);
+const build = gulp.series(init, compileSass, css, js, criticalCSS);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSyncSrc));
-const production = gulp.series(browserSyncDist);
 
 // Register public tasks
-exports.reinit = reinit;
+exports.init = init;
 exports.build = build;
 exports.watch = watch;
-exports.production = production;
