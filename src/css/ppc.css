@@ -8246,6 +8246,9 @@ a {
     border: 1px solid rgba(20, 49, 61, 0.3);
     border-left-width: 0;
     box-shadow: none; }
+    .blog-search button:hover {
+      border: 1px solid rgba(20, 49, 61, 0.3);
+      border-left-width: 0; }
 
 .blog-categories {
   margin-bottom: calc(0.9275rem + 3.43vw); }

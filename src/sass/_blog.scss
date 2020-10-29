@@ -159,6 +159,10 @@
         border: 1px solid rgba($on-background, 0.30);
         border-left-width: 0;
         box-shadow: none;
+        &:hover {
+            border: 1px solid rgba($on-background, 0.30);
+            border-left-width: 0;
+        }
     }
 }
 
