@@ -51,126 +51,143 @@ $(document).ready(function() {
     });
 
     // 4. Counters
-    var elements = document.querySelectorAll('.counter');
-    var counterUp = window.counterUp["default"];
+    if (window.counterUp) {
+        var counterUp = window.counterUp["default"]; // Import counterUp2
+        var $el = $('.counter');
 
-    elements.forEach(function(el) {
-        new Waypoint({
-            element: el,
-            handler: function() { 
-                counterUp(el);
-                this.destroy();
-            },
-            offset: 'bottom-in-view',
-        })
-    });
+        $el.each(function (ignore, counter) {
+            var waypoint = new Waypoint({
+                element: $(this),
+                handler: function() { 
+                    counterUp(counter, {
+                        duration: 5000,
+                        delay: 16
+                    });
+                    this.destroy();
+                },
+                offset: 'bottom-in-view',
+            });
+        });
+    }
 
     // 5. Hero carousel
-    $('#heroCarousel').owlCarousel({
-        loop:true,
-        margin:0,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause:true,
-        checkVisibility: false,
-        items: 1,
-        responsive:{
-            // breakpoint from 0 up
-            0:{
-                nav:true,
-                dots:false,
-                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
-            },
-            // breakpoint from 576px up
-            576 : {
-                nav:false,
-                dots:true,
+    if ($('#heroCarousel').length) {
+        $('#heroCarousel').owlCarousel({
+            loop:true,
+            margin:0,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
+            checkVisibility: false,
+            items: 1,
+            responsive:{
+                // breakpoint from 0 up
+                0:{
+                    nav:true,
+                    dots:false,
+                    navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
+                },
+                // breakpoint from 576px up
+                576 : {
+                    nav:false,
+                    dots:true,
+                }
             }
-        }
-    });
+        });
+    }
     
 
     // 6. Shop carousel
-    $('#shopCarousel').owlCarousel({
-        loop:true,
-        nav:false,
-        dots: false,
-        autoplay:true,
-        autoplayTimeout:2000,
-        autoplayHoverPause:true,
-        responsive:{
-            // breakpoint from 0 up
-            0:{
-                items:3,
-                margin:12
-            },
-            // breakpoint from 576px up
-            576 : {
-                items:3,
-                margin:12
-            },
-            // breakpoint from 768px up
-            768 : {
-                items:6,
-                margin:16
+    if ($('#shopCarousel').length) {
+        $('#shopCarousel').owlCarousel({
+            loop:true,
+            nav:false,
+            dots: false,
+            autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            responsive:{
+                // breakpoint from 0 up
+                0:{
+                    items:3,
+                    margin:12
+                },
+                // breakpoint from 576px up
+                576 : {
+                    items:3,
+                    margin:12
+                },
+                // breakpoint from 768px up
+                768 : {
+                    items:6,
+                    margin:16
+                }
             }
-        }
-    });
+        });
+    }
 
     // 7. Testimonials carousel
-    $('#testimonialsCarousel').owlCarousel({
-        loop:true,
-        margin:0,
-        nav:false,
-        dots: true,
-        autoplay:true,
-        autoplayTimeout:2000,
-        autoplayHoverPause:true,
-        responsive:{
-            // breakpoint from 0 up
-            0:{
-                items:1
+    if ($('#testimonialsCarousel').length) {
+        $('#testimonialsCarousel').owlCarousel({
+            loop:true,
+            margin:0,
+            nav:false,
+            dots: true,
+            autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            responsive:{
+                // breakpoint from 0 up
+                0:{
+                    items:1
+                }
             }
-        }
-    });
+        });
+    }
 
     // 8. Blog carousel
-    $('#blogCarousel').owlCarousel({
-        loop:false,
-        nav:true,
-        navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
-        dots: false,
-        autoplay:false,
-        responsive:{
-            // breakpoint from 0 up
-            0:{
-                items:1,
-                stagePadding: 24,
-                margin:12
-            },
-            // breakpoint from 576px up
-            992 : {
-                items:2,
-                stagePadding: 32,
-                margin:16
+    if ($('#blogCarousel').length) {
+        $('#blogCarousel').owlCarousel({
+            loop:false,
+            nav:true,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            dots: false,
+            autoplay:false,
+            responsive:{
+                // breakpoint from 0 up
+                0:{
+                    items:1,
+                    stagePadding: 24,
+                    margin:12
+                },
+                // breakpoint from 576px up
+                992 : {
+                    items:2,
+                    stagePadding: 32,
+                    margin:16
+                }
             }
-        }
-    });
+        });
+    }
 
     // 9. Post carousel
-    $('#singlePostCarousel').owlCarousel({
-        loop:true,
-        nav:true,
-        navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
-        dots: false,
-        autoplay:true,
-        items: 1
-    });
+    if ($('#singlePostCarousel').length) {
+        $('#singlePostCarousel').owlCarousel({
+            loop:true,
+            nav:true,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            dots: false,
+            autoplay:true,
+            items: 1
+        });
+    }
 
     // 10. Fancybox options
-    $('[data-fancybox]').fancybox({
-        smallBtn : true
-    });
+    if ($('[data-fancybox]').length) {
+        $('[data-fancybox]').fancybox({
+            smallBtn : true
+        });
+    }
 
     // 11. Headroom.js
     var pageHeader = document.getElementById("pageHeader");

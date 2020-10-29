@@ -43,7 +43,7 @@ function populateVendor() {
     'node_modules/owl.carousel2/dist/assets/owl.theme.default.min.css',
     'node_modules/headroom.js/dist/headroom.min.js',
     'node_modules/counterup2/dist/index.js',
-    'node_modules/waypoints/lib/noframework.waypoints.js'
+    'node_modules/waypoints/lib/jquery.waypoints.min.js'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('src/vendor/'));
 }
