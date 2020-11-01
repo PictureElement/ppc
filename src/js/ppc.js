@@ -60,7 +60,7 @@ $(document).ready(function() {
                 element: $(this),
                 handler: function() { 
                     counterUp(counter, {
-                        duration: 5000,
+                        duration: 1000,
                         delay: 16
                     });
                     this.destroy();
@@ -134,7 +134,7 @@ $(document).ready(function() {
             nav:false,
             dots: true,
             autoplay:true,
-            autoplayTimeout:2000,
+            autoplayTimeout:3000,
             autoplayHoverPause:true,
             responsive:{
                 // breakpoint from 0 up
@@ -228,4 +228,7 @@ $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip({
             container: 'body'
          });
+
+    // 13. Initialize AOS
+    AOS.init();
 });

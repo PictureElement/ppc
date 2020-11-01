@@ -36,8 +36,17 @@
 }
 
 .testimonials-carousel {
+    display: block;
     position: relative;
     padding-bottom: calc(2rem + 24px);
+    .item {
+        &:not(:first-child) {
+            display: none;
+        }
+        @media (max-width: 575.98px) {
+            min-height: calc(100vh - 72px);
+        }
+    }
     .owl-stage-outer {
         overflow: visible;
         .owl-stage {
