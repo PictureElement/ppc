@@ -6,49 +6,53 @@ $(document).ready(function() {
     }); 
 
     // 2. Add header shadow
-    var $pageHeader = $('#pageHeader');
+    if ($('#pageHeader').length) {
+        var $pageHeader = $('#pageHeader');
 
-    if( $(window).scrollTop() > 0 ) {
-        $pageHeader.addClass('header_shadow');
+        if( $(window).scrollTop() > 0 ) {
+            $pageHeader.addClass('header_shadow');
+        }
+
+        $('.navbar-toggler').on('click', function() {
+            var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
+            var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
+            var hasShadow = $pageHeader.hasClass('page-header_shadow');
+            
+            if (isScrollTopGreaterThanZero) {
+                $pageHeader.addClass('page-header_shadow');
+            } else if (isNavbarCollapseVisible) {
+                $pageHeader.removeClass('page-header_shadow');
+            } else {
+                $pageHeader.addClass('page-header_shadow');
+            }
+        });
+
+        $(window).scroll(function() {
+            var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
+            var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
+            var hasShadow = $pageHeader.hasClass('page-header_shadow');
+
+            if (isScrollTopGreaterThanZero) {
+                $pageHeader.addClass('page-header_shadow');
+            } else if (isNavbarCollapseVisible) {
+                $pageHeader.addClass('page-header_shadow');
+            } else {
+                $pageHeader.removeClass('page-header_shadow');
+            }
+        });
     }
 
-    $('.navbar-toggler').on('click', function() {
-        var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
-        var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
-        var hasShadow = $pageHeader.hasClass('page-header_shadow');
-        
-        if (isScrollTopGreaterThanZero) {
-            $pageHeader.addClass('page-header_shadow');
-        } else if (isNavbarCollapseVisible) {
-            $pageHeader.removeClass('page-header_shadow');
-        } else {
-            $pageHeader.addClass('page-header_shadow');
-        }
-    });
-
-    $(window).scroll(function() {
-        var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
-        var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
-        var hasShadow = $pageHeader.hasClass('page-header_shadow');
-
-        if (isScrollTopGreaterThanZero) {
-            $pageHeader.addClass('page-header_shadow');
-        } else if (isNavbarCollapseVisible) {
-            $pageHeader.addClass('page-header_shadow');
-        } else {
-            $pageHeader.removeClass('page-header_shadow');
-        }
-    });
-
     // 3. Back to top
-    $('#toTop').on('click', function(e) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        }, 1000, function () {
-            // Callback after animation
+    if ($('#toTop').length) {
+        $('#toTop').on('click', function(e) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1000, function () {
+                // Callback after animation
+            });
         });
-    });
+    }
 
     // 4. Counters
     if (window.counterUp) {
@@ -190,12 +194,14 @@ $(document).ready(function() {
     }
 
     // 11. Headroom.js
-    var pageHeader = document.getElementById("pageHeader");
-    var options = {
-        offset : 500
+    if (document.body.contains(document.getElementById("pageHeader"))) {
+        var pageHeader = document.getElementById("pageHeader");
+        var options = {
+            offset : 500
+        }
+        var headroom  = new Headroom(pageHeader, options);
+        headroom.init();
     }
-    var headroom  = new Headroom(pageHeader, options);
-    headroom.init();
 
     // 12. Smooth scrolling
     $('a[href*="#"]')
@@ -224,10 +230,6 @@ $(document).ready(function() {
                 }
             }
         });
-
-        $('[data-toggle="tooltip"]').tooltip({
-            container: 'body'
-         });
 
     // 13. Initialize AOS
     AOS.init();
