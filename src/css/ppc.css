@@ -7759,7 +7759,7 @@ p {
         position: static;
         background-color: #005d81;
         transform: translateY(0);
-        min-height: calc(100vh - 56.25vw - 82px);
+        min-height: calc(100vh - 56.25vw - 56px);
         display: flex;
         align-items: center; } }
 
@@ -7769,7 +7769,7 @@ p {
     display: none; }
   @media (max-width: 575.98px) {
     .hero-carousel .item {
-      min-height: calc(100vh - 82px); } }
+      min-height: calc(100vh - 56px); } }
   @media (max-width: 575.98px) {
     .hero-carousel .owl-stage-outer {
       background-color: #005d81; } }
