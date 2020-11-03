@@ -9,6 +9,7 @@
             color: $on-background;
             @include rfs(0.5rem, padding);
             position: relative;
+            text-decoration: none;
             &:hover, &:focus {
                 color: $on-background;
                 text-decoration: none;

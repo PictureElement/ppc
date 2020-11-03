@@ -8,18 +8,20 @@
 
 .faq {
     &__icon {
-        color: $accent;
+        color: $primary;
         line-height: 1.6;
         @include font-size(1.5rem);
     }
     &__btn {
         position: relative;
         text-transform: none;
+        text-decoration: none;
         @include font-size(1.25rem);
         line-height: 1.6;
         color: $on-background;
         &:hover {
             color: $on-background;
+            text-decoration: underline;
         }
         &:focus, &:active {
             box-shadow: none !important;

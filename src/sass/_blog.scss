@@ -29,33 +29,33 @@
         .owl-prev {
             padding: 0;
             margin: 0 .5rem 0 0;
-            color: $on-accent;
+            color: $on-primary;
             width: 48px;
             height: 48px;
             border-radius: 50%;
             text-align: center;
             line-height: 48px;
-            background: $accent;
+            background: $primary;
             font-size: 20px;
             &:hover {
-                background: darken($accent, 10%);
-                color: $on-accent;
+                background: darken($primary, 10%);
+                color: $on-primary;
             }
         }
         .owl-next {
             padding: 0;
             margin: 0;
-            color: $on-accent;
+            color: $on-primary;
             width: 48px;
             height: 48px;
             border-radius: 50%;
             text-align: center;
             line-height: 48px;
-            background: $accent;
+            background: $primary;
             font-size: 20px;
             &:hover {
-                background: darken($accent, 10%);
-                color: $on-accent;
+                background: darken($primary, 10%);
+                color: $on-primary;
             }
         }
     }
@@ -88,7 +88,6 @@
         font-weight: 300;
         a {
             color: $on-surface;
-            font-weight: 400;
         }
     }
     &__title {
@@ -96,6 +95,10 @@
         overflow: hidden;
         a {
             color: $on-surface;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     &__excerpt {
@@ -174,6 +177,10 @@
     }
     li, a {
         color: $on-surface;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -186,6 +193,9 @@
             font-size: 1rem;
             margin-right: 4px;
             margin-bottom: 4px;
+            a {
+                text-decoration: none;
+            }
         }
     }
     @media (max-width: 991.98px) {

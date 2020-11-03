@@ -75,12 +75,12 @@
                 width: 16px;
                 height: 16px;
                 background: #fff;
-                border: 1px solid $accent;
+                border: 1px solid $primary;
             }
             &.active, &:hover {
                 span {
                     border: none;
-                    background: $accent;
+                    background: $primary;
                 }
             }
         }

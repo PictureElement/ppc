@@ -17,7 +17,11 @@
         ul li {
             margin-bottom: 12px;
             a {
+                text-decoration: none;
                 color: $on-surface;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

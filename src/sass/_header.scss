@@ -16,8 +16,18 @@
     .navbar-brand {
         line-height: 1;
     }
-    .nav-link, .nav-phone {
+    .nav-link {
         @include font-size(1rem);
+    }
+    .nav-phone {
+        @include font-size(1rem);
+        a {
+            color: $accent;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
