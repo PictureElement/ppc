@@ -21,26 +21,48 @@
 // $on-surface: magenta;
 
 // Theme 2
-$primary: #005d81;
+// $primary: #005d81;
+// $on-primary: #fff;
+
+// $primary-dark: #003454;
+// $on-primary-dark: #fff;
+
+// $accent: #8CFFDA;
+// $on-accent: #14313D;
+
+// $accent-dark: #57cba8;
+// $on-accent-dark: #14313D;
+
+// $secondary: #6C757D;
+// $on-secondary: #fff;
+
+// $background: #fff;
+// $on-background: #14313D;
+
+// $surface: #fff;
+// $on-surface: #14313D;
+
+// Theme 3
+$primary: #263238;
 $on-primary: #fff;
 
-$primary-dark: #003454;
+$primary-dark: #000a12;
 $on-primary-dark: #fff;
 
-$accent: #8CFFDA;
-$on-accent: #14313D;
+$accent: #ffe57f;
+$on-accent: #000a12;
 
-$accent-dark: #57cba8;
-$on-accent-dark: #14313D;
+$accent-dark: #cab350;
+$on-accent-dark: #000a12;
 
 $secondary: #6C757D;
 $on-secondary: #fff;
 
 $background: #fff;
-$on-background: #14313D;
+$on-background:#000a12;
 
 $surface: #fff;
-$on-surface: #14313D;
+$on-surface:#000a12;
 
 // Theme colors
 $theme-colors: (
