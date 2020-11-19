@@ -1,50 +1,27 @@
 // Testimonials
 // =============================================================================
 
-.testimonials {
-    overflow-x: hidden;
-    @include rfs(-10rem, margin-top);
-    &__quote {
-        position: absolute;
-        top: 0;
-        z-index: 1;
-        fill: rgba($on-surface, 0.15);
-    }
-}
-
-.testimonial {
-    background-color: $surface;
-    border-radius: 4px;
-    padding: 100px 64px;
-    text-align: center;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    &__text {
-        margin-bottom: 1rem;
-        color: $on-surface;
-    }
-    &__author {
-        @include font-size(1rem);
-        font-weight: 300;
-        color: $on-surface;
-    }
-    @media (max-width: 575.98px) {
-        padding: 100px 16px;
-    }
-}
-
 .testimonials-carousel {
-    display: block;
     position: relative;
     padding-bottom: calc(2rem + 24px);
-    .item {
+    .testimonial {
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        img {
+            width: 64px;
+            height: 64px;
+        }
         &:not(:first-child) {
             display: none;
         }
-        @media (max-width: 575.98px) {
-            min-height: calc(100vh - 72px);
+        &__author {
+            opacity: 0.54;
+            display: block;
+            font-size: 80%;
         }
     }
     .owl-stage-outer {
@@ -74,7 +51,7 @@
                 margin: 4px;
                 width: 16px;
                 height: 16px;
-                background: #fff;
+                background: transparent;
                 border: 1px solid $primary;
             }
             &.active, &:hover {

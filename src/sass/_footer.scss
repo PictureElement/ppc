@@ -1,7 +1,8 @@
-// FOOTER (Use pixels instead of relative units)
+// FOOTER
 // =============================================================================
 
 .footer {
+    overflow: hidden;
     background-color: $primary-dark;
     @include rfs(7.5rem 0, padding);
     color: $on-primary-dark;
@@ -12,67 +13,31 @@
             text-decoration: underline;
         }
     }
-    p {
-        margin-bottom: 12px;
-        font-size: 16px;
-    }
     ul li {
-        margin-bottom: 12px;
-        font-size: 16px;
+        margin-bottom: 1rem;
     }
-    .form-group {
-        margin-bottom: 12px;
-        .form-control {
-            background-color: transparent;
-            border-color: rgba($on-primary-dark, 0.3);
-            color: $on-primary-dark;
-            font-size: 16px;
-            padding: 8px 12px;
-            line-height: 1.6;
-            height: auto;
-            &::-webkit-input-placeholder {
-                /* Chrome/Opera/Safari */
-                color: rgba($on-primary-dark, 0.54);
-            }
-            &::-moz-placeholder {
-                /* Firefox 19+ */
-                color: rgba($on-primary-dark, 0.54);
-            }
-            &:-ms-input-placeholder {
-                /* IE 10+ */
-                color: rgba($on-primary-dark, 0.54);
-            }
-            &:-moz-placeholder {
-                /* Firefox 18- */
-                color: rgba($on-primary-dark, 0.54);
-            }
-        }
-    }
-    .btn {
-        font-size: 16px;
-        padding: 8px 12px;
-        line-height: 1.6;
+    &__statement {
+        max-width: 540px;
     }
     &__social-link {
         display: inline-block;
         text-align: center;
         width: 48px;
         height: 48px;
-        border: 1px solid $on-primary-dark;
-        border-radius: 4px;
+        background-color: rgba($on-primary-dark, 0.15);
+        transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s; 
+        &:hover {
+            background-color: $primary;
+            color: $on-primary;
+        }
         i {
             line-height: 48px;
-            font-size: 20px;
         }
     }
     &__copy-left {
-        font-size:12px;
-        line-height:1;
         font-weight: 300;
     }
     &__copy-right {
-        font-size:12px;
-        line-height:1;
         font-weight: 300;
         a {
             text-decoration: underline;
@@ -80,16 +45,5 @@
                 text-decoration: none;
             }
         }
-    }
-    &__brand {
-        margin-bottom: 20px;
-    }
-    &__heading {
-        margin-bottom: 20px;
-        font-size: 20px;
-        font-weight: 500;
-    }
-    &__divider {
-        margin: 40px 0 20px 0;
     }
 }

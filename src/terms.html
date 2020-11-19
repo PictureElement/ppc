@@ -7,15 +7,24 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="author" content="Marios Sofokleous">
         <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ante eros. Aenean et finibus mauris.">
-        <title>PPC Pool Services | Terms</title>
+        <title>Rapido, a one-page business theme for October CMS | Terms and Conditions</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
         <!-- Font Awesome 5 -->
         <link rel="stylesheet" href="vendor/@fortawesome/fontawesome-free/css/all.min.css">
         <!-- AOS -->
         <link rel="stylesheet" href="vendor/aos/dist/aos.css">
         <!-- Styles -->
-        <link rel="stylesheet" href="css/ppc.css">
+        <link rel="stylesheet" href="css/rapido.css">
     </head>
     <body>
+        <!-- SPINNER -->
+        <div id="spinnerWrapper" class="spinner-wrapper bg-gradient-primary">
+            <div class="spinner">
+                <div class="spinner__ball"></div>
+                <p class="spinner__text">LOADING</p>
+            </div>
+        </div>
+        
         <!-- TO TOP -->
         <button aria-label="Back to top" id="toTop" class="to-top btn"><i class="fas fa-long-arrow-alt-up"></i></button>
 
@@ -38,16 +47,15 @@
         </div>
 
         <!-- HEADER -->
-        <header id="pageHeader" class="page-header headroom">
+        <header id="pageHeader" class="page-header bg-white headroom">
             <div class="container">
-                <nav class="navbar navbar-expand-xl navbar-dark px-0 py-2">
+                <nav class="navbar navbar-expand-lg px-0 py-2">
                     <a aria-label="Visit the homepage" class="navbar-brand py-0 mr-2" href="https://msof.me/demo/">
-                        <img class="img-fluid" src="https://placehold.co/40x40" width="40" height="40" alt="PPC Pool Services Logo">
-                        <!-- <img class="img-fluid" src="https://placehold.co/40x40.png" srcset="https://placehold.co/40x40.png?text=40x40@1x 1x, https://placehold.co/80x80.png?text=40x40@2x 2x" width="40" height="40" alt="PPC Pool Services Logo"> -->
+                        <img class="img-fluid" src="images/theme-02/logo.svg" width="134" height="40" alt="...">
+                        <!-- <img class="img-fluid" src="https://placehold.co/134x40.png" srcset="https://placehold.co/134x40.png?text=134x40@1x 1x, https://placehold.co/268x80.png?text=134x40@2x 2x" width="134" height="40" alt="..."> -->
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
@@ -76,7 +84,7 @@
                                 <a class="nav-link" href="https://msof.me/demo/#contact">CONTACT</a>
                             </li>
                         </ul>
-                        <div class="nav-phone ml-xl-5 py-2"><i class="fas fa-phone-alt text-accent"></i><a class="position-relative ml-2" href="tel:+">+357 26 XXX XXX</a></div>
+                        <a class="btn btn-sm btn-accent d-none d-lg-inline-block ml-xl-3" href="#">Download</a>
                     </div>
                 </nav>
             </div>
@@ -84,13 +92,13 @@
 
         <main class="main">
             <!-- COVER -->
-            <div class="cover cover_utility-page">
+            <div class="cover_utility space-py-4">
                 <div class="container">
-                    <h1 data-aos="fade-up" data-aos-once="true" class="cover__title mb-0">Terms and Conditions</h1>
+                    <h1 data-aos="fade-up" data-aos-once="true" class="max-width-800 mx-auto text-center mb-0">Terms and Conditions</h1>
                 </div>
             </div>
 
-            <section data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="section section_narrow">
+            <section class="space-py-4 max-width-800 mx-auto">
                 <div class="container">
                     <!-- CONTENT -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis ante consectetur ipsum finibus, quis tristique purus maximus. Integer venenatis nisl vel finibus congue. Pellentesque eget semper velit. Integer vitae dignissim dui. Nulla interdum consequat nisl at ultricies. Maecenas et vehicula neque, vestibulum suscipit est. Duis tincidunt hendrerit urna, a porta dui ultricies non. Donec risus eros, tempus at lacinia eget, finibus nec ante. Sed id mi mollis, pharetra purus id, pellentesque urna. Nam bibendum neque eu cursus eleifend. Proin at risus laoreet, vulputate sapien vehicula, congue nibh. Etiam eget neque velit. Sed porta tortor id dolor iaculis molestie. Vivamus suscipit dapibus facilisis.</p>
@@ -103,71 +111,78 @@
                 </div>
             </section>
 
-            <!-- CTA 3 -->
-            <section class="section section_large-gap cta">
-                <div class="container">
-                    <h2 data-aos="fade-up" data-aos-once="true" class="cta__heading">Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-                    <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="aos-mobile-delay-zero">
-                        <a href="tel:+" class="cta__btn btn btn-accent"><i class="fas fa-phone-alt"></i> Call us now</a>
-                        <a href="https://msof.me/demo/#contact" class="cta__btn btn btn-outline-accent">Get a quote</a>
+            <!-- CTA -->
+            <div class="bg-gradient-primary space-py-4">
+                <div class="container position-relative">
+                  <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
+                    <div class="col-lg-5 mb-3 mb-lg-0">
+                        <h2 class="text-on-primary mb-0">Download Rapido for free anytime, anywhere.</h2>
                     </div>
+                    <div class="col-lg-5 text-lg-right">
+                      <a class="btn btn-lg btn-accent mx-1 mb-2" href="#">Get Started</a>
+                      <a class="btn btn-lg btn-outline-accent mx-1 mb-2" href="#">Learn More</a>
+                    </div>
+                  </div>
                 </div>
-            </section>
+            </div>
         </main>
 
         <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container">
+        <footer class="footer position-relative">
+            <div style="z-index:1;" class="container position-relative">
                 <div class="row">
-                    <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+                    <div class="col-12 col-lg mb-4 mb-lg-0">
                         <a aria-label="Visit the homepage" href="https://msof.me/demo/">
-                            <img class="footer__brand img-fluid" src="https://placehold.co/40x40" width="40" height="40" alt="PPC Pool Services Logo">
-                            <!-- <img class="footer__brand img-fluid" src="https://placehold.co/40x40.png" srcset="https://placehold.co/40x40.png?text=40x40@1x 1x, https://placehold.co/80x80.png?text=40x40@2x 2x" width="40" height="40" alt="PPC Pool Services Logo"> -->
+                            <img class="mb-3 img-fluid" src="images/logo-light.svg" width="134" height="40" loading="lazy" alt="...">
+                            <!-- <img class="mb-3 img-fluid" src="https://placehold.co/134x40.png" srcset="https://placehold.co/134x40.png?text=134x40@1x 1x, https://placehold.co/268x80.png?text=134x40@2x 2x" width="134" height="40" loading="lazy" alt="..."> -->
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod dictum lacus sit amet mattis.</p>
+                        <p class="footer__statement">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt obcaecati qui ea alias assumenda aperiam.</p>
                         <div>
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><a class="footer__social-link" aria-label="Visit our facebook page" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="list-inline-item"><a class="footer__social-link" aria-label="Visit our Instagram page" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a class="footer__social-link corner-shape-sm" aria-label="Visit our facebook page" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a class="footer__social-link corner-shape-sm" aria-label="Visit our Instagram page" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 mb-4 mb-lg-0">
-                        <h3 class="footer__heading">Contact</h3>
+                    <div class="col-12 col-md-5 col-lg mb-4 mb-lg-0">
+                        <h3 class="mb-3">Contact</h3>
                         <ul class="list-unstyled mb-0">
-                            <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-map-marker-alt"></i><div class="ml-2"><a href="#" target="_blank" rel="noopener noreferrer">Olgas Ksinaridou Str.,<br>Omiros Court Shop 2,<br>8020, Paphos</a></div></li>
-                            <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-phone-alt"></i><div class="ml-2"><a href="tel:+">+357 26 XXX XXX</a></div></li>
+                            <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-map-marker-alt"></i><div class="ml-2"><a href="#" target="_blank" rel="noopener noreferrer">Rapido, Inc.<br>1355 Market St, Suite 900<br>San Francisco, CA 94103</a></div></li>
+                            <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-phone-alt"></i><div class="ml-2"><a href="tel:+">415-701-2367</a></div></li>
                             <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-at"></i><div class="ml-2"><a href="mailto:">mail@example.com</a></div></li>
                             <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-clock"></i><div class="ml-2">Mon. to Fri. from 08:00 - 17:00</div></li>
                         </ul>
                     </div>
-                    <div class="col-12 col-lg-3 mb-4 mb-lg-0">
-                        <h3 class="footer__heading">Other</h3>
+                    <div class="col-12 col-md-3 col-lg mb-4 mb-lg-0">
+                        <h3 class="mb-3">Other</h3>
                         <ul class="list-unstyled mb-0">
                             <li><a href="#">Terms & Conditions</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Cookies</a></li>
                         </ul>
                     </div>
-                    <div class="col-12 col-lg-3">
-                        <h3 class="footer__heading">Subscribe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, cum!</p>
-                        <form class="newsletter-form">
+                    <div class="col-12 col-md-4 col-lg">
+                        <h3 class="mb-3">Stay in the know</h3>
+                        <p>Sign up for our monthly newsletter and get news and announcements delivered right to your inbox.</p>
+                        <form data-aos="fade-up" data-aos-once="true" class="newsletter-form">
                             <div class="form-group">
                                 <label class="sr-only" for="newsletterEmail">Email address</label>
-                                <input type="email" class="form-control" id="newsletterEmail" aria-describedby="emailHelp" placeholder="Email address" required>
+                                <input type="email" class="form-control corner-shape-sm" id="newsletterEmail" aria-describedby="emailHelp" placeholder="Email address" required>
                             </div>
-                            <button type="submit" class="btn btn-block btn-accent rounded">Subscribe</button>
-                            <small style="font-size:12px;font-weight:300;line-height:1.2;margin-top:4px;" id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+                            <button type="submit" class="btn btn-block btn-accent corner-shape-sm">Subscribe</button>
+                            <small id="emailHelp" class="form-text font-light">We'll never share your email with anyone else.</small>
                         </form>
                     </div>
                 </div>
-                <hr class="footer__divider hr_on-primary-dark">
-                <div class="clearfix">
-                    <span class="footer__copy-left float-none float-sm-left">© 2020 PPC Pool Services Ltd. All rights reserved.</span>
-                    <span class="footer__copy-right float-none float-sm-right">Website by <a href="https://msof.me/" target="_blank" rel="noopener noreferrer">Marios Sofokleous</a></span>
+                <hr style="background-color:rgba(255,255,255,0.30);" class="my-4">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                    <div><small class="footer__copy-left">© 2020 Rapido, Inc. All rights reserved.</small></div>
+                    <div><small class="footer__copy-right">Rapido theme by <a href="https://msof.me/" target="_blank" rel="noopener noreferrer">Marios Sofokleous</a></small></div>
                 </div>
             </div>
+            <figure class="footer-figure">
+                <img class="img-fluid" src="images/isometric-squares.svg" loading="lazy" alt="">
+            </figure>
         </footer>
 
         <!-- jQuery -->
@@ -179,6 +194,6 @@
         <!-- Headroom.js -->
         <script src="vendor/headroom.js/dist/headroom.min.js"></script>
         <!-- Site scripts -->
-        <script src="js/ppc.js"></script>
+        <script src="js/rapido.js"></script>
     </body>
 </html>

@@ -1,11 +1,6 @@
 // FAQs
 // =============================================================================
 
-.faqs {
-    border-top: 1px solid rgba($on-background, 0.30);
-    @include rfs(7.5rem, margin-top);
-}
-
 .faq {
     &__icon {
         color: $primary;
@@ -16,11 +11,7 @@
         position: relative;
         text-transform: none;
         text-decoration: none;
-        @include font-size(1.25rem);
-        line-height: 1.6;
-        color: $on-background;
         &:hover {
-            color: $on-background;
             text-decoration: underline;
         }
         &:focus, &:active {

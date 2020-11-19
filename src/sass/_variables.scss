@@ -1,109 +1,39 @@
-// Variables
-// =============================================================================
+// Helper function
+@function themable($theme, $color) {
+    @return map-get($theme, $color);
+}
 
-// Theme 1
-// $primary: red;
-// $on-primary:  yellow;
+// Color variables
+$primary: themable($theme, "primary");
+$on-primary: themable($theme, "on-primary");
+$primary-dark: themable($theme, "primary-dark");
+$on-primary-dark: themable($theme, "on-primary-dark");
+$primary-light: themable($theme, "primary-light");
+$accent: themable($theme, "accent");
+$on-accent: themable($theme, "on-accent");
 
-// $primary-dark: darken(red, 30%);
-// $on-primary-dark: lime;
-
-// $accent: green;
-// $on-accent: blue;
-
-// $accent-dark: purple;
-// $on-accent-dark: orange;
-
-// $background: #333;
-// $on-background: cyan;
-
-// $surface: navy;
-// $on-surface: magenta;
-
-// Theme 2
-// $primary: #005d81;
-// $on-primary: #fff;
-
-// $primary-dark: #003454;
-// $on-primary-dark: #fff;
-
-// $accent: #8CFFDA;
-// $on-accent: #14313D;
-
-// $accent-dark: #57cba8;
-// $on-accent-dark: #14313D;
-
-// $secondary: #6C757D;
-// $on-secondary: #fff;
-
-// $background: #fff;
-// $on-background: #14313D;
-
-// $surface: #fff;
-// $on-surface: #14313D;
-
-// Theme 3
-$primary: #263238;
-$on-primary: #fff;
-
-$primary-dark: #000a12;
-$on-primary-dark: #fff;
-
-$accent: #ffe57f;
-$on-accent: #000a12;
-
-$accent-dark: #cab350;
-$on-accent-dark: #000a12;
-
-$secondary: #6C757D;
-$on-secondary: #fff;
-
-$background: #fff;
-$on-background:#000a12;
-
-$surface: #fff;
-$on-surface:#000a12;
-
-// Theme colors
+// Define theme colors
 $theme-colors: (
     "primary": $primary,
+    "on-primary": $on-primary,
+    "primary-dark": $primary-dark,
+    "on-primary-dark": $on-primary-dark,
+    "primary-light": $primary-light,
     "accent": $accent,
-    "secondary": $secondary
+    "on-accent": $on-accent
 );
 
-// Breadcrumb separator
-$breadcrumb-divider: quote(">");
-
-// Toggle Bootstrap's global CSS preferences
+// Enable shadows
 $enable-shadows: true;
-$enable-responsive-font-sizes: false;
 
-// Buttons
-$btn-padding-y: 0.75rem;
-$btn-padding-x: 1.25rem;             
-$btn-line-height: 1;
-$btn-border-radius: 40px;
+// Enable gradients
+$enable-gradients: true;
 
-// Typography
-$font-family-base: 'Montserrat', sans-serif;
-$headings-font-family: 'Arima Madurai', cursive;
-$line-height-base: 1.6;
-$font-weight-base: 400;
-$link-color: $accent;
+// Buttons          
+$btn-border-radius: $corner-radius-sm !important;
 
 // Grid
 $grid-gutter-width: 2rem;
-
-// Pagination
-$pagination-color: rgba(0,0,0,0.87);
-$pagination-hover-color:rgba(0,0,0,0.87);
-$pagination-active-color: $on-accent;
-$pagination-active-bg: $accent;
-
-// Color contrast
-$yiq-contrasted-threshold: 150;
-$yiq-text-dark: black;
-$yiq-text-light: white;
 
 // Links
 $link-color: currentcolor;
@@ -112,6 +42,6 @@ $link-hover-color: currentcolor;
 $link-hover-decoration: none;
 
 // RFS
-$rfs-base-value: 0.875rem;
+$rfs-base-value: 1rem;
 $rfs-rem-value: 16;
-$rfs-factor: 50; // Factor of decrease
+// $rfs-factor: 50; // Factor of decrease

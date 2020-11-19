@@ -6,46 +6,25 @@
     top: 0;
     z-index: 1003;
     width: 100%;
-    background-color: $primary;
     &_shadow {
         box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-    }
-    .navbar-toggler {
-        border-radius: 4px;
     }
     .navbar-brand {
         line-height: 1;
     }
-    .nav-link {
-        @include font-size(1rem);
-    }
-    .nav-phone {
-        @include font-size(1rem);
-        a {
-            color: $accent;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-.navbar-dark .navbar-nav {
-    .active .nav-link {
-        color: $on-primary;
+    .navbar-toggler {        
+        color: $primary;
     }
     .nav-link {
-        color: $on-primary;
+        @include font-size(1rem);
         position: relative;
         &:hover, &:focus {
-            color: $on-primary;
             &::before {
                 content: '';
                 display: inline-block;
                 width: 100%;
                 height: 1px;
-                background-color: $on-primary;
+                background-color: $primary;
                 position: absolute;
                 bottom: 0;
                 left: 0;

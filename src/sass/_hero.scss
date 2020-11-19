@@ -2,164 +2,89 @@
 // =============================================================================
 
 .hero {
-    overflow-x: hidden;
     z-index: 1002;
     position: relative;
-    &__bg-wrapper {
-        max-width: 54%;
-        position: relative;
-        z-index: 1;
-        &::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(black, 0.3);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            border-radius: 0 4px 4px 0;
-        }
-        @media (max-width: 1199.98px) {
-            max-width: 100vw;
-            &::after {
-                border-radius: 0; 
-            }
-        }
-        @media (max-width: 575.98px) {
-            &::after {
-                display: none;
-            }
-        }
-    }
-    &__bg {
-        border-radius: 0 4px 4px 0;
-        @media (max-width: 1199.98px) {
-            border-radius: 0;
-        }
-    }
-    &-text-wrapper {
-        background-color: $primary;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        padding: 4.2vw 0;
-        &__title {
-            font-size: 4.375vw;
-            max-width: 41.666vw;
-            position: relative;
-            z-index: 2;
-            margin-bottom: 0.625vw;
-            margin-left: auto;
-            color: $on-primary;
-            @media (max-width: 1199.98px) {
-                max-width: 800px;
-                margin-right: auto;
-                @include font-size(5.25rem);
-                margin-bottom: 0.75rem;
-            }
-        }
-        &__lead {
-            font-family: $font-family-base;
-            font-weight: 300;
-            font-size: 1.666vw;
-            line-height: 1.125;
-            max-width: 41.666vw;
-            position: relative;
-            z-index: 2;
-            margin-bottom: 2.292vw;
-            margin-left: auto;
-            color: $on-primary;
-            @media (max-width: 1199.98px) {
-                max-width: 800px;
-                margin-right: auto;
-                @include font-size(2rem);
-                @include rfs(2.75rem, margin-bottom);
-            }
-        }
-        &__buttons {
-            position: relative;
-            z-index: 2;
-            @media (max-width: 575.98px) {
-                a {
-                    display: block;
-                    width: 100%;
-                    &:first-child {
-                        margin-bottom: 0.75rem;
-                    }
-                }
-            }
-        }
-        @media (max-width: 1199.98px) {
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-            background: transparent;
-        }
-        @media (max-width: 575.98px) {
-            position: static;
-            background-color: $primary;
-            transform: translateY(0);
-            min-height: calc(100vh - 56.25vw - 56px);
-            display: flex;
-            align-items: center;
-        }
-    }
 }
 
 .hero-carousel {
-    display: block;
-    .item {
-        &:not(:first-child) {
-            display: none;
-        }
-        @media (max-width: 575.98px) {
-            min-height: calc(100vh - 56px);
-        }
-    }
     .owl-stage-outer {
-        @media (max-width: 575.98px) {
-            background-color: $primary;
+        padding-bottom: 48px;
+        .owl-stage {
+            display: flex;
+        }
+        @media (max-width: 767.98px) {
+            padding-bottom: 0;
         }
     }
-    .owl-nav {
-        margin: 0;
-        position: absolute;
-        top: 28vw;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &__item {
+        height: 100%;
         display: flex;
-        width: 100%;
-        justify-content: space-between;
-        .owl-prev {
-            text-align: center;
-            background: transparent !important;
-            border-radius: 50%;
-            color: rgba(white, 0.75);
-            width: 48px;
-            height: 48px;
-            font-size: 20px;
-            line-height: 48px;
-            padding: 0;
-            &:hover {
-                color: rgba(white, 1);
+        justify-content: center;
+        text-align: right;
+        position: relative;
+        background: url("../images/abstract-shape-2.svg"), $primary;
+        background-position: top center;
+        background-size: cover;
+        @media (max-width: 767.98px) {
+            justify-content: start;
+        }
+    }
+    &__text-wrapper {
+        z-index:1;
+        position:relative;
+        h1 {
+            color: $on-primary;
+            max-width: 75%;
+            margin-left: auto;
+            @media (max-width: 767.98px) {
+                max-width: 100%;
             }
         }
-        .owl-next {
-            text-align: center;
-            background: transparent !important;
-            border-radius: 50%;
-            color: rgba(white, 0.75);
-            width: 48px;
-            height: 48px;
-            font-size: 20px;
-            line-height: 48px;
-            padding: 0;
-            &:hover {
-                color: rgba(white, 1);
+        p {
+            font-family: $font-family-base;
+            color: $on-primary;
+            max-width: 75%;
+            margin-left: auto;
+            @media (max-width: 767.98px) {
+                max-width: 100%;
             }
+        }
+        @media (max-width: 767.98px) {
+            text-align: center;
+            .btn {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    &__image-wrapper {
+        width: 50%;
+        height: calc(100% + 48px);
+        position: absolute;
+        top:0;
+        left:0;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        &::after {
+            background-image: linear-gradient(to bottom, rgba(#000, 0.5) 0%, rgba(#000, 0.2) 100%);
+            background-repeat: repeat-x;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            content: "";
+        }
+        @media (max-width: 767.98px) {
+            position: relative;
+            width: 100%;
+            height: auto;
         }
     }
     .owl-dots {
@@ -167,9 +92,8 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        right: 20px;
-        top: calc(50% - 2.9166vw);
-        transform: translateY(-50%);
+        right: 8px;
+        top: calc(50% - 48px);
         margin-top: 0 !important;
         .owl-dot {
             transition: background-color .15s ease-in-out;
@@ -188,14 +112,9 @@
                 }
             }
         }
-        @media (max-width: 1199.98px) {
-            top: 50%;
-        }
-        @media (max-width: 575.98px) {
-            display: block;
-            position: static;
-            transform: none;
-            margin-top: 1rem;
+        @media (max-width: 767.98px) {
+            top: calc(0.24 * 100vw);
+            transform: translateY(-50%);
         }
     }
 }

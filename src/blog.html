@@ -7,15 +7,24 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="author" content="Marios Sofokleous">
         <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ante eros. Aenean et finibus mauris.">
-        <title>PPC Pool Services | Blog</title>
+        <title>Rapido, a one-page business theme for October CMS | Blog</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
         <!-- Font Awesome 5 -->
         <link rel="stylesheet" href="vendor/@fortawesome/fontawesome-free/css/all.min.css">
         <!-- AOS -->
         <link rel="stylesheet" href="vendor/aos/dist/aos.css">
         <!-- Styles -->
-        <link rel="stylesheet" href="css/ppc.css">
+        <link rel="stylesheet" href="css/rapido.css">
     </head>
     <body>
+        <!-- SPINNER -->
+        <div id="spinnerWrapper" class="spinner-wrapper bg-gradient-primary">
+            <div class="spinner">
+                <div class="spinner__ball"></div>
+                <p class="spinner__text">LOADING</p>
+            </div>
+        </div>
+        
         <!-- TO TOP -->
         <button aria-label="Back to top" id="toTop" class="to-top btn"><i class="fas fa-long-arrow-alt-up"></i></button>
 
@@ -38,16 +47,15 @@
         </div>
 
         <!-- HEADER -->
-        <header id="pageHeader" class="page-header headroom">
+        <header id="pageHeader" class="page-header bg-white headroom">
             <div class="container">
-                <nav class="navbar navbar-expand-xl navbar-dark px-0 py-2">
+                <nav class="navbar navbar-expand-lg px-0 py-2">
                     <a aria-label="Visit the homepage" class="navbar-brand py-0 mr-2" href="https://msof.me/demo/">
-                        <img class="img-fluid" src="https://placehold.co/40x40" width="40" height="40" alt="PPC Pool Services Logo">
-                        <!-- <img class="img-fluid" src="https://placehold.co/40x40.png" srcset="https://placehold.co/40x40.png?text=40x40@1x 1x, https://placehold.co/80x80.png?text=40x40@2x 2x" width="40" height="40" alt="PPC Pool Services Logo"> -->
+                        <img class="img-fluid" src="images/theme-02/logo.svg" width="134" height="40" alt="...">
+                        <!-- <img class="img-fluid" src="https://placehold.co/134x40.png" srcset="https://placehold.co/134x40.png?text=134x40@1x 1x, https://placehold.co/268x80.png?text=134x40@2x 2x" width="134" height="40" alt="..."> -->
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
@@ -76,7 +84,7 @@
                                 <a class="nav-link" href="https://msof.me/demo/#contact">CONTACT</a>
                             </li>
                         </ul>
-                        <div class="nav-phone ml-xl-5 py-2"><i class="fas fa-phone-alt text-accent"></i><a class="position-relative ml-2" href="tel:+">+357 26 XXX XXX</a></div>
+                        <a class="btn btn-sm btn-accent d-none d-lg-inline-block ml-xl-3" href="#">Download</a>
                     </div>
                 </nav>
             </div>
@@ -84,170 +92,331 @@
 
         <main class="main">
             <!-- COVER -->
-            <div class="cover cover_primary-page">
+            <div class="cover_primary space-py-4">
                 <div class="container">
-                    <h1 data-aos="fade-up" data-aos-once="true" class="cover__title">Blog</h1>
-                    <p data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="cover__subtitle mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <h1 data-aos="fade-up" data-aos-once="true" class="max-width-800">Blog</h1>
+                    <p data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="max-width-800 lead mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam fugiat ad reprehenderit, atque cumque obcaecati.</p>
                 </div>
             </div>
-
-            <section class="section section_dark">
+            
+            <!-- POSTS -->
+            <section class="space-py-4 bg-primary-light">
                 <div class="container">
-                    <header>
-                        <h2 data-aos="fade-up" data-aos-delay="200" data-aos-once="true" class="section__heading">Latest posts</h2>
+                    <header class="mb-4">
+                        <h2>Latest posts</h2>
                     </header>
-                    <!-- BLOG LIST -->
-                    <div class="blog-list row">
-                        <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="col-lg-6 d-flex">
-                            <article class="post shadow-sm">
-                                <img
-                                    width="1456"
-                                    height="818"
-                                    class="img-fluid"  
-                                    src="https://placehold.co/688x387.png"
-                                    srcset="https://placehold.co/538x303.png 538w,
-                                            https://placehold.co/1076x606.png 1076w,
+                    <div class="blog-grid row">
+                        <div class="col-lg-6">
+                            <article class="elevation-1dp corner-shape-lg overflow-hidden h-100">
+                                <div class="position-relative">
+                                    <img width="1456" height="818" class="img-fluid" src="images/post-01.jpg" alt="...">
+                                    <!-- <img
+                                        width="1456"
+                                        height="818"
+                                        class="img-fluid"  
+                                        src="https://placehold.co/688x387.png"
+                                        srcset="https://placehold.co/538x303.png 538w,
+                                                https://placehold.co/1076x606.png 1076w,
 
-                                            https://placehold.co/448x252.png 448w,
-                                            https://placehold.co/896x504.png 896w,
+                                                https://placehold.co/448x252.png 448w,
+                                                https://placehold.co/896x504.png 896w,
 
-                                            https://placehold.co/688x387.png 688w,
-                                            https://placehold.co/1376x774.png 1376w,
+                                                https://placehold.co/688x387.png 688w,
+                                                https://placehold.co/1376x774.png 1376w,
 
-                                            https://placehold.co/508x286.png 508w,
-                                            https://placehold.co/1016x572.png 1016w,
+                                                https://placehold.co/508x286.png 508w,
+                                                https://placehold.co/1016x572.png 1016w,
 
-                                            https://placehold.co/543x305.png 543w,
-                                            https://placehold.co/1086x610.png 1086w"
-                                    sizes="(min-width: 1200px) 538px,
-                                           (min-width: 992px) 448px,
-                                           (min-width: 768px) 688px,
-                                           (min-width: 576px) 508px,
-                                           543px"
-                                    alt="...">
-                                <div class="card-body">
-                                    <div class="post__meta">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
-                                    <h3 class="post__title"><a href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
-                                    <p class="post__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
+                                                https://placehold.co/543x305.png 543w,
+                                                https://placehold.co/1086x610.png 1086w"
+                                        sizes="(min-width: 1200px) 538px,
+                                            (min-width: 992px) 448px,
+                                            (min-width: 768px) 688px,
+                                            (min-width: 576px) 508px,
+                                            543px"
+                                        alt="..."> -->
+                                </div>
+                                <div class="card-body bg-white">
+                                    <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                    <h3><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
                                 </div>
                             </article>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true" class="col-lg-6 d-flex aos-mobile-delay-zero">
-                            <article class="post shadow-sm">
-                                <img
-                                    width="1456"
-                                    height="818"
-                                    class="img-fluid"  
-                                    src="https://placehold.co/688x387.png"
-                                    srcset="https://placehold.co/538x303.png 538w,
-                                            https://placehold.co/1076x606.png 1076w,
+                        <div class="col-lg-6">
+                            <article class="elevation-1dp corner-shape-lg overflow-hidden h-100">
+                                <div class="position-relative">
+                                    <img width="1456" height="818" class="img-fluid" src="images/post-02.jpg" alt="...">
+                                    <!-- <img
+                                        width="1456"
+                                        height="818"
+                                        class="img-fluid"  
+                                        src="https://placehold.co/688x387.png"
+                                        srcset="https://placehold.co/538x303.png 538w,
+                                                https://placehold.co/1076x606.png 1076w,
 
-                                            https://placehold.co/448x252.png 448w,
-                                            https://placehold.co/896x504.png 896w,
+                                                https://placehold.co/448x252.png 448w,
+                                                https://placehold.co/896x504.png 896w,
 
-                                            https://placehold.co/688x387.png 688w,
-                                            https://placehold.co/1376x774.png 1376w,
+                                                https://placehold.co/688x387.png 688w,
+                                                https://placehold.co/1376x774.png 1376w,
 
-                                            https://placehold.co/508x286.png 508w,
-                                            https://placehold.co/1016x572.png 1016w,
+                                                https://placehold.co/508x286.png 508w,
+                                                https://placehold.co/1016x572.png 1016w,
 
-                                            https://placehold.co/543x305.png 543w,
-                                            https://placehold.co/1086x610.png 1086w"
-                                    sizes="(min-width: 1200px) 538px,
-                                           (min-width: 992px) 448px,
-                                           (min-width: 768px) 688px,
-                                           (min-width: 576px) 508px,
-                                           543px"
-                                    alt="...">
-                                <div class="card-body">
-                                    <div class="post__meta">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
-                                    <h3 class="post__title"><a href="https://msof.me/demo/post.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ducimus!</a></h3>
-                                    <p class="post__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis adipisci ad qui sed doloribus hic quos alias unde nihil nemo?</p>
+                                                https://placehold.co/543x305.png 543w,
+                                                https://placehold.co/1086x610.png 1086w"
+                                        sizes="(min-width: 1200px) 538px,
+                                            (min-width: 992px) 448px,
+                                            (min-width: 768px) 688px,
+                                            (min-width: 576px) 508px,
+                                            543px"
+                                        alt="..."> -->
+                                </div>
+                                <div class="card-body bg-white">
+                                    <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                    <h3><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
                                 </div>
                             </article>
                         </div>
-                        <div data-aos="fade-up" data-aos-once="true" class="col-lg-6 d-flex">
-                            <article class="post shadow-sm">
-                                <img
-                                    width="1456"
-                                    height="818"
-                                    class="img-fluid"  
-                                    src="https://placehold.co/688x387.png"
-                                    srcset="https://placehold.co/538x303.png 538w,
-                                            https://placehold.co/1076x606.png 1076w,
+                        <div class="col-lg-6">
+                            <article class="elevation-1dp corner-shape-lg overflow-hidden h-100">
+                                <div class="position-relative">
+                                    <img width="1456" height="818" class="img-fluid" src="images/post-03.jpg" alt="...">
+                                    <!-- <img
+                                        width="1456"
+                                        height="818"
+                                        class="img-fluid"  
+                                        src="https://placehold.co/688x387.png"
+                                        srcset="https://placehold.co/538x303.png 538w,
+                                                https://placehold.co/1076x606.png 1076w,
 
-                                            https://placehold.co/448x252.png 448w,
-                                            https://placehold.co/896x504.png 896w,
+                                                https://placehold.co/448x252.png 448w,
+                                                https://placehold.co/896x504.png 896w,
 
-                                            https://placehold.co/688x387.png 688w,
-                                            https://placehold.co/1376x774.png 1376w,
+                                                https://placehold.co/688x387.png 688w,
+                                                https://placehold.co/1376x774.png 1376w,
 
-                                            https://placehold.co/508x286.png 508w,
-                                            https://placehold.co/1016x572.png 1016w,
+                                                https://placehold.co/508x286.png 508w,
+                                                https://placehold.co/1016x572.png 1016w,
 
-                                            https://placehold.co/543x305.png 543w,
-                                            https://placehold.co/1086x610.png 1086w"
-                                    sizes="(min-width: 1200px) 538px,
-                                           (min-width: 992px) 448px,
-                                           (min-width: 768px) 688px,
-                                           (min-width: 576px) 508px,
-                                           543px"
-                                    loading="lazy"
-                                    alt="...">
-                                <div class="card-body">
-                                    <div class="post__meta">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
-                                    <h3 class="post__title"><a href="https://msof.me/demo/post.html">Lorem ipsum dolor sit amet.</a></h3>
-                                    <p class="post__excerpt">Lorem ipsum dolor sit amet.</p>
+                                                https://placehold.co/543x305.png 543w,
+                                                https://placehold.co/1086x610.png 1086w"
+                                        sizes="(min-width: 1200px) 538px,
+                                            (min-width: 992px) 448px,
+                                            (min-width: 768px) 688px,
+                                            (min-width: 576px) 508px,
+                                            543px"
+                                        alt="..."> -->
+                                </div>
+                                <div class="card-body bg-white">
+                                    <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                    <h3><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
                                 </div>
                             </article>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 d-flex aos-mobile-delay-zero">
-                            <article class="post shadow-sm">
-                                <img
-                                    width="1456"
-                                    height="818"
-                                    class="img-fluid"  
-                                    src="https://placehold.co/688x387.png"
-                                    srcset="https://placehold.co/538x303.png 538w,
-                                            https://placehold.co/1076x606.png 1076w,
+                        <div class="col-lg-6">
+                            <article class="elevation-1dp corner-shape-lg overflow-hidden h-100">
+                                <div class="position-relative">
+                                    <img width="1456" height="818" class="img-fluid" src="images/post-04.jpg" alt="...">
+                                    <!-- <img
+                                        width="1456"
+                                        height="818"
+                                        class="img-fluid"  
+                                        src="https://placehold.co/688x387.png"
+                                        srcset="https://placehold.co/538x303.png 538w,
+                                                https://placehold.co/1076x606.png 1076w,
 
-                                            https://placehold.co/448x252.png 448w,
-                                            https://placehold.co/896x504.png 896w,
+                                                https://placehold.co/448x252.png 448w,
+                                                https://placehold.co/896x504.png 896w,
 
-                                            https://placehold.co/688x387.png 688w,
-                                            https://placehold.co/1376x774.png 1376w,
+                                                https://placehold.co/688x387.png 688w,
+                                                https://placehold.co/1376x774.png 1376w,
 
-                                            https://placehold.co/508x286.png 508w,
-                                            https://placehold.co/1016x572.png 1016w,
+                                                https://placehold.co/508x286.png 508w,
+                                                https://placehold.co/1016x572.png 1016w,
 
-                                            https://placehold.co/543x305.png 543w,
-                                            https://placehold.co/1086x610.png 1086w"
-                                    sizes="(min-width: 1200px) 538px,
-                                           (min-width: 992px) 448px,
-                                           (min-width: 768px) 688px,
-                                           (min-width: 576px) 508px,
-                                           543px"
-                                    loading="lazy"
-                                    alt="...">
-                                <div class="card-body">
-                                    <div class="post__meta">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
-                                    <h3 class="post__title"><a href="https://msof.me/demo/post.html">Lorem ipsum dolor sit amet consectetur.</a></h3>
-                                    <p class="post__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                https://placehold.co/543x305.png 543w,
+                                                https://placehold.co/1086x610.png 1086w"
+                                        sizes="(min-width: 1200px) 538px,
+                                            (min-width: 992px) 448px,
+                                            (min-width: 768px) 688px,
+                                            (min-width: 576px) 508px,
+                                            543px"
+                                        alt="..."> -->
+                                </div>
+                                <div class="card-body bg-white">
+                                    <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                    <h3><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="elevation-1dp corner-shape-lg overflow-hidden h-100">
+                                <div class="position-relative">
+                                    <img width="1456" height="818" class="img-fluid" src="images/post-05.jpg" alt="...">
+                                    <!-- <img
+                                        width="1456"
+                                        height="818"
+                                        class="img-fluid"  
+                                        src="https://placehold.co/688x387.png"
+                                        srcset="https://placehold.co/538x303.png 538w,
+                                                https://placehold.co/1076x606.png 1076w,
+
+                                                https://placehold.co/448x252.png 448w,
+                                                https://placehold.co/896x504.png 896w,
+
+                                                https://placehold.co/688x387.png 688w,
+                                                https://placehold.co/1376x774.png 1376w,
+
+                                                https://placehold.co/508x286.png 508w,
+                                                https://placehold.co/1016x572.png 1016w,
+
+                                                https://placehold.co/543x305.png 543w,
+                                                https://placehold.co/1086x610.png 1086w"
+                                        sizes="(min-width: 1200px) 538px,
+                                            (min-width: 992px) 448px,
+                                            (min-width: 768px) 688px,
+                                            (min-width: 576px) 508px,
+                                            543px"
+                                        alt="..."> -->
+                                </div>
+                                <div class="card-body bg-white">
+                                    <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                    <h3><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="elevation-1dp corner-shape-lg overflow-hidden h-100">
+                                <div class="position-relative">
+                                    <img width="1456" height="818" class="img-fluid" src="images/post-06.jpg" alt="...">
+                                    <!-- <img
+                                        width="1456"
+                                        height="818"
+                                        class="img-fluid"  
+                                        src="https://placehold.co/688x387.png"
+                                        srcset="https://placehold.co/538x303.png 538w,
+                                                https://placehold.co/1076x606.png 1076w,
+
+                                                https://placehold.co/448x252.png 448w,
+                                                https://placehold.co/896x504.png 896w,
+
+                                                https://placehold.co/688x387.png 688w,
+                                                https://placehold.co/1376x774.png 1376w,
+
+                                                https://placehold.co/508x286.png 508w,
+                                                https://placehold.co/1016x572.png 1016w,
+
+                                                https://placehold.co/543x305.png 543w,
+                                                https://placehold.co/1086x610.png 1086w"
+                                        sizes="(min-width: 1200px) 538px,
+                                            (min-width: 992px) 448px,
+                                            (min-width: 768px) 688px,
+                                            (min-width: 576px) 508px,
+                                            543px"
+                                        alt="..."> -->
+                                </div>
+                                <div class="card-body bg-white">
+                                    <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                    <h3><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="elevation-1dp corner-shape-lg overflow-hidden h-100">
+                                <div class="position-relative">
+                                    <img width="1456" height="818" class="img-fluid" src="images/post-07.jpg" alt="...">
+                                    <!-- <img
+                                        width="1456"
+                                        height="818"
+                                        class="img-fluid"  
+                                        src="https://placehold.co/688x387.png"
+                                        srcset="https://placehold.co/538x303.png 538w,
+                                                https://placehold.co/1076x606.png 1076w,
+
+                                                https://placehold.co/448x252.png 448w,
+                                                https://placehold.co/896x504.png 896w,
+
+                                                https://placehold.co/688x387.png 688w,
+                                                https://placehold.co/1376x774.png 1376w,
+
+                                                https://placehold.co/508x286.png 508w,
+                                                https://placehold.co/1016x572.png 1016w,
+
+                                                https://placehold.co/543x305.png 543w,
+                                                https://placehold.co/1086x610.png 1086w"
+                                        sizes="(min-width: 1200px) 538px,
+                                            (min-width: 992px) 448px,
+                                            (min-width: 768px) 688px,
+                                            (min-width: 576px) 508px,
+                                            543px"
+                                        alt="..."> -->
+                                </div>
+                                <div class="card-body bg-white">
+                                    <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                    <h3><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="elevation-1dp corner-shape-lg overflow-hidden h-100">
+                                <div class="position-relative">
+                                    <img width="1456" height="818" class="img-fluid" src="images/post-08.jpg" alt="...">
+                                    <!-- <img
+                                        width="1456"
+                                        height="818"
+                                        class="img-fluid"  
+                                        src="https://placehold.co/688x387.png"
+                                        srcset="https://placehold.co/538x303.png 538w,
+                                                https://placehold.co/1076x606.png 1076w,
+
+                                                https://placehold.co/448x252.png 448w,
+                                                https://placehold.co/896x504.png 896w,
+
+                                                https://placehold.co/688x387.png 688w,
+                                                https://placehold.co/1376x774.png 1376w,
+
+                                                https://placehold.co/508x286.png 508w,
+                                                https://placehold.co/1016x572.png 1016w,
+
+                                                https://placehold.co/543x305.png 543w,
+                                                https://placehold.co/1086x610.png 1086w"
+                                        sizes="(min-width: 1200px) 538px,
+                                            (min-width: 992px) 448px,
+                                            (min-width: 768px) 688px,
+                                            (min-width: 576px) 508px,
+                                            543px"
+                                        alt="..."> -->
+                                </div>
+                                <div class="card-body bg-white">
+                                    <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                    <h3><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nobis.</p>
                                 </div>
                             </article>
                         </div>
                     </div>
                     <!-- PAGINATION -->
-                    <div data-aos="fade-up" data-aos-once="true" class="d-flex flex-column align-items-center">
-                        <nav class="d-inline-block" aria-label="Blog pagination">
-                            <ul class="pagination mx-auto text-center mb-0">
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                    <div class="d-flex flex-column align-items-center">
+                        <nav aria-label="post pagination">
+                            <ul class="pagination mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                </li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">Next</span>
-                                    </a>
+                                    <a class="page-link" href="#">Next</a>
                                 </li>
                             </ul>
                         </nav>
@@ -256,72 +425,72 @@
             </section>
 
             <!-- POPULAR POSTS + CATEGORIES + TAGS -->
-            <section class="section">
+            <div class="space-py-4">
                 <div class="container">
                     <div class="row">
-                        <div data-aos="fade-up" data-aos-once="true" class="col-lg-8 order-1 order-lg-0 aos-mobile-delay-zero">
+                        <div class="col-lg-8 order-1 order-lg-0">
                             <!-- POPULAR -->
                             <div class="blog-popular">
-                                <h3 class="section__heading section__heading_mb-small">Popular posts</h3>
-                                <div class="blog-list row">
-                                    <div class="col-md-12">
-                                        <article class="post border_on-background">
+                                <h3 class="mb-3">Popular posts</h3>
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <article class="elevation-0dp corner-shape">
                                             <div class="card-body">
-                                                <div class="post__meta">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
-                                                <h4 class="post__title mb-0"><a href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
+                                                <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                                <h4 class="mb-0"><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <article class="elevation-0dp corner-shape">
+                                            <div class="card-body">
+                                                <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                                <h4 class="mb-0"><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <article class="elevation-0dp corner-shape">
+                                            <div class="card-body">
+                                                <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                                <h4 class="mb-0"><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
                                             </div>
                                         </article>
                                     </div>
                                     <div class="col-md-12">
-                                        <article class="post border_on-background">
+                                        <article class="elevation-0dp corner-shape">
                                             <div class="card-body">
-                                                <div class="post__meta">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
-                                                <h4 class="post__title mb-0"><a href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <article class="post border_on-background">
-                                            <div class="card-body">
-                                                <div class="post__meta">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
-                                                <h4 class="post__title mb-0"><a href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <article class="post border_on-background">
-                                            <div class="card-body">
-                                                <div class="post__meta">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
-                                                <h4 class="post__title mb-0"><a href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
+                                                <div class="font-light font-small">Posted in <a href="https://msof.me/demo/category.html">Category</a> on Sep 25, 2020.</div>
+                                                <h4 class="mb-0"><a class="link-no-underline font-base" href="https://msof.me/demo/post.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h4>
                                             </div>
                                         </article>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-4 order-0 order-lg-1 aos-mobile-delay-zero">
+                        <div class="col-lg-4 order-0 order-lg-1 pl-lg-5">
                             <!-- SEARCH -->
-                            <div class="blog-search pl-0 pl-lg-4">
-                                <h3 class="section__heading section__heading_mb-small">Search for posts</h3>
-                                <form class="d-flex">
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                    <button aria-label="Search for post" class="btn-accent rounded-right" type="submit"><i class="fas fa-search"></i></button>
+                            <div class="blog-search mb-4">
+                                <h3 class="mb-3">Search for posts</h3>
+                                <form>
+                                    <input class="form-control mr-2 corner-shape-sm" type="text" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
                                 </form>
                             </div>
                             <!-- CATEGORIES -->
-                            <div class="blog-categories pl-0 pl-lg-4">
-                                <h3 class="section__heading section__heading_mb-small">Categories</h3>
-                                <ul class="list-unstyled mb-0 border_on-background rounded p-3">
-                                    <li>&raquo; <a href="https://msof.me/demo/category.html">Tips (24)</a></li>
-                                    <li>&raquo; <a href="https://msof.me/demo/category.html">News (10)</a></li>
-                                    <li>&raquo; <a href="https://msof.me/demo/category.html">Services (12)</a></li>
-                                    <li>&raquo; <a href="https://msof.me/demo/category.html">Special offers (32)</a></li>
+                            <div class="blog-categories mb-4">
+                                <h3 class="mb-3">Categories</h3>
+                                <ul class="list-unstyled mb-0 corner-shape p-3 elevation-0dp">
+                                    <li>&raquo; <a class="link-no-underline" href="https://msof.me/demo/category.html">Tips (24)</a></li>
+                                    <li>&raquo; <a class="link-no-underline" href="https://msof.me/demo/category.html">News (10)</a></li>
+                                    <li>&raquo; <a class="link-no-underline" href="https://msof.me/demo/category.html">Services (12)</a></li>
+                                    <li>&raquo; <a class="link-no-underline" href="https://msof.me/demo/category.html">Special offers (32)</a></li>
                                 </ul>
                             </div>
                             <!-- TAGS -->
-                            <div class="blog-tags pl-0 pl-lg-4">
-                                <h3 class="section__heading section__heading_mb-small">Tag cloud</h3>
-                                <ul class="list-inline mb-0 border_on-background rounded p-3">
+                            <div class="blog-tags mb-4">
+                                <h3 class="mb-3">Tag cloud</h3>
+                                <ul class="list-inline mb-0 corner-shape p-3 elevation-0dp">
                                     <li class="list-inline-item"><a href="https://msof.me/demo/tag.html" class="badge badge-accent">Liners (2)</a></li>
                                     <li class="list-inline-item"><a href="https://msof.me/demo/tag.html" class="badge badge-accent">LED lights (4)</a></li>
                                     <li class="list-inline-item"><a href="https://msof.me/demo/tag.html" class="badge badge-accent">IP68 (3)</a></li>
@@ -345,73 +514,80 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- CTA 3 -->
-            <section class="section section_large-gap cta">
-                <div class="container">
-                    <h2 data-aos="fade-up" data-aos-once="true" class="cta__heading">Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-                    <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="aos-mobile-delay-zero">
-                        <a href="tel:+" class="cta__btn btn btn-accent"><i class="fas fa-phone-alt"></i> Call us now</a>
-                        <a href="https://msof.me/demo/#contact" class="cta__btn btn btn-outline-accent">Get a quote</a>
+            <!-- CTA -->
+            <div class="bg-gradient-primary space-py-4">
+                <div class="container position-relative">
+                  <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
+                    <div class="col-lg-5 mb-3 mb-lg-0">
+                        <h2 class="text-on-primary mb-0">Download Rapido for free anytime, anywhere.</h2>
                     </div>
+                    <div class="col-lg-5 text-lg-right">
+                      <a class="btn btn-lg btn-accent mx-1 mb-2" href="#">Get Started</a>
+                      <a class="btn btn-lg btn-outline-accent mx-1 mb-2" href="#">Learn More</a>
+                    </div>
+                  </div>
                 </div>
-            </section>
+            </div>
         </main>
 
         <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container">
+        <footer class="footer position-relative">
+            <div style="z-index:1;" class="container position-relative">
                 <div class="row">
-                    <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+                    <div class="col-12 col-lg mb-4 mb-lg-0">
                         <a aria-label="Visit the homepage" href="https://msof.me/demo/">
-                            <img class="footer__brand img-fluid" src="https://placehold.co/40x40" width="40" height="40" alt="PPC Pool Services Logo">
-                            <!-- <img class="footer__brand img-fluid" src="https://placehold.co/40x40.png" srcset="https://placehold.co/40x40.png?text=40x40@1x 1x, https://placehold.co/80x80.png?text=40x40@2x 2x" width="40" height="40" alt="PPC Pool Services Logo"> -->
+                            <img class="mb-3 img-fluid" src="images/logo-light.svg" width="134" height="40" loading="lazy" alt="...">
+                            <!-- <img class="mb-3 img-fluid" src="https://placehold.co/134x40.png" srcset="https://placehold.co/134x40.png?text=134x40@1x 1x, https://placehold.co/268x80.png?text=134x40@2x 2x" width="134" height="40" loading="lazy" alt="..."> -->
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod dictum lacus sit amet mattis.</p>
+                        <p class="footer__statement">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt obcaecati qui ea alias assumenda aperiam.</p>
                         <div>
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><a class="footer__social-link" aria-label="Visit our facebook page" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="list-inline-item"><a class="footer__social-link" aria-label="Visit our Instagram page" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a class="footer__social-link corner-shape-sm" aria-label="Visit our facebook page" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a class="footer__social-link corner-shape-sm" aria-label="Visit our Instagram page" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 mb-4 mb-lg-0">
-                        <h3 class="footer__heading">Contact</h3>
+                    <div class="col-12 col-md-5 col-lg mb-4 mb-lg-0">
+                        <h3 class="mb-3">Contact</h3>
                         <ul class="list-unstyled mb-0">
-                            <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-map-marker-alt"></i><div class="ml-2"><a href="#" target="_blank" rel="noopener noreferrer">Olgas Ksinaridou Str.,<br>Omiros Court Shop 2,<br>8020, Paphos</a></div></li>
-                            <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-phone-alt"></i><div class="ml-2"><a href="tel:+">+357 26 XXX XXX</a></div></li>
+                            <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-map-marker-alt"></i><div class="ml-2"><a href="#" target="_blank" rel="noopener noreferrer">Rapido, Inc.<br>1355 Market St, Suite 900<br>San Francisco, CA 94103</a></div></li>
+                            <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-phone-alt"></i><div class="ml-2"><a href="tel:+">415-701-2367</a></div></li>
                             <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-at"></i><div class="ml-2"><a href="mailto:">mail@example.com</a></div></li>
                             <li class="d-flex"><i style="line-height:1.6;" class="fa-fw fas fa-clock"></i><div class="ml-2">Mon. to Fri. from 08:00 - 17:00</div></li>
                         </ul>
                     </div>
-                    <div class="col-12 col-lg-3 mb-4 mb-lg-0">
-                        <h3 class="footer__heading">Other</h3>
+                    <div class="col-12 col-md-3 col-lg mb-4 mb-lg-0">
+                        <h3 class="mb-3">Other</h3>
                         <ul class="list-unstyled mb-0">
                             <li><a href="#">Terms & Conditions</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Cookies</a></li>
                         </ul>
                     </div>
-                    <div class="col-12 col-lg-3">
-                        <h3 class="footer__heading">Subscribe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, cum!</p>
-                        <form class="newsletter-form">
+                    <div class="col-12 col-md-4 col-lg">
+                        <h3 class="mb-3">Stay in the know</h3>
+                        <p>Sign up for our monthly newsletter and get news and announcements delivered right to your inbox.</p>
+                        <form data-aos="fade-up" data-aos-once="true" class="newsletter-form">
                             <div class="form-group">
                                 <label class="sr-only" for="newsletterEmail">Email address</label>
-                                <input type="email" class="form-control" id="newsletterEmail" aria-describedby="emailHelp" placeholder="Email address" required>
+                                <input type="email" class="form-control corner-shape-sm" id="newsletterEmail" aria-describedby="emailHelp" placeholder="Email address" required>
                             </div>
-                            <button type="submit" class="btn btn-block btn-accent rounded">Subscribe</button>
-                            <small style="font-size:12px;font-weight:300;line-height:1.2;margin-top:4px;" id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+                            <button type="submit" class="btn btn-block btn-accent corner-shape-sm">Subscribe</button>
+                            <small id="emailHelp" class="form-text font-light">We'll never share your email with anyone else.</small>
                         </form>
                     </div>
                 </div>
-                <hr class="footer__divider hr_on-primary-dark">
-                <div class="clearfix">
-                    <span class="footer__copy-left float-none float-sm-left">© 2020 PPC Pool Services Ltd. All rights reserved.</span>
-                    <span class="footer__copy-right float-none float-sm-right">Website by <a href="https://msof.me/" target="_blank" rel="noopener noreferrer">Marios Sofokleous</a></span>
+                <hr style="background-color:rgba(255,255,255,0.30);" class="my-4">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                    <div><small class="footer__copy-left">© 2020 Rapido, Inc. All rights reserved.</small></div>
+                    <div><small class="footer__copy-right">Rapido theme by <a href="https://msof.me/" target="_blank" rel="noopener noreferrer">Marios Sofokleous</a></small></div>
                 </div>
             </div>
+            <figure class="footer-figure">
+                <img class="img-fluid" src="images/isometric-squares.svg" loading="lazy" alt="">
+            </figure>
         </footer>
 
         <!-- jQuery -->
@@ -423,6 +599,6 @@
         <!-- Headroom.js -->
         <script src="vendor/headroom.js/dist/headroom.min.js"></script>
         <!-- Site scripts -->
-        <script src="js/ppc.js"></script>
+        <script src="js/rapido.js"></script>
     </body>
 </html>

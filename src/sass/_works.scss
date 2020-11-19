@@ -3,15 +3,12 @@
 
 .grid {
     &__controls {
-        margin-bottom: 0.75rem;
         button {
             line-height: 1;
-            color: $on-background;
-            @include rfs(0.5rem, padding);
             position: relative;
             text-decoration: none;
             &:hover, &:focus {
-                color: $on-background;
+                color: $primary;
                 text-decoration: none;
             }
             &.active::before {
@@ -19,7 +16,7 @@
                 display: inline-block;
                 width: 100%;
                 height: 1px;
-                background-color: $on-background;
+                background-color: $primary;
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -35,23 +32,18 @@
             padding-right: 0.5rem;
             padding-left: 0.5rem;
         }
-        img {
-            border-radius: 4px;
-        }
     }
     &__spinner {
         text-align: center;
-        background: rgba($background, 0.8);
+        background-color: rgba($primary, 0.75);
+        border-radius: 4px;
         position: absolute;
         display: flex;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 1rem);
         top: 0;
         left: 0;
         align-items: center;
         justify-content: center;
-        .spinner-grow {
-            margin-bottom: 1rem;
-        }
     }
 }

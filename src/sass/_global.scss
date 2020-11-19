@@ -1,106 +1,98 @@
-
 // Global
 // =============================================================================
 
 body {
-    background-color: $background;
-    color: $on-background;
+    background-color: #fff;
+    color: rgba(0,0,0,0.87);
     overflow-x: hidden;
-    @include font-size(1.25rem);
-    &.fancybox-active {
-        overflow: hidden;
-    }
+    @include font-size(1rem);
 }
 
 h1 {
-    font-weight: 900;
-    line-height: 1.1428;
-    @include font-size(4.25rem);
+    font-weight: 600;
+    line-height: 1.2;
+    @include font-size(3.5rem);
 }
 
 h2 {
-    font-weight: 700;
-    line-height: 1.1538;
-    @include font-size(3.25rem);
+    font-weight: 600;
+    line-height: 1.4;
+    @include font-size(1.875rem);
 }
 
 h3 {
-    font-weight: 500;
-    line-height: 1.125;
-    @include font-size(2rem);
+    font-weight: 600;
+    line-height: 1.4;
+    @include font-size(1.3125rem);
+}
+
+h4 {
+    font-weight: 600;
+    line-height: 1.4;
+    @include font-size(1.125rem);
 }
 
 p {
     margin-bottom: 1rem;
 }
 
-// Multi-Line truncation 
-.line-clamp {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+.h1 {
+    line-height: 1.2;
+    @include font-size(3.5rem);
 }
 
-.hr {
-    &_on-background {
-        border-top-color: rgba($on-background, 0.30) !important;
-    }
-    &_on-secondary {
-        border-top-color: rgba($on-secondary, 0.30) !important;
-    }
-    &_on-accent {
-        border-top-color: rgba($on-accent, 0.30) !important;
-    }
-    &_on-primary-dark {
-        border-top-color: rgba($on-primary-dark, 0.30) !important;
-    }
+.h3 {
+    line-height: 1.4;
+    @include font-size(1.3125rem);
 }
 
-.border {
-    &_on-background {
-        border: 1px solid rgba($on-background, 0.30);
+.font {
+    &-light {
+        font-weight: 300;
     }
-}
-
-.pagination {
-    .page-item {
-        .page-link {
-            border-color: rgba($on-background, 0.30);
-            color: $on-background;
-        }
+    &-heavy {
+        font-weight: 600;
     }
-    &_mt {
-        margin-top: 2rem;
-        @media (max-width: 767.98px) {
-            margin-top: 1rem;
-        }
+    &-heading {
+        font-family: $headings-font-family;
+    }
+    &-base {
+        font-family: $font-family-base;
+    }
+    &-small {
+        font-size: 14px;
     }
 }
 
-.overflow-x-hidden {
-    overflow-x: hidden;
+.fancybox-content {
+    @include rfs($corner-radius-lg, border-radius);
+}
+
+.link-no-underline {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.corner-shape {
+    @include rfs($corner-radius, border-radius);
+    &-sm {
+        @include rfs($corner-radius-sm, border-radius);
+    }
+    &-lg {
+        @include rfs($corner-radius-lg, border-radius);
+    }
 }
 
 .btn {
     text-transform: uppercase;
-    box-shadow: none !important;
-    @include font-size(1.25rem);
-}
-
-.ratio-box {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    &_16-by-9 {
-        padding-top: 56.25%;
-    }
+    @include font-size(1rem);
 }
 
 .section {
-    @include rfs(7.5rem 0, padding);
     &__preheading {
-        @include font-size(1.25rem);
+        @include font-size(1rem);
         font-family: $font-family-base;
         font-weight: 300;
         color: $primary;
@@ -118,21 +110,69 @@ p {
             left: -24px;
         }
     }
-    &__heading {
-        @include rfs(3.5rem, margin-bottom);
-        &_mb-small {
-            @include rfs(2rem, margin-bottom);
+}
+
+.space {
+    &-py-8 {
+        @include rfs(8rem, padding-top);
+        @include rfs(8rem, padding-bottom);
+    }
+    &-py-4 {
+        @include rfs(4rem, padding-top);
+        @include rfs(4rem, padding-bottom);
+    }
+    &-p-4 {
+        @include rfs(4rem, padding);
+    }
+    &-mb-3 {
+        @include rfs(3rem, margin-bottom);
+    }
+    &-mb-4 {
+        @include rfs(4rem, margin-bottom);
+    }
+    &-mb-1 {
+        @include rfs(1rem, margin-bottom);
+    }
+}
+
+.max-width-800 {
+    max-width: 800px;
+}
+
+.elevation {
+    &-0dp {
+        transition: box-shadow .25s ease, opacity .4s ease, transform .4s ease !important;
+        box-shadow: 0 0 0 1px $border-color;
+        &:hover, &:focus {
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
         }
     }
-    &_dark {
-        background-color: darken($background, 5%);
+    &-1dp {
+        transition: box-shadow .25s ease, opacity .4s ease, transform .4s ease !important;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+        &:hover, &:focus {
+            box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
+        }
     }
-    &_large-gap {
-        @include rfs(8.75rem 0, padding);
-    }
-    &_narrow {
-        max-width: 800px;
-        margin: 0 auto;
+}
+
+.lead {
+    @include font-size(1.25rem);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.image-grayscale {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: filter .15s ease-in-out, opacity .15s ease-in-out;
+    &:hover {
+        filter: grayscale(0);
+        opacity: 1;
     }
 }
 
@@ -147,7 +187,6 @@ p {
 }
 
 .breadcrumb-item {
-    @include font-size(1rem);
     a { 
         text-decoration: none;
         font-weight: 400;
@@ -157,63 +196,74 @@ p {
         }
     }
     &.active {
-        color: $on-primary-dark;
+        color: $on-primary;
     }
     &+ .breadcrumb-item {
         padding-left: 0.25rem;
         &::before {
-            color: $on-primary-dark;
+            color: $on-primary;
             padding-right: 0.25rem;
         }
     }
 }
 
-.back-to-overview {
-    margin-top: 2rem;
-    @media (max-width: 767.98px) {
-        margin-top: 1rem;
-    }
-}
-
 .cover {
-    @include rfs(7.5rem 0, padding);
-    &__title {
-        @include rfs(0.75rem, margin-bottom);
-    }
-    &__subtitle {
-        font-family: $font-family-base;
-        font-weight: 300;
-        line-height: 1.125;
-        @include font-size(2rem);
-    }
-    &__divider {
-        @include rfs(1.75rem, margin-top);
-        @include rfs(1.75rem, margin-bottom);
-    }
-    &_primary-page {
-        background-color: $primary-dark;
-        .cover__title, .cover__subtitle, .cover__text {
-            color: $on-primary-dark;
+    &_primary {
+        background: url("../images/abstract-shape-2.svg"), $primary;
+        background-position: top center;
+        background-size: cover;
+        h1, p {
+            color: $on-primary;
         }
     }
-    &_status-page {
-        background-color: $accent;
-        .cover__title, .cover__subtitle, .cover__text {
-            color: $on-accent;
-        }
-    }
-    &_utility-page {
-        background-color: $secondary;
-        .cover__title, .cover__subtitle, .cover__text {
-            color: $on-secondary;
-            text-align: center;
-        }
+    &_utility {
+        background: url("../images/abstract-shape-2.svg"), $primary-light;
+        background-position: top center;
+        background-size: cover;
     }
 }
 
 .badge {
     font-size: 100%;
     font-weight: 400;
+}
+
+.top-0 {
+    top: 0 !important;
+}
+
+.bottom-0 {
+    bottom: 0 !important;
+}
+
+.left-0 {
+    left: 0 !important;
+}
+
+.right-0 {
+    right: 0 !important;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+.fill {
+    &-accent {
+        fill: $accent !important;
+    }
+    &-primary {
+        fill: $primary;
+    }
+    &-primary-dark {
+        fill: $primary-dark;
+    }
+    &-black {
+        fill: #000;
+    }
+    &-white {
+        fill: #fff;
+    }
 }
 
 .to-top {
@@ -223,7 +273,7 @@ p {
     right: 0;
     width: 48px;
     height: 48px;
-    color: color-yiq($background);
+    color: #000;
 }
 
 .full-screen-overlay {
@@ -241,4 +291,43 @@ p {
 
 .aos-mobile-delay-zero {
     transition-delay: 0s !important;
+}
+
+// SPINNER
+// =============================================================================
+
+.spinner-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1004;
+}
+
+.spinner {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    &__ball {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+    &__text {
+        color: #fff;
+        margin-top: 4px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        font-size: 10px;
+    }
 }
