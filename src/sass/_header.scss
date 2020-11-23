@@ -11,6 +11,9 @@
     }
     .navbar-brand {
         line-height: 1;
+        img {
+            max-width: 100%;
+        }
     }
     .navbar-toggler {        
         color: $primary;

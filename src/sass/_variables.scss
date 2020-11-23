@@ -23,6 +23,12 @@ $theme-colors: (
     "on-accent": $on-accent
 );
 
+// Typography
+$font-family-base: 'Open Sans', sans-serif;
+$headings-font-family: 'Source Serif Pro', serif;
+$line-height-base: 1.6;
+$font-weight-base: 400;
+
 // Enable shadows
 $enable-shadows: true;
 

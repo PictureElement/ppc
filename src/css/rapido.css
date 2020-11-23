@@ -1,60 +1,46 @@
 /*!
- * PPC Pool Services
+ * Rapido
  * Copyright 2020 Marios Sofokleous
  */
-/* latin */
+/* open-sans-300 - latin_greek_cyrillic */
 @font-face {
-  font-family: 'Arima Madurai';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local("Arima Madurai Thin"), local("ArimaMadurai-Thin"), url(../webfonts/t5t4IRoeKYORG0WNMgnC3seB1V3_rbuD.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-/* latin */
-@font-face {
-  font-family: 'Arima Madurai';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local("Arima Madurai Medium"), local("ArimaMadurai-Medium"), url(../webfonts/t5t7IRoeKYORG0WNMgnC3seB1c3supymfw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-/* latin */
-@font-face {
-  font-family: 'Arima Madurai';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local("Arima Madurai Bold"), local("ArimaMadurai-Bold"), url(../webfonts/t5t7IRoeKYORG0WNMgnC3seB1YXqupymfw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-/* latin */
-@font-face {
-  font-family: 'Arima Madurai';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: local("Arima Madurai Black"), local("ArimaMadurai-Black"), url(../webfonts/t5t7IRoeKYORG0WNMgnC3seB1b3oupymfw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-/* latin */
-@font-face {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
-  src: local("Montserrat Light"), local("Montserrat-Light"), url(../webfonts/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  src: url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.eot?#iefix") format("embedded-opentype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.woff2") format("woff2"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.woff") format("woff"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.ttf") format("truetype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
 
-/* latin */
+/* open-sans-regular - latin_greek_cyrillic */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(../webfonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  src: url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.woff2") format("woff2"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.woff") format("woff"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.ttf") format("truetype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-600 - latin_greek_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.woff2") format("woff2"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.woff") format("woff"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.ttf") format("truetype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* source-serif-pro-600 - latin_greek_cyrillic */
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.woff2") format("woff2"), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.woff") format("woff"), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.ttf") format("truetype"), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.svg#SourceSerifPro") format("svg");
+  /* Legacy iOS */ }
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -360,7 +346,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Source Serif Pro", serif;
   font-weight: 500;
   line-height: 1.2; }
 
@@ -8074,7 +8060,7 @@ p {
   font-weight: 600; }
 
 .font-heading {
-  font-family: "Playfair Display", serif; }
+  font-family: "Source Serif Pro", serif; }
 
 .font-base {
   font-family: "Open Sans", sans-serif; }
@@ -8328,6 +8314,8 @@ figure {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
   .page-header .navbar-brand {
     line-height: 1; }
+    .page-header .navbar-brand img {
+      max-width: 100%; }
   .page-header .navbar-toggler {
     color: #5d21d2; }
   .page-header .nav-link {
