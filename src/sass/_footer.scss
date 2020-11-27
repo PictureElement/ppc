@@ -4,7 +4,8 @@
 .footer {
     overflow: hidden;
     background-color: $primary-dark;
-    @include rfs(7.5rem 0, padding);
+    @include padding-top(7.5rem);
+    @include padding-bottom(7.5rem);
     color: $on-primary-dark;
     a {
         color: $on-primary-dark;

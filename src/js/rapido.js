@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // 1. Work section filters
+    // 1. Projects section filters
     $(".grid__controls button.btn").click(function() {
         $(".grid__controls").find(".active").removeClass("active");
         $(this).addClass("active");

@@ -35,6 +35,7 @@ function populateVendor() {
     'node_modules/aos/dist/aos.js',
     'node_modules/aos/dist/aos.css',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js.map',
     'node_modules/bootstrap/scss/**/*',
     'node_modules/rfs/scss.scss',
     'node_modules/jquery/dist/jquery.min.js',
@@ -95,7 +96,7 @@ function browserReload(cb) {
 
 // Compile Sass files
 function compileSass() {
-  return gulp.src('src/sass/**/*.scss')
+  return gulp.src('src/sass/rapido.scss')
     .pipe(sass().on('error', sass.logError)) // Compile to CSS
     .pipe(gulp.dest('src/css/')) // Save to src
     .pipe(browsersync.stream()); // Inject changes without refreshing the page.
@@ -111,18 +112,6 @@ function watchFiles() {
 
 // Production
 // =============================================================================
-
-// JS and CSS optimization
-/*
-function combine() {
-  return gulp.src('src/*.html')
-    .pipe(useref())
-    .pipe(gulpif('*.js', uglify())) // Minify JavaScript
-    .pipe(gulpif('*.css', autoprefixer({cascade: false}))) // Add vendor prefixes
-    .pipe(gulpif('*.css', cleanCSS({compatibility: 'ie8'}))) // Minify CSS
-    .pipe(gulp.dest('dist')); // Save to dist
-}
-*/
 
 // CSS optimization
 function css() {
@@ -194,7 +183,6 @@ function criticalCSS() {
 // Define tasks
 const init = gulp.series(cleanDist, cleanVendor, populateVendor, copyFonts, copyImages, copyVendor, copyHtml);
 const build = gulp.series(init, compileSass, css, js, criticalCSS);
-// const build = gulp.series(init, compileSass, css, js);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSyncSrc));
 
 // Register public tasks

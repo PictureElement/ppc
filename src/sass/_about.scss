@@ -4,15 +4,16 @@
 .facts {
     z-index: 1;
     position: relative;
-    @include rfs(3rem 0, padding);
-    @include rfs(3rem, margin-top);
+    @include padding-top(3rem);
+    @include padding-bottom(3rem);
+    @include margin-top(3rem);
     [class^='col-']:not(:first-child) {
         border-left: 1px solid #dee2e6;
     }
     @media (max-width: 767.98px) {
         [class^='col-'] {
             &:not(:last-child) {
-                @include rfs(3rem, margin-bottom);
+                @include margin-bottom(3rem);
             }
             &:not(:first-child) {
                 border: none;

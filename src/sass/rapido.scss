@@ -2,20 +2,18 @@
  * Rapido
  * Copyright 2020 Marios Sofokleous
  */
-@charset "UTF-8";
-
-@import "fonts";
-@import "theme";
-@import "variables";
+@import "settings";
+@import "overrides";
 @import "../vendor/bootstrap/scss/bootstrap";
 @import "../vendor/rfs/scss";
+@import "fonts";
 @import "global";
 @import "header";
 @import "hero";
 @import "services";
 @import "shop";
 @import "clients";
-@import "works";
+@import "projects";
 @import "about";
 @import "figures";
 @import "testimonials";

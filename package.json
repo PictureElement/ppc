@@ -1,7 +1,7 @@
 {
-  "name": "ppc-pool-services",
+  "name": "rapido",
   "version": "1.0.0",
-  "description": "Website for PPC Pool Services Ltd",
+  "description": "One-page business theme for October CMS",
   "keywords": [
     "business website",
     "one page website"
@@ -10,8 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "aos": "^2.3.4",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "counterup2": "^1.0.4",
     "headroom.js": "^0.11.0",
     "jquery": "^3.4.1",

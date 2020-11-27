@@ -110,24 +110,24 @@ p {
 
 .space {
     &-py-8 {
-        @include rfs(8rem, padding-top);
-        @include rfs(8rem, padding-bottom);
+        @include padding-top(8rem);
+        @include padding-bottom(8rem);
     }
     &-py-4 {
-        @include rfs(4rem, padding-top);
-        @include rfs(4rem, padding-bottom);
+        @include padding-top(4rem);
+        @include padding-bottom(4rem);
     }
     &-p-4 {
-        @include rfs(4rem, padding);
+        @include padding(4rem);
     }
     &-mb-3 {
-        @include rfs(3rem, margin-bottom);
+        @include margin-bottom(3rem);
     }
     &-mb-4 {
-        @include rfs(4rem, margin-bottom);
+        @include margin-bottom(4rem);
     }
     &-mb-1 {
-        @include rfs(1rem, margin-bottom);
+        @include margin-bottom(1rem);
     }
 }
 

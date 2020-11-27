@@ -1,6 +1,6 @@
 .clients {
-    @include rfs(8rem, padding-top);
-    @include rfs(16rem, padding-bottom);
+    @include padding-top(8rem);
+    @include padding-bottom(16rem);
     &-slideshow {
         img {
             filter: grayscale(100%);
