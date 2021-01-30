@@ -23,9 +23,16 @@ $theme-2: (
 $theme: $theme-2;
 
 // Corner radius
+/*
 $corner-radius: 1rem 0;
 $corner-radius-sm: 0.5rem 0;
 $corner-radius-lg: 2rem 0;
+*/
+
+// Corner radius
+$corner-radius: 1.5vh 0;
+$corner-radius-sm: 0.75vh 0;
+$corner-radius-lg: 3vh 0;
 
 // Breadcrumb separator
 $breadcrumb-divider: quote(">");

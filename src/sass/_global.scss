@@ -71,6 +71,7 @@ p {
     }
 }
 
+/*
 .corner-shape {
     @include rfs($corner-radius, border-radius);
     &-sm {
@@ -78,6 +79,17 @@ p {
     }
     &-lg {
         @include rfs($corner-radius-lg, border-radius);
+    }
+}
+*/
+
+.corner-shape {
+    border-radius: $corner-radius;
+    &-sm {
+        border-radius: $corner-radius-sm;
+    }
+    &-lg {
+        border-radius: $corner-radius-lg;
     }
 }
 
@@ -108,6 +120,7 @@ p {
     }
 }
 
+/*
 .space {
     &-py-8 {
         @include padding-top(8rem);
@@ -128,6 +141,30 @@ p {
     }
     &-mb-1 {
         @include margin-bottom(1rem);
+    }
+}
+*/
+
+.space {
+    &-py-8 {
+        padding-top: 12vh;
+        padding-bottom: 12vh;
+    }
+    &-py-4 {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+    }
+    &-p-4 {
+        padding: 6vh;
+    }
+    &-mb-3 {
+        margin-bottom: 4.5vh;
+    }
+    &-mb-4 {
+        margin-bottom: 6vh;
+    }
+    &-mb-1 {
+        margin-bottom: 1.5vh;
     }
 }
 
