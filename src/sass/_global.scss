@@ -364,3 +364,14 @@ figure {
         font-size: 10px;
     }
 }
+
+// FIXES
+// =============================================================================
+
+// Fix wrong Owl Carousel width calculation
+.owl-stage {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-box !important;
+    display: box !important;
+}

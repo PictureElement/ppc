@@ -8350,6 +8350,12 @@ figure {
     letter-spacing: 3px;
     font-size: 10px; }
 
+.owl-stage {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-box !important;
+  display: box !important; }
+
 .page-header {
   position: sticky;
   top: 0;
