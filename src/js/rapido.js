@@ -136,8 +136,7 @@ $(document).ready(function() {
     if ($('#blogCarousel').length) {
         $('#blogCarousel').owlCarousel({
             loop:false,
-            nav:true,
-            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            nav:false,
             dots: false,
             autoplay:false,
             responsive:{
