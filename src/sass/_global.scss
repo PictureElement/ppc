@@ -9,25 +9,25 @@ body {
 }
 
 h1 {
-    font-weight: 600;
+    font-weight: $headings-font-weight;
     line-height: 1.2;
     @include font-size(3.5rem);
 }
 
 h2 {
-    font-weight: 600;
+    font-weight: $headings-font-weight;
     line-height: 1.4;
     @include font-size(1.875rem);
 }
 
 h3 {
-    font-weight: 600;
+    font-weight: $headings-font-weight;
     line-height: 1.4;
     @include font-size(1.3125rem);
 }
 
 h4 {
-    font-weight: 600;
+    font-weight: $headings-font-weight;
     line-height: 1.4;
     @include font-size(1.125rem);
 }
