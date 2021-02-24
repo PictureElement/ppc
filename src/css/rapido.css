@@ -65,7 +65,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -313,8 +313,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Source Serif Pro", serif;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2; }
 
 h1, .h1 {
@@ -4967,7 +4966,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -5052,7 +5051,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -7998,46 +7997,6 @@ a.text-on-accent:hover, a.text-on-accent:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-/* open-sans-300 - latin_greek_cyrillic */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.eot?#iefix") format("embedded-opentype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.woff2") format("woff2"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.woff") format("woff"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.ttf") format("truetype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-300.svg#OpenSans") format("svg");
-  /* Legacy iOS */ }
-
-/* open-sans-regular - latin_greek_cyrillic */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.woff2") format("woff2"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.woff") format("woff"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.ttf") format("truetype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-regular.svg#OpenSans") format("svg");
-  /* Legacy iOS */ }
-
-/* open-sans-600 - latin_greek_cyrillic */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.woff2") format("woff2"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.woff") format("woff"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.ttf") format("truetype"), url("../webfonts/open-sans-v18-latin_greek_cyrillic-600.svg#OpenSans") format("svg");
-  /* Legacy iOS */ }
-
-/* source-serif-pro-600 - latin_greek_cyrillic */
-@font-face {
-  font-family: 'Source Serif Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.woff2") format("woff2"), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.woff") format("woff"), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.ttf") format("truetype"), url("../webfonts/source-serif-pro-v10-latin_greek_cyrillic-600.svg#SourceSerifPro") format("svg");
-  /* Legacy iOS */ }
-
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.87);
@@ -8045,7 +8004,7 @@ body {
   font-size: 1rem; }
 
 h1 {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   font-size: 3.5rem; }
   @media (max-width: 1200px) {
@@ -8053,7 +8012,7 @@ h1 {
       font-size: calc(1.475rem + 2.7vw) ; } }
 
 h2 {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   font-size: 1.875rem; }
   @media (max-width: 1200px) {
@@ -8061,7 +8020,7 @@ h2 {
       font-size: calc(1.3125rem + 0.75vw) ; } }
 
 h3 {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   font-size: 1.3125rem; }
   @media (max-width: 1200px) {
@@ -8069,7 +8028,7 @@ h3 {
       font-size: calc(1.25625rem + 0.075vw) ; } }
 
 h4 {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   font-size: 1.125rem; }
 
@@ -8096,11 +8055,8 @@ p {
 .font-heavy {
   font-weight: 600; }
 
-.font-heading {
-  font-family: "Source Serif Pro", serif; }
-
 .font-base {
-  font-family: "Open Sans", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
 .font-small {
   font-size: 14px; }
@@ -8134,7 +8090,7 @@ p {
 
 .section__preheading {
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 300;
   color: #5d21d2;
   position: relative;
@@ -8428,7 +8384,7 @@ figure {
       .hero-carousel__text-wrapper h1 {
         max-width: 100%; } }
   .hero-carousel__text-wrapper p {
-    font-family: "Open Sans", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: rgba(255, 255, 255, 0.87);
     max-width: 75%;
     margin-left: auto; }
@@ -8579,7 +8535,7 @@ figure {
   text-align: center; }
   .fact__number {
     font-size: 4.5rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 300;
     line-height: 1;
     color: #5d21d2; }

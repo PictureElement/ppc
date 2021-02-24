@@ -1,3 +1,27 @@
+// Corner radius
+/*
+$corner-radius: 1rem 0;
+$corner-radius-sm: 0.5rem 0;
+$corner-radius-lg: 2rem 0;
+*/
+
+// Corner radius
+$corner-radius: 1.5vh 0;
+$corner-radius-sm: 0.75vh 0;
+$corner-radius-lg: 3vh 0;
+
+// Breadcrumb separator
+$breadcrumb-divider: quote(">");
+$breadcrumb-font-size: 14px;
+
+// Typography
+$line-height-base: 1.6;
+$font-weight-base: 400;
+
+// RFS
+$rfs-base-value: 1rem;
+// $rfs-factor: 50; // Factor of decrease
+
 // Themes
 $theme-1: (
     "primary": #008aff,
@@ -22,29 +46,48 @@ $theme-2: (
 // Theme selection
 $theme: $theme-2;
 
-// Corner radius
-/*
-$corner-radius: 1rem 0;
-$corner-radius-sm: 0.5rem 0;
-$corner-radius-lg: 2rem 0;
-*/
+// Helper function
+@function themable($theme, $color) {
+    @return map-get($theme, $color);
+}
 
-// Corner radius
-$corner-radius: 1.5vh 0;
-$corner-radius-sm: 0.75vh 0;
-$corner-radius-lg: 3vh 0;
+// Color variables
+$primary: themable($theme, "primary");
+$on-primary: themable($theme, "on-primary");
+$primary-dark: themable($theme, "primary-dark");
+$on-primary-dark: themable($theme, "on-primary-dark");
+$primary-light: themable($theme, "primary-light");
+$accent: themable($theme, "accent");
+$on-accent: themable($theme, "on-accent");
 
-// Breadcrumb separator
-$breadcrumb-divider: quote(">");
-$breadcrumb-font-size: 14px;
+// Define theme colors
+$theme-colors: (
+    "primary": $primary,
+    "on-primary": $on-primary,
+    "primary-dark": $primary-dark,
+    "on-primary-dark": $on-primary-dark,
+    "primary-light": $primary-light,
+    "accent": $accent,
+    "on-accent": $on-accent
+);
 
-// Typography
-$font-family-base: 'Open Sans', sans-serif;
-$headings-font-family: 'Source Serif Pro', serif;
-$headings-font-weight: 600;
-$line-height-base: 1.6;
-$font-weight-base: 400;
+// Enable shadows
+$enable-shadows: true;
 
-// RFS
-$rfs-base-value: 1rem;
-// $rfs-factor: 50; // Factor of decrease
+// Enable gradients
+$enable-gradients: true;
+
+// Enable responsive font sizes
+$enable-responsive-font-sizes: true;
+
+// Buttons          
+$btn-border-radius: $corner-radius-sm !important;
+
+// Grid
+$grid-gutter-width: 2rem;
+
+// Links
+$link-color: currentcolor;
+$link-decoration: underline;
+$link-hover-color: currentcolor;
+$link-hover-decoration: none;
