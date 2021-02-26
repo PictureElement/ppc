@@ -1,7 +1,7 @@
 Rapido theme
 ==========
 
-![Screenshot](https://raw.githubusercontent.com/PictureElement/rapido/master/theme-preview.png)
+![Screenshot](https://github.com/PictureElement/ppc/blob/master/theme-preview.png?raw=true)
 
 A polished single-page business-oriented theme with blog.
 
