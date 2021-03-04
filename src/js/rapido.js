@@ -64,7 +64,7 @@ $(document).ready(function() {
                 element: $(this),
                 handler: function() { 
                     counterUp(counter, {
-                        duration: 1000,
+                        duration: 2000,
                         delay: 16
                     });
                     this.destroy();
