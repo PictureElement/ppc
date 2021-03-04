@@ -46,6 +46,9 @@
         background: url("../images/abstract-shape-2.svg"), $primary;
         background-position: top center;
         background-size: cover;
+        @media (max-width: 991.98px) {
+            background-position: 65% 50%;
+        }
     }
     .owl-dots {
         line-height: 0;
