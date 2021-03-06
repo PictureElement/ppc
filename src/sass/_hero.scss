@@ -5,8 +5,8 @@
     position: relative;
     z-index: 1002;
     color: $on-primary;
-    padding-top: 18vh;
-    padding-bottom: 18vh;
+    padding-top: 12vh;
+    padding-bottom: calc(12vh + 64px);
     overflow: hidden;
     top: 50%;
     transform: translateY(-50%);
@@ -16,9 +16,6 @@
         top: 50%;
         transform: translateY(-50%);
         width: 600px;
-        img {
-            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
-        }
         @media (max-width: 991.98px) {
             margin-top: 32px;
             width: 100%;
@@ -43,21 +40,42 @@
 
 .hero-carousel {
     .owl-item {
-        background: url("../images/abstract-shape-2.svg"), $primary;
+        background: linear-gradient(125deg, $primary 70%, lighten($primary, 10%) 30%);
+        // background: url("../images/abstract-shape-2.svg"), $primary;
         background-position: top center;
         background-size: cover;
         @media (max-width: 991.98px) {
             background-position: 65% 50%;
         }
     }
+    .owl-nav {
+        @include make-container($gutter: $grid-gutter-width);
+        @include make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints);
+        display: flex;
+        position: absolute;
+        bottom: calc(12vh + 48px);
+        left: 50%;
+        transform: translate(-50%, 100%);
+        .owl-next, .owl-prev {
+            color: $on-primary;
+            border: 1px solid $on-primary;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            border-radius: 50%;
+        }
+        .owl-next {
+            margin-left: 8px;
+        }
+    }
     .owl-dots {
         line-height: 0;
         display: flex;
-        flex-direction: column;
         position: absolute;
-        right: 24px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: calc(100% - 4vh);
+        left: 50%;
+        transform: translate(-50%, -50%);
         margin-top: 0 !important;
         .owl-dot {
             transition: background-color .15s ease-in-out;
@@ -75,12 +93,6 @@
                     background-color: $accent;
                 }
             }
-        }
-        @media (max-width: 991.98px) {
-            flex-direction: row;
-            top: calc(100% - 4vh);
-            right: 50%;
-            transform: translate(50%, -50%);
         }
     }
 }

@@ -77,14 +77,22 @@ $(document).ready(function() {
     // 5. Hero carousel
     if ($('#heroCarousel').length) {
         $('#heroCarousel').owlCarousel({
-            loop:false,
+            loop:true,
             margin:0,
             autoplay:false,
             checkVisibility: false,
             items: 1,
-            nav:false,
-            dots:true,
-            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            navText: ['<i class="fas fa-long-arrow-alt-left"></i>', '<i class="fas fa-long-arrow-alt-right"></i>'],
+            responsive : {
+                0: {
+                    nav:false,
+                    dots:true
+                },
+                992 : {
+                    nav:true,
+                    dots:false
+                }
+            }
         });
     }
     
