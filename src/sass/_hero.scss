@@ -5,8 +5,8 @@
     position: relative;
     z-index: 1002;
     color: $on-primary;
-    padding-top: 12vh;
-    padding-bottom: calc(12vh + 64px);
+    padding-top: #{'min(12vh, 128px)'};
+    padding-bottom: #{'min(calc(12vh + 64px), 192px)'};
     overflow: hidden;
     top: 50%;
     transform: translateY(-50%);
@@ -32,8 +32,8 @@
     }
     @media (max-width: 991.98px) {
         text-align: center;
-        padding-top: 8vh;
-        padding-bottom: 8vh;
+        padding-top: #{'min(8vh, 160px)'};
+        padding-bottom: #{'min(8vh, 160px)'};
     }
 
 }
@@ -53,7 +53,7 @@
         @include make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints);
         display: flex;
         position: absolute;
-        bottom: calc(12vh + 48px);
+        bottom: #{'min(calc(12vh + 48px), 176px)'};
         left: 50%;
         transform: translate(-50%, 100%);
         .owl-next, .owl-prev {
