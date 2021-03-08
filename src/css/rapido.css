@@ -8318,6 +8318,12 @@ figure {
       position: absolute;
       bottom: 0;
       left: 0; }
+  @media (max-width: 1199.98px) {
+    .page-header .nav-cta {
+      text-align: center;
+      padding-top: 8px; }
+      .page-header .nav-cta .btn {
+        display: block; } }
 
 .headroom {
   will-change: transform;
