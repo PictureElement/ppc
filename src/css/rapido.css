@@ -1909,7 +1909,7 @@ textarea.form-control {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.6;
-  border-radius: min(0.75vh, 8px) 0 !important;
+  border-radius: 8px 0 !important;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .btn {
@@ -3592,7 +3592,7 @@ input[type="button"].btn-block {
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: min(0.75vh, 8px) 0 !important; }
+  border-radius: 8px 0 !important; }
   .navbar-toggler:hover, .navbar-toggler:focus {
     text-decoration: none; }
 
@@ -8062,11 +8062,11 @@ p {
     text-decoration: underline; }
 
 .corner-shape {
-  border-radius: min(1.5vh, 16px) 0; }
+  border-radius: 16px 0; }
   .corner-shape-sm {
-    border-radius: min(0.75vh, 8px) 0; }
+    border-radius: 8px 0; }
   .corner-shape-lg {
-    border-radius: min(3vh, 32px) 0; }
+    border-radius: 32px 0; }
 
 .btn {
   text-transform: uppercase;

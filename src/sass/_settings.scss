@@ -1,7 +1,7 @@
 // Corner radius
-$corner-radius: #{'min(1.5vh, 16px)'} 0;
-$corner-radius-sm: #{'min(0.75vh, 8px)'} 0;
-$corner-radius-lg: #{'min(3vh, 32px)'} 0;
+$corner-radius: 16px 0;
+$corner-radius-sm: 8px 0;
+$corner-radius-lg: 32px 0;
 
 // Breadcrumb separator
 $breadcrumb-divider: quote(">");
