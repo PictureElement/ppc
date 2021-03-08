@@ -8368,7 +8368,7 @@ figure {
       padding-bottom: min(8vh, 160px); } }
 
 .hero-carousel .owl-item {
-  background: linear-gradient(125deg, #5d21d2 70%, #7a44e2 30%);
+  background: linear-gradient(125deg, #5d21d2 70%, #6a2ede 30%);
   background-position: top center;
   background-size: cover; }
   @media (max-width: 991.98px) {
@@ -8501,7 +8501,7 @@ figure {
     border-left: 1px solid #dee2e6; }
   @media (max-width: 767.98px) {
     .facts [class^='col-']:not(:last-child) {
-      margin-bottom: min(4.5vh, 48xpx); }
+      margin-bottom: min(4.5vh, 48px); }
     .facts [class^='col-']:not(:first-child) {
       border: none; } }
 
