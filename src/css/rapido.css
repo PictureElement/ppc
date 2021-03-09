@@ -8343,7 +8343,10 @@ figure {
   padding-bottom: min(calc(12vh + 64px), 192px);
   overflow: hidden;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  background: linear-gradient(125deg, #5d21d2 70%, #6a2ede 30%);
+  background-position: top center;
+  background-size: cover; }
   .hero-item__img {
     position: absolute;
     left: 58%;
@@ -8365,14 +8368,7 @@ figure {
     .hero-item {
       text-align: center;
       padding-top: min(8vh, 160px);
-      padding-bottom: min(8vh, 160px); } }
-
-.hero-carousel .owl-item {
-  background: linear-gradient(125deg, #5d21d2 70%, #6a2ede 30%);
-  background-position: top center;
-  background-size: cover; }
-  @media (max-width: 991.98px) {
-    .hero-carousel .owl-item {
+      padding-bottom: min(8vh, 160px);
       background-position: 65% 50%; } }
 
 .hero-carousel .owl-nav {

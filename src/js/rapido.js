@@ -78,6 +78,8 @@ $(document).ready(function() {
     if ($('#heroCarousel').length) {
         $('#heroCarousel').owlCarousel({
             loop:true,
+            pullDrag: false,
+            mouseDrag: false,
             margin:0,
             autoplay:false,
             checkVisibility: false,

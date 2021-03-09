@@ -10,6 +10,9 @@
     overflow: hidden;
     top: 50%;
     transform: translateY(-50%);
+    background: linear-gradient(125deg, $primary 70%, lighten($primary, 5%) 30%);
+    background-position: top center;
+    background-size: cover;
     &__img {
         position: absolute;
         left: 58%;
@@ -34,20 +37,12 @@
         text-align: center;
         padding-top: #{'min(8vh, 160px)'};
         padding-bottom: #{'min(8vh, 160px)'};
+        background-position: 65% 50%;
     }
 
 }
 
 .hero-carousel {
-    .owl-item {
-        background: linear-gradient(125deg, $primary 70%, lighten($primary, 5%) 30%);
-        // background: url("../images/abstract-shape-2.svg"), $primary;
-        background-position: top center;
-        background-size: cover;
-        @media (max-width: 991.98px) {
-            background-position: 65% 50%;
-        }
-    }
     .owl-nav {
         @include make-container($gutter: $grid-gutter-width);
         @include make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints);
