@@ -10,6 +10,7 @@ $breadcrumb-font-size: 14px;
 // Typography
 $line-height-base: 1.6;
 $font-weight-base: 400;
+$system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 // RFS
 $rfs-base-value: 1rem;
@@ -17,27 +18,17 @@ $rfs-base-value: 1rem;
 
 // Themes
 $theme-1: (
-    "primary": #008aff,
+    "primary": #1976d2,
     "on-primary": rgba(255,255,255,0.87),
-    "primary-dark": #004580,
+    "primary-dark": #004ba0,
     "on-primary-dark": rgba(255,255,255,0.87),
-    "primary-light": #eff8ff,
-    "accent": #ffb30f,
-    "on-accent": rgba(0,0,0,0.87)
-);
-
-$theme-2: (
-    "primary":#5d21d2,
-    "on-primary": rgba(255,255,255,0.87),
-    "primary-dark": #2e1169,
-    "on-primary-dark": rgba(255,255,255,0.87),
-    "primary-light": #f0eafb,
-    "accent": #a0ebe5,
+    "primary-light": #e6e6e6,
+    "accent": #ffc400,
     "on-accent": rgba(0,0,0,0.87)
 );
 
 // Theme selection
-$theme: $theme-2;
+$theme: $theme-1;
 
 // Helper function
 @function themable($theme, $color) {
