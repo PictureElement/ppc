@@ -8223,18 +8223,6 @@ figure {
   height: 48px;
   color: #000; }
 
-.full-screen-overlay {
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2001;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed; }
-
 .aos-mobile-delay-zero {
   transition-delay: 0s !important; }
 
@@ -8280,12 +8268,6 @@ figure {
     font-family: sans-serif;
     letter-spacing: 3px;
     font-size: 10px; }
-
-@media (max-width: 575.98px) {
-  .cookies-bar {
-    text-align: center; }
-    .cookies-bar .buttons a {
-      width: 100%; } }
 
 .owl-stage {
   display: -webkit-box !important;
