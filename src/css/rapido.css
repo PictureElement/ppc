@@ -308,7 +308,8 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
   line-height: 1.2; }
 
 h1, .h1 {
@@ -7999,7 +8000,7 @@ body {
   font-size: 1rem; }
 
 h1 {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.2;
   font-size: 3.5rem; }
   @media (max-width: 1200px) {
@@ -8007,7 +8008,7 @@ h1 {
       font-size: calc(1.475rem + 2.7vw) ; } }
 
 h2 {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
   font-size: 1.875rem; }
   @media (max-width: 1200px) {
@@ -8015,7 +8016,7 @@ h2 {
       font-size: calc(1.3125rem + 0.75vw) ; } }
 
 h3 {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
   font-size: 1.3125rem; }
   @media (max-width: 1200px) {
@@ -8023,7 +8024,7 @@ h3 {
       font-size: calc(1.25625rem + 0.075vw) ; } }
 
 h4 {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
   font-size: 1.125rem; }
 
@@ -8049,6 +8050,9 @@ p {
 
 .font-heavy {
   font-weight: 600; }
+
+.font-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
 .font-base {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
@@ -8223,8 +8227,23 @@ figure {
   height: 48px;
   color: #000; }
 
+.full-screen-overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2001;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed; }
+
 .aos-mobile-delay-zero {
   transition-delay: 0s !important; }
+
+.cta-title {
+  font-weight: 400; }
 
 @media (max-width: 575.98px) {
   .cta-btn {
@@ -8269,11 +8288,14 @@ figure {
     letter-spacing: 3px;
     font-size: 10px; }
 
+@media (max-width: 575.98px) {
+  .cookies-bar {
+    text-align: center; }
+    .cookies-bar .buttons a {
+      width: 100%; } }
+
 .owl-stage {
-  display: -webkit-box !important;
-  display: -moz-box !important;
-  display: -ms-box !important;
-  display: box !important; }
+  display: flex !important; }
 
 .page-header {
   position: sticky;

@@ -12,6 +12,21 @@ $line-height-base: 1.6;
 $font-weight-base: 400;
 $system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+$google-fonts-enable: false;
+$google-fonts-body: "Open Sans", sans-serif;
+$google-fonts-heading: "Poppins", sans-serif;
+$headings-font-weight: 400;
+
+@if $google-fonts-enable {
+    $font-family-base: $google-fonts-body !global;
+    $headings-font-family: $google-fonts-heading !global;
+} @else {
+    $font-family-base: $system-font !global;
+    $headings-font-family: $system-font !global;
+}
+
+
+
 // RFS
 $rfs-base-value: 1rem;
 // $rfs-factor: 50; // Factor of decrease

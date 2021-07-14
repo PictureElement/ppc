@@ -277,14 +277,32 @@ figure {
     color: #000;
 }
 
+.full-screen-overlay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2001;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+}
+
 .aos-mobile-delay-zero {
     transition-delay: 0s !important;
 }
 
-.cta-btn {
-    @media (max-width: 575.98px) {
-        display: block;
-        width: 100%
+.cta {
+    &-title {
+        font-weight: $headings-font-weight;
+    }
+    &-btn {
+        @media (max-width: 575.98px) {
+            display: block;
+            width: 100%;
+        }
     }
 }
 
@@ -336,13 +354,24 @@ figure {
     }
 }
 
+// COOKIES BAR
+// =============================================================================
+
+.cookies-bar {
+    @media (max-width: 575.98px) {
+        text-align: center;
+        .buttons {
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+
 // FIXES
 // =============================================================================
 
 // Fix wrong Owl Carousel width calculation
 .owl-stage {
-    display: -webkit-box !important;
-    display: -moz-box !important;
-    display: -ms-box !important;
-    display: box !important;
+    display: flex !important;
 }
