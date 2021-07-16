@@ -1,12 +1,14 @@
 // Services
 // =============================================================================
 
-.media {
+.service-card {
     &__link {
+        display: block;
         text-decoration: none;
-        color: $primary;
         &:hover {
-            color: $primary;
+            .service-card__title {
+                text-decoration: underline;
+            }
         }
     }
 }

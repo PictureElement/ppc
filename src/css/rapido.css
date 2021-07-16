@@ -8048,9 +8048,6 @@ p {
 .font-light {
   font-weight: 300; }
 
-.font-heavy {
-  font-weight: 600; }
-
 .font-heading {
   font-family: "Poppins", sans-serif; }
 
@@ -8256,6 +8253,10 @@ figure {
 .muted-light {
   color: rgba(255, 255, 255, 0.54); }
 
+.modal-scroll {
+  max-height: calc(100vh - 200px);
+  overflow: auto; }
+
 .spinner-wrapper {
   width: 100%;
   height: 100%;
@@ -8287,12 +8288,6 @@ figure {
     font-family: sans-serif;
     letter-spacing: 3px;
     font-size: 10px; }
-
-@media (max-width: 575.98px) {
-  .cookies-bar {
-    text-align: center; }
-    .cookies-bar .buttons a {
-      width: 100%; } }
 
 .owl-stage {
   display: flex !important; }
@@ -8433,11 +8428,11 @@ figure {
     .hero-carousel .owl-dots .owl-dot.active span, .hero-carousel .owl-dots .owl-dot:hover span {
       background-color: #ffc400; }
 
-.media__link {
-  text-decoration: none;
-  color: #1976d2; }
-  .media__link:hover {
-    color: #1976d2; }
+.service-card__link {
+  display: block;
+  text-decoration: none; }
+  .service-card__link:hover .service-card__title {
+    text-decoration: underline; }
 
 .shop__card {
   z-index: 1; }
@@ -8456,6 +8451,9 @@ figure {
     .clients-slideshow img:hover {
       filter: grayscale(0);
       opacity: 1; }
+
+.grid-item {
+  margin-top: 32px; }
 
 .grid__controls button {
   line-height: 1;
@@ -8493,6 +8491,15 @@ figure {
   left: 0;
   align-items: center;
   justify-content: center; }
+
+.project-card__title {
+  display: inline-block; }
+
+.project-card__link {
+  display: block;
+  text-decoration: none; }
+  .project-card__link:hover .project-card__title {
+    text-decoration: underline; }
 
 .facts {
   z-index: 1;

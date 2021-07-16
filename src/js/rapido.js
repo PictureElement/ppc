@@ -201,6 +201,8 @@ $(document).ready(function() {
         // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
+        .not('[href^="#projectModal"]')
+        .not('[href^="#serviceModal"]')
         .click(function (event) {
             // On-page links
             if (
@@ -231,8 +233,42 @@ $(document).ready(function() {
     window.console.log.apply(console, ["%c Made by Marios Sofokleous | msof.me %c %c🤘 %c\n", "color: #fff; background: #0020f4; padding:5px 0;", "color: #fff; background: #242424; padding:5px 0 5px 5px;", "background: #242424; padding:5px 0", "background: #242424; padding:5px 5px 5px 0"]);
 });
 
+var msnry = null;
+var masonryUpdate = null;
+
 $(window).on('load', function() {
     // 1. Hide spinner on page load
     $('#spinnerWrapper').fadeOut('slow');
     $('html').css('overflow-y', 'visible');
+
+    if ($('#grid').length) {
+        var elem = document.querySelector('#grid');
+        // Initialize masonry
+        msnry = new Masonry(elem, {
+            itemSelector: '.grid-item',
+            gutter: 32,
+            horizontalOrder: true
+        });
+        // Update masonry
+        masonryUpdate = function() {
+            setTimeout(function() {
+                msnry = new Masonry(elem, {
+                    itemSelector: '.grid-item',
+                    gutter: 32,
+                    horizontalOrder: true
+                });
+                $('#gridSpinner').fadeOut('slow');
+            }, 500);
+        }
+        // Triggered if the AJAX request was successful (on filter grid)
+        $('body').on('ajaxDone', function(e) {
+            // Remove active class
+            var filters = document.querySelectorAll(".js-filter");
+            filters.forEach(function(filter) {
+                filter.classList.remove('active');
+            });
+            // Add active class
+            e.target.classList.add('active');
+        });
+    }
 });
