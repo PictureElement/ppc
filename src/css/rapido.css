@@ -8224,18 +8224,6 @@ figure {
   height: 48px;
   color: #000; }
 
-.full-screen-overlay {
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2001;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed; }
-
 .aos-mobile-delay-zero {
   transition-delay: 0s !important; }
 
@@ -8289,9 +8277,6 @@ figure {
     letter-spacing: 3px;
     font-size: 10px; }
 
-.owl-stage {
-  display: flex !important; }
-
 .page-header {
   position: sticky;
   top: 0;
@@ -8323,16 +8308,6 @@ figure {
       padding-top: 8px; }
       .page-header .nav-cta .btn {
         display: block; } }
-
-.headroom {
-  will-change: transform;
-  transition: transform 200ms linear; }
-
-.headroom--pinned {
-  transform: translateY(0%); }
-
-.headroom--unpinned {
-  transform: translateY(-100%); }
 
 .hero-item {
   position: relative;
@@ -8856,3 +8831,22 @@ figure {
   100% {
     -webkit-transform: translateX(0) scale(1);
     transform: translateX(0) scale(1); } }
+
+.simplebar-content-wrapper {
+  overflow: auto; }
+
+.fancybox-content {
+  padding: 0; }
+
+.owl-stage {
+  display: flex !important; }
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear; }
+
+.headroom--pinned {
+  transform: translateY(0%); }
+
+.headroom--unpinned {
+  transform: translateY(-100%); }

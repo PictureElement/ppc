@@ -19,6 +19,7 @@
     "masonry-layout": "^4.2.2",
     "owl.carousel2": "^2.2.1",
     "rfs": "^9.0.3",
+    "simplebar": "^5.3.5",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
