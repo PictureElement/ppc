@@ -15,6 +15,7 @@
     "bootstrap": "^4.5.0",
     "counterup2": "^1.0.4",
     "headroom.js": "^0.11.0",
+    "imagesloaded": "^4.1.4",
     "jquery": "^3.4.1",
     "masonry-layout": "^4.2.2",
     "owl.carousel2": "^2.2.1",

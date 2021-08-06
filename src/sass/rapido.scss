@@ -4,15 +4,13 @@
  */
 @import "settings";
 @import "../vendor/bootstrap/scss/bootstrap";
-// @import "../vendor/rfs/scss";
-// @import "fonts";
+@import "../vendor/rfs/scss";
 @import "global";
 @import "header";
 @import "hero";
 @import "services";
 @import "shop";
 @import "clients";
-@import "projects";
 @import "about";
 @import "figures";
 @import "testimonials";

@@ -12,3 +12,9 @@
         }
     }
 }
+
+.service-modal {
+    > div {
+        padding: #{'clamp(1rem, 0.6364rem + 1.8182vw, 2rem)'};
+    }
+}
