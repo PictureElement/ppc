@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="vendor/owl.carousel2/dist/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="vendor/simplebar/dist/simplebar.min.css">
         <link rel="stylesheet" href="vendor/aos/dist/aos.css">
+        <link rel="stylesheet" href="vendor/cookieconsent/build/cookieconsent.min.css">
         <link rel="stylesheet" href="css/rapido.css">
 
         <!-- Favicon and App icons-->
@@ -76,7 +77,7 @@
                                 <a class="nav-link" href="/#about">ABOUT</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/#shop">SHOP</a>
+                                <a class="nav-link" href="/#retail">RETAIL</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/#faqs">FAQs</a>
@@ -841,7 +842,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-7">
                             <header class="mb-3">
-                                <div class="section__preheading">RETAIL SHOP</div>
+                                <div class="section__preheading">RETAIL</div>
                                 <h2 class="mb-0">Discover our latest products now available at our brand new store.</h2>
                             </header>
                             <div class="pr-0 pr-lg-3 h-100 overflow-hidden">
@@ -1794,7 +1795,72 @@
         <script src="vendor/counterup2/dist/index.js"></script>
         <!-- Waypoints -->
         <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+        <!-- Osano Cookie Consent -->
+        <script src="vendor/cookieconsent/build/cookieconsent.min.js"></script>
         <!-- Site scripts -->
         <script type="module" src="js/rapido.js"></script>
+        <script>
+            // Add Analytics
+            function addAnalytics() {
+                window['ga-disable-GA_MEASUREMENT_ID'] = false;
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'GA_MEASUREMENT_ID');
+            }
+        
+            // Disable Analytics
+            function disableAnalytics() {
+                // Disable google analytics, existing cookies will not be deleted.
+                // Existing cookies will neither be updated nor sent to google.
+                window['ga-disable-GA_MEASUREMENT_ID'] = true;
+            }
+        
+            window.addEventListener("load", function () {
+                // Initialise cookie consent
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#000000",
+                            "text": "#fff"
+                        },
+                        "button": {
+                            "background": "#f1d600",
+                            "text": "#000"
+                        }
+                    },
+                    "theme": "block",
+                    "position": "bottom-left",
+                    "type": "opt-in",
+                    "content": {
+                        "message": "We use cookies to ensure you get the best experience on our website.",
+                        "dismiss": "Got it!",
+                        "allow": "Allow cookies",
+                        "link": "Privacy Policy",
+                        "href": "privacy-policy"
+                    },
+                    onInitialise: function (status) {
+                        var type = this.options.type;
+                        var didConsent = this.hasConsented();
+                        if (type == 'opt-in' && didConsent) {
+                            addAnalytics();
+                        }
+                    },
+                    onStatusChange: function(status, chosenBefore) {
+                        var type = this.options.type;
+                        var didConsent = this.hasConsented();
+                        if (type == 'opt-in' && didConsent) {
+                            addAnalytics();
+                        }
+                    },
+                    onRevokeChoice: function() {
+                        var type = this.options.type;
+                        if (type == 'opt-in') {
+                            disableAnalytics();
+                        }
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

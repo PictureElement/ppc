@@ -1,43 +1,5 @@
 $(document).ready(function() {
-    // 0. Masonry
-    if ($('#grid').length) {
-        var elem = document.querySelector('#grid');
-        // Initialize masonry
-        msnry = new Masonry(elem, {
-            itemSelector: '.grid-item',
-            gutter: 32,
-            horizontalOrder: true
-        });
-        // Update masonry
-        masonryUpdate = function() {
-            setTimeout(function() {
-                msnry = new Masonry(elem, {
-                    itemSelector: '.grid-item',
-                    gutter: 32,
-                    horizontalOrder: true
-                });
-                $('#gridSpinner').fadeOut('slow');
-            }, 500);
-        }
-        // Triggered if the AJAX request was successful (on filter grid)
-        $('body').on('ajaxDone', function(e) {
-            // Remove active class
-            var filters = document.querySelectorAll(".js-filter");
-            filters.forEach(function(filter) {
-                filter.classList.remove('active');
-            });
-            // Add active class
-            e.target.classList.add('active');
-        });
-    }
-
-    // 1. Projects section filters
-    $(".grid__controls button.btn").click(function() {
-        $(".grid__controls").find(".active").removeClass("active");
-        $(this).addClass("active");
-    });
-
-    // 2. Add header shadow
+    // 1. Add header shadow
     if ($('#pageHeader').length) {
         var $pageHeader = $('#pageHeader');
 
@@ -74,7 +36,7 @@ $(document).ready(function() {
         });
     }
 
-    // 3. Back to top
+    // 2. Back to top
     if ($('#toTop').length) {
         $('#toTop').on('click', function(e) {
             event.preventDefault();
@@ -86,7 +48,7 @@ $(document).ready(function() {
         });
     }
 
-    // 4. Counters
+    // 3. Counters
     if (window.counterUp) {
         var counterUp = window.counterUp["default"]; // Import counterUp2
         var $el = $('.counter');
@@ -106,7 +68,7 @@ $(document).ready(function() {
         });
     }
 
-    // 5. Hero carousel
+    // 4. Hero carousel
     if ($('#heroCarousel').length) {
         $('#heroCarousel').owlCarousel({
             loop:true,
@@ -130,7 +92,7 @@ $(document).ready(function() {
         });
     }
     
-    // 6. Clients carousel
+    // 5. Clients carousel
     if ($('#clientsCarousel').length) {
         $('#clientsCarousel').owlCarousel({
             loop:true,
@@ -157,7 +119,7 @@ $(document).ready(function() {
         });
     }
 
-    // 7. Testimonials carousel
+    // 6. Testimonials carousel
     if ($('#testimonialsCarousel').length) {
         $('#testimonialsCarousel').owlCarousel({
             loop:true,
@@ -174,7 +136,7 @@ $(document).ready(function() {
         });
     }
 
-    // 8. Blog carousel
+    // 7. Blog carousel
     if ($('#blogCarousel').length) {
         $('#blogCarousel').owlCarousel({
             loop:false,
@@ -198,7 +160,7 @@ $(document).ready(function() {
         });
     }
 
-    // 9. Post carousel
+    // 8. Post carousel
     if ($('#singlePostCarousel').length) {
         $('#singlePostCarousel').owlCarousel({
             loop:true,
@@ -210,7 +172,7 @@ $(document).ready(function() {
         });
     }
 
-    // 10. Fancybox options
+    // 9. Fancybox options
     if ($('[data-fancybox]').length) {
         $('[data-fancybox]').fancybox({
             smallBtn : true,
@@ -218,7 +180,7 @@ $(document).ready(function() {
         });
     }
 
-    // 11. Headroom.js
+    // 10. Headroom.js
     if (document.body.contains(document.getElementById("pageHeader"))) {
         var pageHeader = document.getElementById("pageHeader");
         var options = {
@@ -228,7 +190,7 @@ $(document).ready(function() {
         headroom.init();
     }
 
-    // 12. Smooth scrolling
+    // 11. Smooth scrolling
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
         .not('[href="#"]')
@@ -257,19 +219,19 @@ $(document).ready(function() {
                 }
             }
         });
-
-    // 13. Initialize AOS
+    
+    // 12. Initialize AOS
     AOS.init();
 
-    // Copyright
-    window.console.log.apply(console, ["%c Made by Marios Sofokleous | msof.me %c %c🤘 %c\n", "color: #fff; background: #0020f4; padding:5px 0;", "color: #fff; background: #242424; padding:5px 0 5px 5px;", "background: #242424; padding:5px 0", "background: #242424; padding:5px 5px 5px 0"]);
+    // 13. Copyright
+    window.console.log.apply(console, ["%c Made by Marios Sofokleous | msof.me %c %c🤘 %c\n", "color: #fff; background: #114F7F; padding:5px 0;", "color: #fff; background: #000; padding:5px 0 5px 5px;", "background: #000; padding:5px 0", "background: #000; padding:5px 5px 5px 0"]);
 });
-
-var msnry = null;
-var masonryUpdate = null;
 
 $(window).on('load', function() {
     // 1. Hide spinner on page load
     $('#spinnerWrapper').fadeOut('slow');
     $('html').css('overflow-y', 'visible');
+
+    // 2. Refresh AOS
+    AOS.refresh();
 });

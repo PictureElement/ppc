@@ -47,7 +47,9 @@ function populateVendor() {
     'node_modules/headroom.js/dist/headroom.min.js',
     'node_modules/counterup2/dist/index.js',
     'node_modules/waypoints/lib/jquery.waypoints.min.js',
-    'node_modules/masonry-layout/dist/masonry.pkgd.min.js'
+    'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
+    'node_modules/cookieconsent/build/cookieconsent.min.js',
+    'node_modules/cookieconsent/build/cookieconsent.min.css'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('src/vendor/'));
 }
