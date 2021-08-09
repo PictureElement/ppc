@@ -150,7 +150,7 @@ $(document).ready(function() {
                     stagePadding: 24,
                     margin:12
                 },
-                // breakpoint from 576px up
+                // breakpoint from 992px up
                 992 : {
                     items:2,
                     stagePadding: 32,
