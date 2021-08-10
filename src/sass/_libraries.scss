@@ -6,8 +6,7 @@
     padding: 0;
 }
 
-// Fix wrong Owl Carousel width calculation
-.owl-stage {
+.hero-carousel .owl-stage {
     display: flex !important;
 }
 

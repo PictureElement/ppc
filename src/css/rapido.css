@@ -8789,7 +8789,7 @@ figure {
 .fancybox-content {
   padding: 0; }
 
-.owl-stage {
+.hero-carousel .owl-stage {
   display: flex !important; }
 
 .headroom {
