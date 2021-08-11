@@ -39,7 +39,6 @@ function populateVendor() {
     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map',
     'node_modules/bootstrap/scss/**/*',
-    'node_modules/rfs/scss.scss',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/owl.carousel2/dist/owl.carousel.min.js',
     'node_modules/owl.carousel2/dist/assets/owl.carousel.min.css',
