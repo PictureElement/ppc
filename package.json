@@ -14,6 +14,7 @@
     "aos": "^2.3.4",
     "async": "^3.2.1",
     "bootstrap": "^4.5.0",
+    "clipboard": "^2.0.8",
     "cookieconsent": "^3.1.1",
     "counterup2": "^1.0.4",
     "headroom.js": "^0.11.0",

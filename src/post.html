@@ -218,12 +218,56 @@
                                 <div data-aos="zoom-in" data-aos-once="true">
                                     <div class="text-center h3 font-heading mb-3">Share this post</div>
                                     <ul class="list-inline mb-5">
-                                        <li class="list-inline-item mr-0"><a class="single-post__share-link corner-shape-sm" href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li class="list-inline-item mr-0"><a class="single-post__share-link corner-shape-sm" href="https://twitter.com/share?url=" title="Share on Twitter"><i class="fab fa-twitter"></i></a></li>
-                                        <li class="list-inline-item mr-0"><a class="single-post__share-link corner-shape-sm" href="https://www.linkedin.com/shareArticle?mini=true&url=" title="Share on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                                        <li class="list-inline-item mr-0"><a class="single-post__share-link corner-shape-sm" href="https://vk.com/share.php?url=" title="Share on VK"><i class="fab fa-vk"></i></a></li>
-                                        <li class="list-inline-item mr-0"><a class="single-post__share-link corner-shape-sm" href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://www.website.com." title="Share via Email"><i class="fas fa-envelope"></i></a></li>
-                                        <li class="list-inline-item mr-0"><a class="single-post__share-link corner-shape-sm" href="https://www.addtoany.com/share_save?linkurl=" title="More sharing options"><i class="fas fa-share-alt"></i></a></li>
+                                        <li class="list-inline-item mr-0">
+                                            <a
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="single-post__share-link corner-shape-sm"
+                                                href=""
+                                                aria-label="Share on Facebook">
+                                                    <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item mr-0">
+                                            <a
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="single-post__share-link corner-shape-sm"
+                                                href=""
+                                                aria-label="Share on Twitter">
+                                                    <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item mr-0">
+                                            <a
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="single-post__share-link corner-shape-sm"
+                                                href=""
+                                                aria-label="Share on LinkedIn">
+                                                    <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item mr-0">
+                                            <a
+                                                target="_blank"
+                                                class="single-post__share-link corner-shape-sm"
+                                                href=""
+                                                aria-label="Share with Email">
+                                                    <i class="fas fa-envelope"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item mr-0">
+                                            <a 
+                                                tabindex="0"
+                                                id="copyLink"
+                                                class="single-post__share-link corner-shape-sm"
+                                                href="javascript:;"
+                                                role="button"
+                                                data-clipboard-text="Post page URL">
+                                                    <i class="fas fa-copy"></i>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <a class="btn btn-outline-primary" href=".">Back to blog overview</a>
@@ -495,8 +539,8 @@
         
         <!-- jQuery -->
         <script src="vendor/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap JS + Popper -->
+        <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Owl Carousel 2 -->
         <script src="vendor/owl.carousel2/dist/owl.carousel.min.js"></script>
         <!-- AOS -->
@@ -505,8 +549,40 @@
         <script src="vendor/headroom.js/dist/headroom.min.js"></script>
         <!-- Osano Cookie Consent -->
         <script src="vendor/cookieconsent/build/cookieconsent.min.js"></script>
+        <!-- Clipboard.js -->
+        <script src="vendor/clipboard/dist/clipboard.min.js"></script>
         <!-- Site scripts -->
         <script src="js/rapido.js"></script>
+
+        <script>
+            $('#copyLink').tooltip({
+                trigger: 'click',
+                placement: 'bottom'
+            });
+
+            function setTooltip(message) {
+                $('#copyLink').tooltip('hide').attr('data-original-title', message).tooltip('show');
+            }
+
+            function hideTooltip(message) {
+                setTimeout(function() {
+                    $('#copyLink').tooltip('hide');
+                }, 1000);
+            }
+
+            var clipboard = new ClipboardJS('#copyLink');
+
+            clipboard.on("success", function(e) {
+                setTooltip('Copied!');
+                hideTooltip();
+            });
+
+            clipboard.on("error", function(e) {
+                setTooltip('Failed!');
+                hideTooltip();
+            });
+        </script>
+
         <script>
             // Add Analytics
             function addAnalytics() {

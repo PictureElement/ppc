@@ -36,6 +36,8 @@ function populateVendor() {
     'node_modules/aos/dist/aos.css',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js.map',
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map',
     'node_modules/bootstrap/scss/**/*',
     'node_modules/rfs/scss.scss',
     'node_modules/jquery/dist/jquery.min.js',
@@ -49,7 +51,8 @@ function populateVendor() {
     'node_modules/waypoints/lib/jquery.waypoints.min.js',
     'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
     'node_modules/cookieconsent/build/cookieconsent.min.js',
-    'node_modules/cookieconsent/build/cookieconsent.min.css'
+    'node_modules/cookieconsent/build/cookieconsent.min.css',
+    'node_modules/clipboard/dist/clipboard.min.js'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('src/vendor/'));
 }
@@ -187,7 +190,8 @@ function criticalCSS() {
 
 // Define tasks
 const init = gulp.series(cleanDist, cleanVendor, populateVendor, copyFonts, copyImages, copyVendor, copyHtml);
-const build = gulp.series(init, compileSass, css, js, criticalCSS);
+//const build = gulp.series(init, compileSass, css, js, criticalCSS);
+const build = gulp.series(init, compileSass, css, js);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSyncSrc));
 
 // Register public tasks
