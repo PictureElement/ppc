@@ -553,36 +553,6 @@
         <script src="vendor/clipboard/dist/clipboard.min.js"></script>
         <!-- Site scripts -->
         <script src="js/rapido.js"></script>
-
-        <script>
-            $('#copyLink').tooltip({
-                trigger: 'click',
-                placement: 'bottom'
-            });
-
-            function setTooltip(message) {
-                $('#copyLink').tooltip('hide').attr('data-original-title', message).tooltip('show');
-            }
-
-            function hideTooltip(message) {
-                setTimeout(function() {
-                    $('#copyLink').tooltip('hide');
-                }, 1000);
-            }
-
-            var clipboard = new ClipboardJS('#copyLink');
-
-            clipboard.on("success", function(e) {
-                setTooltip('Copied!');
-                hideTooltip();
-            });
-
-            clipboard.on("error", function(e) {
-                setTooltip('Failed!');
-                hideTooltip();
-            });
-        </script>
-
         <script>
             // Add Analytics
             function addAnalytics() {

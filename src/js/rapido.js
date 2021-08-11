@@ -223,7 +223,37 @@ $(document).ready(function() {
     // 12. Initialize AOS
     AOS.init();
 
-    // 13. Copyright
+    // 13. Copy to clipboard
+    if ($('#copyLink').length) {
+        $('#copyLink').tooltip({
+            trigger: 'click',
+            placement: 'bottom'
+        });
+
+        function setTooltip(message) {
+            $('#copyLink').tooltip('hide').attr('data-original-title', message).tooltip('show');
+        }
+
+        function hideTooltip(message) {
+            setTimeout(function() {
+                $('#copyLink').tooltip('hide');
+            }, 1000);
+        }
+
+        var clipboard = new ClipboardJS('#copyLink');
+
+        clipboard.on("success", function(e) {
+            setTooltip('Copied!');
+            hideTooltip();
+        });
+
+        clipboard.on("error", function(e) {
+            setTooltip('Failed!');
+            hideTooltip();
+        });
+    }
+
+    // 14. Copyright
     window.console.log.apply(console, ["%c Made by Marios Sofokleous | msof.me %c %c🤘 %c\n", "color: #fff; background: #114F7F; padding:5px 0;", "color: #fff; background: #000; padding:5px 0 5px 5px;", "background: #000; padding:5px 0", "background: #000; padding:5px 5px 5px 0"]);
 });
 
