@@ -1,42 +1,5 @@
 $(document).ready(function() {
-    // 1. Add header shadow
-    if ($('#pageHeader').length) {
-        var $pageHeader = $('#pageHeader');
-
-        if( $(window).scrollTop() > 0 ) {
-            $pageHeader.addClass('header_shadow');
-        }
-
-        $('.navbar-toggler').on('click', function() {
-            var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
-            var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
-            var hasShadow = $pageHeader.hasClass('page-header_shadow');
-            
-            if (isScrollTopGreaterThanZero) {
-                $pageHeader.addClass('page-header_shadow');
-            } else if (isNavbarCollapseVisible) {
-                $pageHeader.removeClass('page-header_shadow');
-            } else {
-                $pageHeader.addClass('page-header_shadow');
-            }
-        });
-
-        $(window).scroll(function() {
-            var isNavbarCollapseVisible = $('.navbar-collapse').hasClass('show');
-            var isScrollTopGreaterThanZero = ($(window).scrollTop() > 0) ? true : false;
-            var hasShadow = $pageHeader.hasClass('page-header_shadow');
-
-            if (isScrollTopGreaterThanZero) {
-                $pageHeader.addClass('page-header_shadow');
-            } else if (isNavbarCollapseVisible) {
-                $pageHeader.addClass('page-header_shadow');
-            } else {
-                $pageHeader.removeClass('page-header_shadow');
-            }
-        });
-    }
-
-    // 2. Back to top
+    // 1. Back to top
     if ($('#toTop').length) {
         $('#toTop').on('click', function(e) {
             event.preventDefault();
@@ -48,7 +11,7 @@ $(document).ready(function() {
         });
     }
 
-    // 3. Counters
+    // 2. Counters
     if (window.counterUp) {
         var counterUp = window.counterUp["default"]; // Import counterUp2
         var $el = $('.counter');
@@ -68,7 +31,7 @@ $(document).ready(function() {
         });
     }
 
-    // 4. Hero carousel
+    // 3. Hero carousel
     if ($('#heroCarousel').length) {
         $('#heroCarousel').owlCarousel({
             loop:true,
@@ -92,7 +55,7 @@ $(document).ready(function() {
         });
     }
     
-    // 5. Clients carousel
+    // 4. Clients carousel
     if ($('#clientsCarousel').length) {
         $('#clientsCarousel').owlCarousel({
             loop:true,
@@ -119,7 +82,7 @@ $(document).ready(function() {
         });
     }
 
-    // 6. Testimonials carousel
+    // 5. Testimonials carousel
     if ($('#testimonialsCarousel').length) {
         $('#testimonialsCarousel').owlCarousel({
             loop:true,
@@ -136,7 +99,7 @@ $(document).ready(function() {
         });
     }
 
-    // 7. Blog carousel
+    // 6. Blog carousel
     if ($('#blogCarousel').length) {
         $('#blogCarousel').owlCarousel({
             loop:false,
@@ -160,7 +123,7 @@ $(document).ready(function() {
         });
     }
 
-    // 8. Post carousel
+    // 7. Post carousel
     if ($('#singlePostCarousel').length) {
         $('#singlePostCarousel').owlCarousel({
             loop:true,
@@ -172,7 +135,7 @@ $(document).ready(function() {
         });
     }
 
-    // 9. Fancybox options
+    // 8. Fancybox options
     if ($('[data-fancybox]').length) {
         $('[data-fancybox]').fancybox({
             smallBtn : true,
@@ -180,23 +143,12 @@ $(document).ready(function() {
         });
     }
 
-    // 10. Headroom.js
-    if (document.body.contains(document.getElementById("pageHeader"))) {
-        var pageHeader = document.getElementById("pageHeader");
-        var options = {
-            offset : 500
-        }
-        var headroom  = new Headroom(pageHeader, options);
-        headroom.init();
-    }
-
-    // 11. Smooth scrolling
+    // 9. Smooth scrolling
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
         .not('[href="#"]')
-        .not('[href="#0"]')
-        .not('[href^="#projectModal"]')
-        .not('[href^="#serviceModal"]')
+        .not('[href="javascript:;"]')
+        .not('[data-fancybox]')
         .click(function (event) {
             // On-page links
             if (
@@ -219,11 +171,11 @@ $(document).ready(function() {
                 }
             }
         });
-    
-    // 12. Initialize AOS
-    AOS.init();
 
-    // 13. Copy to clipboard
+    // 10. Initialize AOS
+    AOS.init();
+    
+    // 11. Copy to clipboard
     if ($('#copyLink').length) {
         $('#copyLink').tooltip({
             trigger: 'click',
@@ -253,7 +205,17 @@ $(document).ready(function() {
         });
     }
 
-    // 14. Copyright
+    // 12. Detect when jump links section get pinned
+    if ($('#jumpLinks').length) {
+        const el = document.querySelector("#jumpLinks")
+        const observer = new IntersectionObserver( 
+            ([e]) => e.target.classList.toggle("jump-links_pinned", e.intersectionRatio < 1),
+            { threshold: [1] }
+        );
+        observer.observe(el);
+    }
+
+    // 13. Copyright
     window.console.log.apply(console, ["%c Made by Marios Sofokleous | msof.me %c %c🤘 %c\n", "color: #fff; background: #114F7F; padding:5px 0;", "color: #fff; background: #000; padding:5px 0 5px 5px;", "background: #000; padding:5px 0", "background: #000; padding:5px 5px 5px 0"]);
 });
 
@@ -261,7 +223,7 @@ $(window).on('load', function() {
     // 1. Hide spinner on page load
     $('#spinnerWrapper').fadeOut('slow');
     $('html').css('overflow-y', 'visible');
-
+    
     // 2. Refresh AOS
     AOS.refresh();
 });

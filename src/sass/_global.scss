@@ -83,6 +83,15 @@ p {
     @include font-size(1rem);
 }
 
+.nav-link {
+    &:hover {
+        text-decoration: underline;
+    }
+    &.active {
+        color: $primary;
+    }
+}
+
 .section {
     &__preheading {
         @include font-size(1rem);
@@ -300,7 +309,7 @@ figure {
 }
 
 .modal-scroll {
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 100px);
     overflow: auto;
 }
 
@@ -314,7 +323,7 @@ figure {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1004;
+    z-index: 1021;
 }
 
 .spinner {
