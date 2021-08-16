@@ -1,9 +1,7 @@
-Rapido theme
+Static Implementation of Rapido Theme For October CMS
 ==========
 
-![Screenshot](https://github.com/PictureElement/ppc/blob/master/theme-preview.png?raw=true)
-
-A polished single-page business-oriented theme with blog.
+Polished single-page business-oriented theme with blog.
 
 ## Features/Highlights
 
