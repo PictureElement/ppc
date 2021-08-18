@@ -8666,6 +8666,11 @@ figure {
   display: flex;
   align-items: center; }
 
+.blog-categories ul li {
+  display: flex; }
+  .blog-categories ul li a {
+    flex: 1; }
+
 .blog-tags ul {
   font-size: 0; }
   .blog-tags ul .list-inline-item {
