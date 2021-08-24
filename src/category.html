@@ -684,7 +684,7 @@
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'GA_MEASUREMENT_ID');
+                gtag('config', 'GA_MEASUREMENT_ID', {cookie_flags: 'SameSite=None;Secure'});
             }
         
             // Disable Analytics
@@ -697,6 +697,9 @@
             window.addEventListener("load", function () {
                 // Initialise cookie consent
                 window.cookieconsent.initialise({
+                    "cookie": {
+                        "secure": true
+                    },
                     "palette": {
                         "popup": {
                             "background": "#000000",
